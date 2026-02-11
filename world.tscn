@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://djt1a8n5rq3a6"]
+
+[ext_resource type="PackedScene" uid="uid://birblg11uwsgn" path="res://player.tscn" id="1_f3sb7"]
+
+[node name="World" type="Node2D" unique_id=1338697159]
+
+[node name="Player" parent="." unique_id=1852234601 instance=ExtResource("1_f3sb7")]
