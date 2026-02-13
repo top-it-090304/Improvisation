@@ -1,6 +1,59 @@
 [gd_scene format=3 uid="uid://da42ck6cfmqf5"]
 
+[ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://Wood.jpg" id="1_xxkwp"]
+
 [node name="Walls" type="StaticBody2D" unique_id=1616081594]
+
+[node name="Visual" type="Node2D" parent="." unique_id=278498061]
+clip_children = 1
+
+[node name="Top" type="ColorRect" parent="Visual" unique_id=76297520]
+clip_contents = true
+offset_right = 1080.0
+offset_bottom = 80.0
+
+[node name="Shadow" type="Sprite2D" parent="Visual/Top" unique_id=363062031]
+position = Vector2(540, 960)
+rotation = 3.1415927
+scale = Vector2(0.6189112, 0.61895555)
+texture = ExtResource("1_xxkwp")
+
+[node name="Bottom" type="ColorRect" parent="Visual" unique_id=197391951]
+clip_contents = true
+offset_top = 1840.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+
+[node name="Shadow" type="Sprite2D" parent="Visual/Bottom" unique_id=1506828354]
+position = Vector2(540, -880)
+rotation = 3.1415927
+scale = Vector2(0.6189112, 0.61895555)
+texture = ExtResource("1_xxkwp")
+
+[node name="Left" type="ColorRect" parent="Visual" unique_id=1604566435]
+clip_contents = true
+offset_top = 80.0
+offset_right = 80.0
+offset_bottom = 1840.0
+
+[node name="Shadow" type="Sprite2D" parent="Visual/Left" unique_id=32306905]
+position = Vector2(539.99994, 880)
+rotation = 3.1415927
+scale = Vector2(0.6189112, 0.61895555)
+texture = ExtResource("1_xxkwp")
+
+[node name="Right" type="ColorRect" parent="Visual" unique_id=1487460943]
+clip_contents = true
+offset_left = 1000.0
+offset_top = 80.0
+offset_right = 1080.0
+offset_bottom = 1840.0
+
+[node name="Shadow" type="Sprite2D" parent="Visual/Right" unique_id=27165122]
+position = Vector2(-461, 874.99994)
+rotation = 3.1415927
+scale = Vector2(0.6189112, 0.61895555)
+texture = ExtResource("1_xxkwp")
 
 [node name="Top" type="CollisionPolygon2D" parent="." unique_id=471685003]
 polygon = PackedVector2Array(0, 0, 0, 80, 1080, 80, 1080, 0, 737.35986, 0)
