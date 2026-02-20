@@ -1,6 +1,5 @@
 extends RigidBody2D
 
-# --- ФИЗИЧЕСКИЕ КОНСТАНТЫ ---
 const GRAVITY_CONSTANT = 980.0  # Стандартная гравитация Godot
 const MAX_OFFSET = 200.0        # Расстояние мыши для "максимального наклона"
 const DEAD_ZONE = 10.0          # Мертвая зона

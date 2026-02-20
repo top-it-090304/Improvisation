@@ -9,60 +9,60 @@ clip_children = 1
 
 [node name="Top" type="ColorRect" parent="Visual" unique_id=76297520]
 clip_contents = true
-offset_right = 1080.0
-offset_bottom = 80.0
+offset_right = 1088.0
+offset_bottom = 64.0
 
 [node name="Shadow" type="Sprite2D" parent="Visual/Top" unique_id=363062031]
-position = Vector2(540, 960)
+position = Vector2(543.9947, 959.99854)
 rotation = 3.1415927
-scale = Vector2(0.6189112, 0.61895555)
+scale = Vector2(0.6235515, 0.61898947)
 texture = ExtResource("1_xxkwp")
 
 [node name="Bottom" type="ColorRect" parent="Visual" unique_id=197391951]
 clip_contents = true
-offset_top = 1840.0
-offset_right = 1080.0
+offset_top = 1856.0
+offset_right = 1088.0
 offset_bottom = 1920.0
 
 [node name="Shadow" type="Sprite2D" parent="Visual/Bottom" unique_id=1506828354]
-position = Vector2(540, -880)
+position = Vector2(543.9945, -895.9937)
 rotation = 3.1415927
-scale = Vector2(0.6189112, 0.61895555)
+scale = Vector2(0.62354547, 0.61898804)
 texture = ExtResource("1_xxkwp")
 
 [node name="Left" type="ColorRect" parent="Visual" unique_id=1604566435]
 clip_contents = true
-offset_top = 80.0
-offset_right = 80.0
-offset_bottom = 1840.0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 1856.0
 
 [node name="Shadow" type="Sprite2D" parent="Visual/Left" unique_id=32306905]
-position = Vector2(539.99994, 880)
+position = Vector2(543.99805, 896.0005)
 rotation = 3.1415927
-scale = Vector2(0.6189112, 0.61895555)
+scale = Vector2(0.62353873, 0.6189853)
 texture = ExtResource("1_xxkwp")
 
 [node name="Right" type="ColorRect" parent="Visual" unique_id=1487460943]
 clip_contents = true
-offset_left = 1000.0
-offset_top = 80.0
-offset_right = 1080.0
-offset_bottom = 1840.0
+offset_left = 1024.0
+offset_top = 64.0
+offset_right = 1088.0
+offset_bottom = 1856.0
 
 [node name="Shadow" type="Sprite2D" parent="Visual/Right" unique_id=27165122]
-position = Vector2(-461, 874.99994)
+position = Vector2(-479.991, 896.0028)
 rotation = 3.1415927
-scale = Vector2(0.6189112, 0.61895555)
+scale = Vector2(0.6235411, 0.61898124)
 texture = ExtResource("1_xxkwp")
 
 [node name="Top" type="CollisionPolygon2D" parent="." unique_id=471685003]
-polygon = PackedVector2Array(0, 0, 0, 80, 1080, 80, 1080, 0, 737.35986, 0)
+polygon = PackedVector2Array(0, 0, 0, 64, 1088, 64, 1088, 0, 737.35986, 0)
 
 [node name="Bottom" type="CollisionPolygon2D" parent="." unique_id=1734373038]
-polygon = PackedVector2Array(0, 1920, 1080, 1920, 1080, 1840, 0, 1840)
+polygon = PackedVector2Array(0, 1920, 1088, 1920, 1088, 1856, 0, 1856)
 
 [node name="Left" type="CollisionPolygon2D" parent="." unique_id=76067933]
-polygon = PackedVector2Array(0, 80, 80, 80, 80, 1840, 0, 1840)
+polygon = PackedVector2Array(0, 64, 64, 64, 64, 1856, 0, 1856)
 
 [node name="Right" type="CollisionPolygon2D" parent="." unique_id=1459063968]
-polygon = PackedVector2Array(1000, 80, 1080, 80, 1080, 1840, 1000, 1840)
+polygon = PackedVector2Array(1024, 64, 1088, 64, 1088, 1856, 1024, 1856)
