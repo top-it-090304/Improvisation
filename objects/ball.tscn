@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cvt7yxp5uxv2g"]
 
+[ext_resource type="Script" uid="uid://db4ut04ffgvmi" path="res://scripts/ball.gd" id="1_n16w4"]
 [ext_resource type="Texture2D" uid="uid://c0fecihjcpr0l" path="res://sources/Ball.png" id="1_x8fbi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x8fbi"]
@@ -12,6 +13,7 @@ radius = 29.0
 [node name="Ball" type="RigidBody2D" unique_id=1990782279]
 physics_material_override = SubResource("PhysicsMaterial_x8fbi")
 continuous_cd = 1
+script = ExtResource("1_n16w4")
 
 [node name="Ball" type="Sprite2D" parent="." unique_id=492431026]
 scale = Vector2(0.026527405, 0.026799012)

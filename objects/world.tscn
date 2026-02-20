@@ -2,11 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_71j4m"]
 [ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="2_qfnet"]
-[ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="3_i7141"]
-[ext_resource type="Script" uid="uid://db4ut04ffgvmi" path="res://scripts/ball.gd" id="4_4mrxx"]
-[ext_resource type="PackedScene" uid="uid://df66a5km0xcvh" path="res://objects/finish.tscn" id="5_7r4gi"]
 [ext_resource type="Script" uid="uid://bn56gkwnwns3g" path="res://scripts/levels.gd" id="6_gnr4b"]
-[ext_resource type="PackedScene" uid="uid://baclftxnn0jwj" path="res://objects/block.tscn" id="6_qfnet"]
 
 [node name="World" type="Node2D" unique_id=1338697159]
 
@@ -20,20 +16,6 @@ texture = ExtResource("1_71j4m")
 visibility_layer = 2
 z_index = 3
 
-[node name="Ball" parent="." unique_id=1990782279 instance=ExtResource("3_i7141")]
-z_index = 2
-position = Vector2(96, 1824)
-script = ExtResource("4_4mrxx")
-
-[node name="Finish" parent="." unique_id=157668249 instance=ExtResource("5_7r4gi")]
-z_index = 1
-position = Vector2(992, 96)
-
 [node name="Levels" type="Node2D" parent="." unique_id=847851399]
 z_index = 3
 script = ExtResource("6_gnr4b")
-
-[node name="Block" parent="." unique_id=296666591 instance=ExtResource("6_qfnet")]
-position = Vector2(-96, 32)
-
-[connection signal="body_entered" from="Finish" to="Ball" method="_finish"]
