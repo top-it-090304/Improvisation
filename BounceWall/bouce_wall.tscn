@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ds1gkkqrswhpq"]
+
+[ext_resource type="Script" uid="uid://ck2bp8omh42s7" path="res://BounceWall/Bumper.gd" id="1_exevk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
+size = Vector2(205, 42)
+
+[node name="BouceWall" type="Area2D" unique_id=1901581891]
+script = ExtResource("1_exevk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=855897234]
+custom_minimum_size = Vector2(200, 30)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.37464836, 0.5525337, 0.1424987, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=552036561]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_aqk2v")

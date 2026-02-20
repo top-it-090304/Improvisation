@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://befj70yvk2434"]
+
+[ext_resource type="Texture2D" uid="uid://cfih8lask7lun" path="res://Bumper/Bumper.png" id="1_0dfj3"]
+[ext_resource type="Script" uid="uid://ck2bp8omh42s7" path="res://BounceWall/Bumper.gd" id="1_b4j1m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_odiup"]
+radius = 14.605478
+
+[node name="Bumper" type="Area2D" unique_id=1779603720]
+script = ExtResource("1_b4j1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1871396643]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_odiup")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1450917469]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -63.0
+offset_right = 193.0
+offset_bottom = 193.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0dfj3")
