@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://dkxfu6b0v4y5m" path="res://sources/Finish.png" id="1_yp4eo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bt3yw"]
-radius = 8.0
+radius = 16.0
 
 [node name="Finish" type="Area2D" unique_id=157668249]
 script = ExtResource("1_bt3yw")
 
 [node name="Finish" type="Sprite2D" parent="." unique_id=1436379828]
-scale = Vector2(0.33614257, 0.33614257)
+scale = Vector2(0.6480713, 0.6480713)
 texture = ExtResource("1_yp4eo")
 
 [node name="Shape" type="CollisionShape2D" parent="." unique_id=1214774323]

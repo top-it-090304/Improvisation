@@ -1,31 +1,33 @@
 extends Area2D
 
-var ball_position : Vector2
-
-func _ready() -> void:
-	var ball = get_parent().get_node_or_null("Ball")
-	ball_position = ball.global_position
-
 func _finish(body: Node2D) -> void:
 	if body.name == "Ball":
-		
-		print("Победа!")
-		
-		# Отключение активности
+		# Выключаем управление и физику
 		if "is_active" in body:
 			body.is_active = false
+		if body is RigidBody2D:
+			body.freeze = true 
 		
-		# Сброс позиции
-		var body_rid = body.get_rid()
-		PhysicsServer2D.body_set_state(
-			body_rid, 
-			PhysicsServer2D.BODY_STATE_TRANSFORM, 
-			Transform2D(0, ball_position)
-		)
+		var tween = create_tween()
+		tween.set_parallel(true)
 		
-		# Остановка
-		PhysicsServer2D.body_set_state(body_rid, PhysicsServer2D.BODY_STATE_LINEAR_VELOCITY, Vector2.ZERO)
-		PhysicsServer2D.body_set_state(body_rid, PhysicsServer2D.BODY_STATE_ANGULAR_VELOCITY, 0)
+		# 1. УМЕНЬШЕНИЕ: TRANS_CUBIC уберет эффект «подпрыгивания» (увеличения)
+		tween.tween_property(body, "scale", Vector2.ZERO, 0.6).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
 		
-		# Следующий уровень
-		get_tree().current_scene.get_node_or_null("Levels").next_level()
+		# 2. ДВИЖЕНИЕ: точно в центр лузы
+		tween.tween_property(body, "global_position", global_position, 0.6).set_trans(Tween.TRANS_CUBIC)
+		
+		# 3. ЗАТЕМНЕНИЕ: шар становится прозрачным, как будто скрывается в тени лузы
+		tween.tween_property(body, "modulate:a", 0.0, 0.6)
+		
+		# 4. ЗАВЕРШЕНИЕ
+		tween.set_parallel(false)
+		tween.tween_callback(func(): _on_animation_finished(body))
+func _on_animation_finished(body):
+	# Возвращаем размер шару для следующего уровня
+	body.scale = Vector2.ONE
+	
+	# Вызываем менеджер уровней
+	var levels_manager = get_tree().current_scene.find_child("Levels", true, false)
+	if levels_manager:
+		levels_manager.next_level()

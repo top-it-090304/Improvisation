@@ -9,6 +9,12 @@
 
 [node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_tlvj4")]
 
+[node name="Finish" parent="." unique_id=157668249 instance=ExtResource("4_fh7dt")]
+position = Vector2(992, 96)
+
+[node name="Ball" parent="." unique_id=1990782279 instance=ExtResource("3_pwaeh")]
+position = Vector2(96, 1824)
+
 [node name="Block" parent="." unique_id=296666591 instance=ExtResource("2_oxfnx")]
 position = Vector2(96, 1760)
 
@@ -581,9 +587,3 @@ position = Vector2(800, 864)
 
 [node name="Block186" parent="." unique_id=11910104 instance=ExtResource("2_oxfnx")]
 position = Vector2(800, 928)
-
-[node name="Ball" parent="." unique_id=1990782279 instance=ExtResource("3_pwaeh")]
-position = Vector2(96, 1824)
-
-[node name="Finish" parent="." unique_id=157668249 instance=ExtResource("4_fh7dt")]
-position = Vector2(992, 96)
