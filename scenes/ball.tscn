@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvt7yxp5uxv2g"]
 
-[ext_resource type="Texture2D" uid="uid://c0fecihjcpr0l" path="res://Ball.png" id="1_x8fbi"]
+[ext_resource type="Texture2D" uid="uid://c0fecihjcpr0l" path="res://sources/Ball.png" id="1_x8fbi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x8fbi"]
 friction = 0.1

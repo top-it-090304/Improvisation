@@ -13,7 +13,7 @@ config_version=5
 config/name="MazeBall"
 run/main_scene="uid://djt1a8n5rq3a6"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://sources/icon.svg"
 
 [display]
 

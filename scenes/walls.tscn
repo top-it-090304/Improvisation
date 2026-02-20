@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://da42ck6cfmqf5"]
 
-[ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://Wood.jpg" id="1_xxkwp"]
+[ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_xxkwp"]
 
 [node name="Walls" type="StaticBody2D" unique_id=1616081594]
 
