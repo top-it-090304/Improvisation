@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cvwtem3ahktek"]
+
+[ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_be0ha"]
+
+[node name="Block" type="StaticBody2D" unique_id=296666591]
+metadata/_edit_horizontal_guides_ = [0.0, -10.0, -18.0, -24.0, -28.0, -31.0]
+
+[node name="Texture" type="Polygon2D" parent="." unique_id=362985358]
+position = Vector2(-64, -17)
+scale = Vector2(1, 1.5238096)
+texture = ExtResource("1_be0ha")
+polygon = PackedVector2Array(32, 32, 96, 32, 96, 11.15625, 95, 4.59375, 92, -0.65625, 88, -4.59375, 83, -7.21875, 75, -9.1875, 64, -9.84375, 53, -9.1875, 46, -7.21875, 40, -4.59375, 36, -0.65625, 33, 4.59375, 32, 11.15625)
+
+[node name="Shape" type="CollisionPolygon2D" parent="." unique_id=1635089911]
+position = Vector2(-4, 4)
+polygon = PackedVector2Array(-28, 28, -28, -4, -27, -14, -24, -22, -20, -28, -14, -32, -7, -35, 4, -36, 15, -35, 23, -32, 28, -28, 32, -22, 35, -14, 36, -4, 36, 28)

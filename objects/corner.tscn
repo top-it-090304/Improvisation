@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bkjvc0q7qw6bh"]
+
+[ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_ev2t1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gtdk"]
+size = Vector2(64, 64)
+
+[node name="Block" type="StaticBody2D" unique_id=296666591]
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=950127636]
+position = Vector2(-3.6811598e-06, 1.75891e-06)
+scale = Vector2(0.6153846, 0.61538464)
+texture = ExtResource("1_ev2t1")
+region_enabled = true
+region_rect = Rect2(0, 0, 104, 104)
+
+[node name="Shape" type="CollisionShape2D" parent="." unique_id=1297005663]
+shape = SubResource("RectangleShape2D_3gtdk")
+
+[node name="Texture2" type="Sprite2D" parent="." unique_id=128190699]
+position = Vector2(64.00001, 64)
+scale = Vector2(0.6153846, 0.6153846)
+texture = ExtResource("1_ev2t1")
+region_enabled = true
+region_rect = Rect2(0, 0, 104, 104)
+
+[node name="Shape2" type="CollisionShape2D" parent="." unique_id=1533299669]
+position = Vector2(64, 64)
+shape = SubResource("RectangleShape2D_3gtdk")
+
+[node name="Texture 3" type="Polygon2D" parent="." unique_id=362985358]
+position = Vector2(0, -16.761906)
+scale = Vector2(1, 1.5238096)
+texture = ExtResource("1_ev2t1")
+polygon = PackedVector2Array(32, 32, 96, 32, 96, 10.343751, 95, 4.437501, 92, -0.15624905, 88, -4.093749, 82, -6.718749, 75, -8.687499, 67, -9.343749, 32, -9.999999)
+
+[node name="Shape 3" type="CollisionPolygon2D" parent="." unique_id=1635089911]
+position = Vector2(59.692307, 4.3076925)
+polygon = PackedVector2Array(-27.692307, 27.692307, -27.692307, -36.307693, 7.3076935, -35.307693, 15.3076935, -34.307693, 22.307693, -31.307693, 28.307693, -27.307693, 32.307693, -21.307693, 35.307693, -14.307693, 36.307693, -4.3076925, 36.307693, 27.692307)
+
+[node name="Texture 4" type="Polygon2D" parent="." unique_id=2084228773]
+position = Vector2(64, 81)
+rotation = 3.1415927
+scale = Vector2(1, 1.5238096)
+texture = ExtResource("1_ev2t1")
+polygon = PackedVector2Array(32.000004, 32.15625, 96.00001, 32.156242, 64.00001, 32.156246, 53.000004, 31.499996, 46.000004, 29.531248, 40.000004, 26.249998, 36.000004, 22.968748, 33.000004, 18.374996, 32.000004, 13.124996, 32, -9.999999)
+
+[node name="Shape 4" type="CollisionPolygon2D" parent="." unique_id=478650023]
+position = Vector2(59.692307, 4.3076925)
+polygon = PackedVector2Array(-27.692307, 27.692307, -91.69231, 27.692307, -59.692307, 27.692307, -48.692307, 28.692307, -41.692307, 31.692307, -35.692307, 36.692307, -31.692307, 41.692307, -28.692307, 48.692307, -27.692307, 56.692307, -27.692307, 91.69231)
