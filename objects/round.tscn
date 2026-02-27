@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dtpxfthsgwlba"]
+
+[ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_q6i33"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q6i33"]
+radius = 33.0
+
+[node name="Block" type="StaticBody2D" unique_id=296666591]
+metadata/_edit_horizontal_guides_ = [0.0, -10.0, -18.0, -24.0, -28.0, -31.0, 31.0, 28.0, 24.0, 18.0, 11.0]
+metadata/_edit_vertical_guides_ = [-31.0, -11.0, 31.0, 10.0, -24.0, -28.0, -19.0, 19.0, 24.0, 28.0]
+
+[node name="Texture" type="Polygon2D" parent="." unique_id=362985358]
+position = Vector2(-64, -17)
+scale = Vector2(1, 1.5238096)
+texture = ExtResource("1_q6i33")
+polygon = PackedVector2Array(41, 26.25, 48, 29.53125, 56, 31.5, 64, 32.15625, 72, 31.5, 80, 29.53125, 87, 26.25, 92, 21.65625, 95, 16.40625, 96, 11.15625, 95, 5.90625, 92, 0.65625, 87, -3.9375, 80, -7.21875, 72, -9.1875, 64, -9.84375, 56, -9.1875, 48, -7.21875, 41, -3.9375, 36, 0.65625, 33, 5.90625, 32, 11.15625, 33, 16.40625, 36, 21.65625)
+
+[node name="Shape" type="CollisionShape2D" parent="." unique_id=689602889]
+shape = SubResource("CircleShape2D_q6i33")

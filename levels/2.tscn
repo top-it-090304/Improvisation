@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="2_s3oku"]
 [ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="3_5u8o6"]
 [ext_resource type="PackedScene" uid="uid://df66a5km0xcvh" path="res://objects/finish.tscn" id="4_qlf6b"]
-[ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner.tscn" id="5_qlf6b"]
+[ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner small.tscn" id="5_qlf6b"]
+[ext_resource type="PackedScene" uid="uid://pk0mkt60rjop" path="res://objects/corner big.tscn" id="6_ju3oa"]
 
 [node name="2" type="Node2D" unique_id=1989446572]
 
@@ -208,17 +209,6 @@ position = Vector2(480, 160)
 [node name="Block66" parent="." unique_id=1290493639 instance=ExtResource("1_eeclr")]
 position = Vector2(480, 96)
 
-[node name="Block67" parent="." unique_id=1243471274 instance=ExtResource("5_qlf6b")]
-position = Vector2(352, 1568)
-rotation = 1.5707964
-
-[node name="Block68" parent="." unique_id=578561256 instance=ExtResource("5_qlf6b")]
-position = Vector2(224, 1632)
-rotation = -3.1415927
-
-[node name="Block69" parent="." unique_id=96491556 instance=ExtResource("5_qlf6b")]
-position = Vector2(288, 160)
-
 [node name="Block89" parent="." unique_id=862429693 instance=ExtResource("1_eeclr")]
 position = Vector2(160.00002, 1504)
 
@@ -254,10 +244,6 @@ position = Vector2(160.00002, 864)
 
 [node name="Block82" parent="." unique_id=561398116 instance=ExtResource("1_eeclr")]
 position = Vector2(160.00002, 800)
-
-[node name="Block70" parent="." unique_id=841854391 instance=ExtResource("5_qlf6b")]
-position = Vector2(160, 224)
-rotation = -1.5707964
 
 [node name="Block78" parent="." unique_id=128987030 instance=ExtResource("1_eeclr")]
 position = Vector2(160, 736)
@@ -343,28 +329,17 @@ position = Vector2(352, 352)
 [node name="Block91" parent="." unique_id=1393186779 instance=ExtResource("1_eeclr")]
 position = Vector2(352, 288)
 
-[node name="Block111" parent="." unique_id=1158474037 instance=ExtResource("5_qlf6b")]
-position = Vector2(864, 288)
-
 [node name="Block131" parent="." unique_id=57171380 instance=ExtResource("1_eeclr")]
 position = Vector2(735.99994, 1632)
 
 [node name="Block130" parent="." unique_id=50468490 instance=ExtResource("1_eeclr")]
 position = Vector2(735.99994, 1568)
 
-[node name="Block112" parent="." unique_id=939093413 instance=ExtResource("5_qlf6b")]
-position = Vector2(736, 352)
-rotation = -1.5707964
-
 [node name="Block129" parent="." unique_id=537309118 instance=ExtResource("1_eeclr")]
 position = Vector2(735.99994, 1504)
 
 [node name="Block132" parent="." unique_id=1694619781 instance=ExtResource("1_eeclr")]
 position = Vector2(735.99994, 1440)
-
-[node name="Block113" parent="." unique_id=521283061 instance=ExtResource("5_qlf6b")]
-position = Vector2(928, 1696)
-rotation = 1.5707964
 
 [node name="Block128" parent="." unique_id=1345190667 instance=ExtResource("1_eeclr")]
 position = Vector2(735.99994, 1376)
@@ -389,10 +364,6 @@ position = Vector2(735.99994, 992.00006)
 
 [node name="Block123" parent="." unique_id=1706602655 instance=ExtResource("1_eeclr")]
 position = Vector2(735.99994, 928.00006)
-
-[node name="Block114" parent="." unique_id=1489875421 instance=ExtResource("5_qlf6b")]
-position = Vector2(800, 1760)
-rotation = 3.1415927
 
 [node name="Block122" parent="." unique_id=392541902 instance=ExtResource("1_eeclr")]
 position = Vector2(736, 864)
@@ -526,55 +497,111 @@ position = Vector2(736, 352)
 [node name="Block170" parent="." unique_id=1829809251 instance=ExtResource("1_eeclr")]
 position = Vector2(928, 352)
 
-[node name="Block29" parent="." unique_id=1834094767 instance=ExtResource("5_qlf6b")]
-position = Vector2(608, 224)
-rotation = -1.5707964
-
-[node name="Block171" parent="." unique_id=1485388112 instance=ExtResource("5_qlf6b")]
-position = Vector2(416, 32)
-
-[node name="Block172" parent="." unique_id=136467089 instance=ExtResource("5_qlf6b")]
-position = Vector2(480, 96)
-rotation = -1.5707964
-
-[node name="Block173" parent="." unique_id=17691362 instance=ExtResource("5_qlf6b")]
-position = Vector2(32, 96)
-rotation = -1.5707964
-
-[node name="Block174" parent="." unique_id=900503623 instance=ExtResource("5_qlf6b")]
-position = Vector2(992, 32)
-
-[node name="Block175" parent="." unique_id=1950129056 instance=ExtResource("5_qlf6b")]
-position = Vector2(1056, 96)
-rotation = 1.5707964
-
 [node name="Block176" parent="." unique_id=710013115 instance=ExtResource("5_qlf6b")]
-position = Vector2(992, 160)
+position = Vector2(992, 224)
 
-[node name="Block177" parent="." unique_id=1310340362 instance=ExtResource("5_qlf6b")]
-position = Vector2(1056, 1824)
-rotation = 1.5707964
+[node name="Block183" parent="." unique_id=2060999390 instance=ExtResource("6_ju3oa")]
+position = Vector2(352, 160)
 
-[node name="Block178" parent="." unique_id=326244029 instance=ExtResource("5_qlf6b")]
-position = Vector2(608, 1824)
-rotation = 1.5707964
+[node name="Block184" parent="." unique_id=1588735368 instance=ExtResource("6_ju3oa")]
+position = Vector2(928, 288)
 
-[node name="Block179" parent="." unique_id=817808940 instance=ExtResource("5_qlf6b")]
-position = Vector2(672, 1888)
-rotation = 3.1415927
-
-[node name="Block13" parent="." unique_id=532025840 instance=ExtResource("5_qlf6b")]
-position = Vector2(480, 1696)
-rotation = 1.5707964
-
-[node name="Block180" parent="." unique_id=1703900863 instance=ExtResource("5_qlf6b")]
-position = Vector2(96, 1760)
-rotation = 3.1415927
-
-[node name="Block181" parent="." unique_id=179651487 instance=ExtResource("5_qlf6b")]
-position = Vector2(32, 1824)
+[node name="Block185" parent="." unique_id=653602703 instance=ExtResource("6_ju3oa")]
+position = Vector2(160, 160)
 rotation = -1.5707964
 
-[node name="Block182" parent="." unique_id=1035282437 instance=ExtResource("5_qlf6b")]
-position = Vector2(96, 1888)
+[node name="Block186" parent="." unique_id=1175336081 instance=ExtResource("5_qlf6b")]
+position = Vector2(96, 96)
+rotation = -1.5707964
+
+[node name="Block13" parent="." unique_id=906822417 instance=ExtResource("6_ju3oa")]
+position = Vector2(608, 160)
+rotation = -1.5707964
+
+[node name="Block29" parent="." unique_id=260333021 instance=ExtResource("6_ju3oa")]
+position = Vector2(736, 288)
+rotation = -1.5707964
+
+[node name="Block171" parent="." unique_id=2038994720 instance=ExtResource("6_ju3oa")]
+position = Vector2(352, 1632)
+rotation = 1.5707964
+
+[node name="Block172" parent="." unique_id=42642902 instance=ExtResource("6_ju3oa")]
+position = Vector2(160, 1632)
 rotation = 3.1415927
+
+[node name="Block173" parent="." unique_id=1602568686 instance=ExtResource("6_ju3oa")]
+position = Vector2(736, 1760)
+rotation = 3.1415927
+
+[node name="Block174" parent="." unique_id=8429799 instance=ExtResource("6_ju3oa")]
+position = Vector2(928, 1760)
+rotation = 1.5707964
+
+[node name="Block175" parent="." unique_id=1943131012 instance=ExtResource("6_ju3oa")]
+position = Vector2(480, 1760)
+rotation = 1.5707964
+
+[node name="Block177" parent="." unique_id=797895889 instance=ExtResource("5_qlf6b")]
+position = Vector2(544, 1824)
+rotation = 1.5707964
+
+[node name="Block178" parent="." unique_id=346273850 instance=ExtResource("5_qlf6b")]
+position = Vector2(288, 1568)
+rotation = 1.5707964
+
+[node name="Block179" parent="." unique_id=1189141619 instance=ExtResource("5_qlf6b")]
+position = Vector2(224, 1568)
+rotation = 3.1415927
+
+[node name="Block180" parent="." unique_id=565407846 instance=ExtResource("5_qlf6b")]
+position = Vector2(288, 224)
+
+[node name="Block181" parent="." unique_id=6357719 instance=ExtResource("5_qlf6b")]
+position = Vector2(224, 224)
+rotation = -1.5707964
+
+[node name="Block182" parent="." unique_id=381466285 instance=ExtResource("5_qlf6b")]
+position = Vector2(416, 1696)
+rotation = 1.5707964
+
+[node name="Block187" parent="." unique_id=1512620089 instance=ExtResource("5_qlf6b")]
+position = Vector2(672, 1824)
+rotation = 3.1415927
+
+[node name="Block188" parent="." unique_id=227362720 instance=ExtResource("5_qlf6b")]
+position = Vector2(992, 1824)
+rotation = 1.5707964
+
+[node name="Block189" parent="." unique_id=714080806 instance=ExtResource("5_qlf6b")]
+position = Vector2(864, 1696)
+rotation = 1.5707964
+
+[node name="Block190" parent="." unique_id=479736465 instance=ExtResource("5_qlf6b")]
+position = Vector2(800, 1696)
+rotation = 3.1415927
+
+[node name="Block191" parent="." unique_id=1932207526 instance=ExtResource("5_qlf6b")]
+position = Vector2(864, 352)
+
+[node name="Block192" parent="." unique_id=979035518 instance=ExtResource("5_qlf6b")]
+position = Vector2(800, 352)
+rotation = -1.5707964
+
+[node name="Block193" parent="." unique_id=2102671965 instance=ExtResource("5_qlf6b")]
+position = Vector2(416, 96)
+
+[node name="Block194" parent="." unique_id=285382082 instance=ExtResource("5_qlf6b")]
+position = Vector2(544, 96)
+rotation = -1.5707964
+
+[node name="Block195" parent="." unique_id=2064882408 instance=ExtResource("5_qlf6b")]
+position = Vector2(672, 224)
+rotation = -1.5707964
+
+[node name="Block196" parent="." unique_id=1857168330 instance=ExtResource("5_qlf6b")]
+position = Vector2(992, 96)
+
+[node name="Block197" parent="." unique_id=616242437 instance=ExtResource("5_qlf6b")]
+position = Vector2(992, 96)
+rotation = 1.5707964
