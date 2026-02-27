@@ -2,31 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_ev2t1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gtdk"]
-size = Vector2(64, 64)
-
 [node name="Block" type="StaticBody2D" unique_id=296666591]
-
-[node name="Texture" type="Sprite2D" parent="." unique_id=950127636]
-position = Vector2(-3.6811598e-06, 1.75891e-06)
-scale = Vector2(0.6153846, 0.61538464)
-texture = ExtResource("1_ev2t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 104, 104)
-
-[node name="Shape" type="CollisionShape2D" parent="." unique_id=1297005663]
-shape = SubResource("RectangleShape2D_3gtdk")
-
-[node name="Texture2" type="Sprite2D" parent="." unique_id=128190699]
-position = Vector2(64.00001, 64)
-scale = Vector2(0.6153846, 0.6153846)
-texture = ExtResource("1_ev2t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 104, 104)
-
-[node name="Shape2" type="CollisionShape2D" parent="." unique_id=1533299669]
-position = Vector2(64, 64)
-shape = SubResource("RectangleShape2D_3gtdk")
 
 [node name="Texture 3" type="Polygon2D" parent="." unique_id=362985358]
 position = Vector2(0, -16.761906)
