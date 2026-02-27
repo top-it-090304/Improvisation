@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="3_pwaeh"]
 [ext_resource type="PackedScene" uid="uid://df66a5km0xcvh" path="res://objects/finish.tscn" id="4_fh7dt"]
 
-[node name="1" type="Node2D" unique_id=344701130]
+[node name="3" type="Node2D" unique_id=344701130]
 
 [node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_tlvj4")]
 
