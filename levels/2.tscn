@@ -605,3 +605,15 @@ position = Vector2(992, 96)
 [node name="Block197" parent="." unique_id=616242437 instance=ExtResource("5_qlf6b")]
 position = Vector2(992, 96)
 rotation = 1.5707964
+
+[node name="Block67" parent="." unique_id=1206748935 instance=ExtResource("5_qlf6b")]
+position = Vector2(96, 1696)
+rotation = 3.1415927
+
+[node name="Block68" parent="." unique_id=2134908425 instance=ExtResource("5_qlf6b")]
+position = Vector2(96, 1824)
+rotation = -1.5707964
+
+[node name="Block69" parent="." unique_id=1847256320 instance=ExtResource("5_qlf6b")]
+position = Vector2(96, 1824)
+rotation = 3.1415927
