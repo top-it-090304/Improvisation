@@ -1,3 +1,30 @@
-[gd_scene format=3 uid="uid://b8gxwgqlum8m0"]
+[gd_scene format=4 uid="uid://b8gxwgqlum8m0"]
+
+[ext_resource type="PackedScene" uid="uid://dntuivli2lx1s" path="res://TileMap/tile_map_layer.tscn" id="1_bgnt5"]
+[ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="2_nacan"]
+[ext_resource type="PackedScene" uid="uid://ds1gkkqrswhpq" path="res://BounceWall/bouce_wall.tscn" id="3_ldnja"]
 
 [node name="3" type="Node2D" unique_id=1207430069]
+
+[node name="TileMapLayer" parent="." unique_id=488669003 instance=ExtResource("1_bgnt5")]
+tile_map_data = PackedByteArray("AAAIABsAAAAAAAAABQAIAAIAAAAAAAAABAACABgAAAAAAAAABwALABMAAAAAAAAABwAEAAwAAAAAAAAABwALAA0AAAAAAAAABwAMAAYAAAAAAAAABwADAAQAAAAAAAAABwAIAAkAAAAAAAAABwAHABEAAAAAAAAABwABAAgAAAAAAAAAAwACAAgAAAAAAAAAAwADAAgAAAAAAAAAAwAPAAoAAAAAAAAAAwAPABEAAAAAAAAAAwAOABEAAAAAAAAAAwADAAsAAAAAAAAAAwADAAoAAAAAAAAAAwADAAkAAAAAAAAAAwACAAsAAAAAAAAAAwABAAsAAAAAAAAAAwACAAoAAAAAAAAAAwABAAoAAAAAAAAAAwABAAkAAAAAAAAAAwACAAkAAAAAAAAAAwADAAYAAAAAAAAAAwADAAcAAAAAAAAAAwACAAUAAAAAAAAAAwABAAUAAAAAAAAAAwABAAYAAAAAAAAAAwABAAcAAAAAAAAAAwACAAcAAAAAAAAAAwACAAYAAAAAAAAAAwANAAwAAAAAAAAAAwANAA0AAAAAAAAAAwANAA4AAAAAAAAAAwANAA8AAAAAAAAAAwANABAAAAAAAAAAAwAOABAAAAAAAAAAAwAOAA8AAAAAAAAAAwAOAA4AAAAAAAAAAwAOAA0AAAAAAAAAAwAOAAwAAAAAAAAAAwAPAAsAAAAAAAAAAwAPAAwAAAAAAAAAAwAPAA0AAAAAAAAAAwAPAA4AAAAAAAAAAwAPAA8AAAAAAAAAAwAPABAAAAAAAAAAAwADAAwAAAAAAAAAAwADAA0AAAAAAAAAAwADAA4AAAAAAAAAAwADAA8AAAAAAAAAAwADABAAAAAAAAAAAwACABEAAAAAAAAAAwABABEAAAAAAAAAAwABABAAAAAAAAAAAwABAA8AAAAAAAAAAwABAA4AAAAAAAAAAwABAA0AAAAAAAAAAwABAAwAAAAAAAAAAwACAAwAAAAAAAAAAwACAA0AAAAAAAAAAwACAA4AAAAAAAAAAwACAA8AAAAAAAAAAwACABAAAAAAAAAAAwANABkAAAAAAAAABwAGABYAAAAAAAAABwAKABcAAAAAAAAABwA=")
+
+[node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("2_nacan")]
+
+[node name="BouceWall" parent="." unique_id=1901581891 instance=ExtResource("3_ldnja")]
+position = Vector2(274, 1000.00006)
+rotation = -1.5562766
+
+[node name="BouceWall" parent="BouceWall" unique_id=1084432430 instance=ExtResource("3_ldnja")]
+position = Vector2(491.02084, -2.129486)
+rotation = -0.026806533
+
+[node name="BouceWall" parent="BouceWall/BouceWall" unique_id=393642197 instance=ExtResource("3_ldnja")]
+position = Vector2(-1320.0967, -0.219325)
+rotation = 1.5824823
+
+[node name="BouceWall" parent="BouceWall/BouceWall/BouceWall" unique_id=1500319254 instance=ExtResource("3_ldnja")]
+position = Vector2(448.99933, 1.2700186)
+rotation = 3.144266
+
+[connection signal="body_entered" from="TileMapLayer/Finish" to="TileMapLayer/Finish" method="_finish"]
