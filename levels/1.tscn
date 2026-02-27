@@ -6,8 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner.tscn" id="4_a1scl"]
 [ext_resource type="PackedScene" uid="uid://baclftxnn0jwj" path="res://objects/block.tscn" id="5_2aftt"]
 [ext_resource type="PackedScene" uid="uid://cvwtem3ahktek" path="res://objects/smoother.tscn" id="6_725xe"]
-[ext_resource type="PackedScene" uid="uid://bewfv7khhetc3" path="res://objects/startPosition.tscn" id="7_725xe"]
-[ext_resource type="PackedScene" uid="uid://bdoci3lxrvjjf" path="res://objects/hole.tscn" id="8_344tg"]
 
 [node name="1" type="Node2D" unique_id=1989446572]
 
@@ -290,20 +288,3 @@ position = Vector2(736, 992)
 [node name="Block82" parent="." unique_id=1829306605 instance=ExtResource("4_a1scl")]
 position = Vector2(736, 1056)
 rotation = 1.5707964
-
-[node name="StartPosition" parent="." unique_id=2052848829 instance=ExtResource("7_725xe")]
-z_index = 1
-position = Vector2(544, 1440)
-
-[node name="Hole" parent="." unique_id=1366922520 instance=ExtResource("8_344tg")]
-z_index = -1
-position = Vector2(96, 1824)
-
-[node name="Hole2" parent="." unique_id=294028656 instance=ExtResource("8_344tg")]
-position = Vector2(992, 1824)
-
-[node name="Hole3" parent="." unique_id=1902275156 instance=ExtResource("8_344tg")]
-position = Vector2(96, 96)
-
-[node name="Hole4" parent="." unique_id=2022498447 instance=ExtResource("8_344tg")]
-position = Vector2(992, 96)
