@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bdoci3lxrvjjf"]
+
+[ext_resource type="Script" uid="uid://g70kagcoya4l" path="res://scripts/hole.gd" id="1_rvj3c"]
+
+[node name="Hole" type="Area2D" unique_id=1366922520]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1616237830]
+z_index = -1
+script = ExtResource("1_rvj3c")
