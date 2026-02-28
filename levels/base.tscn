@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://8s8slf5borhi"]
+[gd_scene format=3 uid="uid://b3t8kwno8437"]
 
 [ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="1_ymyy0"]
 [ext_resource type="PackedScene" uid="uid://df66a5km0xcvh" path="res://objects/finish.tscn" id="2_dc30n"]
 [ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="3_l2qoq"]
 
-[node name="5" type="Node2D" unique_id=1989446572]
+[node name="base" type="Node2D" unique_id=1989446572]
 
 [node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_ymyy0")]
 
