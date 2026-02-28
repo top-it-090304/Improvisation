@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfih8lask7lun"
-path="res://.godot/imported/Bumper.png-faf2ac6a3129a845298d65d4edc19475.ctex"
+path="res://.godot/imported/Bumper.png-8463745a8ca7cc913039fb70dd5cc1b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bumper/Bumper.png"
-dest_files=["res://.godot/imported/Bumper.png-faf2ac6a3129a845298d65d4edc19475.ctex"]
+source_file="res://sources/Bumper.png"
+dest_files=["res://.godot/imported/Bumper.png-8463745a8ca7cc913039fb70dd5cc1b0.ctex"]
 
 [params]
 

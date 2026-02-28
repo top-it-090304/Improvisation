@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://ds1gkkqrswhpq"]
 
-[ext_resource type="Script" uid="uid://ck2bp8omh42s7" path="res://BounceWall/Bumper.gd" id="1_exevk"]
+[ext_resource type="Script" uid="uid://ck2bp8omh42s7" path="res://scripts/bumper.gd" id="1_gbbt4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
 size = Vector2(205, 42)
 
 [node name="BouceWall" type="Area2D" unique_id=1901581891]
-script = ExtResource("1_exevk")
+script = ExtResource("1_gbbt4")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=855897234]
 custom_minimum_size = Vector2(200, 30)

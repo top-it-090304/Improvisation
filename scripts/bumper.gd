@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var bump_force: float = 800.0  # Сила выстрела (настраивается в инспекторе)
+@export var bump_force: float = 1000  # Сила выстрела (настраивается в инспекторе)
 @export var sound_player: AudioStreamPlayer2D  # Опционально: звук
 
 func _ready():
