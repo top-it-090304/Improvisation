@@ -6,13 +6,6 @@ extends Area2D
 @export var respawn_height_offset: float = 200.0  # Высота над начальной точкой
 @export var manual_start_position: Vector2 = Vector2.ZERO  # Ручная настройка позиции
 
-# Визуальные настройки
-@export var hole_radius: float = 35.0       # Радиус дыры
-@export var hitbox_radius: float = 25.0  # Радиус хит-бокса (меньше визуального)
-@export var hole_color: Color = Color(0.2, 0.15, 0.1, 0.9)  # Темно-коричневый
-@export var rim_color: Color = Color(0.4, 0.25, 0.15, 1.0)  # Светло-коричневый
-@export var show_debug_lines: bool = true   # Показывать линии отладки
-
 # Ссылки
 var ball: RigidBody2D = null
 var ball_start_scale: Vector2 = Vector2.ONE
@@ -27,56 +20,8 @@ func _ready() -> void:
 	# Подключаем сигнал
 	body_entered.connect(_on_body_entered)
 	
-	# Создаем визуальное представление
-	_setup_visuals()
-	
 	# Пробуем найти стартовую позицию разными способами
 	_find_start_position()
-
-func _setup_visuals():
-	# Создаем Sprite2D если его нет
-	sprite = Sprite2D.new()
-	sprite.name = "HoleSprite"
-	add_child(sprite)
-	
-	# Устанавливаем Z-индекс - отрицательное значение, чтобы быть под шаром
-	sprite.z_index = 0
-	
-	# Создаем простую текстуру дыры (черный круг)
-	var image = Image.create(64, 64, false, Image.FORMAT_RGBA8)
-	image.fill(Color(0, 0, 0, 0))
-	
-	# Рисуем круг вручную
-	for x in range(64):
-		for y in range(64):
-			var dx = x - 32
-			var dy = y - 32
-			var dist = sqrt(dx*dx + dy*dy)
-			if dist < 30:
-				# Внутренняя часть дыры
-				var alpha = 1.0
-				if dist > 25:
-					alpha = 1.0 - (dist - 25) / 5.0  # Плавное затухание краев
-				image.set_pixel(x, y, Color(0.1, 0.1, 0.1, alpha))
-			elif dist < 32:
-				# Края дыры
-				image.set_pixel(x, y, Color(0.3, 0.2, 0.1, 0.8))
-	
-	var texture = ImageTexture.create_from_image(image)
-	sprite.texture = texture
-	sprite.centered = true
-	sprite.scale = Vector2(hole_radius / 30.0, hole_radius / 30.0)
-	
-	# Создаем или находим CollisionShape2D
-	collision_shape = get_node_or_null("CollisionShape2D")
-	if not collision_shape:
-		collision_shape = CollisionShape2D.new()
-		collision_shape.name = "CollisionShape2D"
-		add_child(collision_shape)
-		
-		var circle_shape = CircleShape2D.new()
-		circle_shape.radius = hitbox_radius  # Немного меньше визуального размера
-		collision_shape.shape = circle_shape
 
 func _find_start_position():
 	# Если задана ручная позиция - используем её
@@ -200,20 +145,3 @@ func finish_teleport():
 		ball = null
 		is_teleporting = false
 		print("Телепортация завершена")
-
-# Визуальная отладка в редакторе
-func _draw() -> void:
-	if Engine.is_editor_hint() or show_debug_lines:
-		# Рисуем круг - дыру (в редакторе всегда, в игре только если включено)
-		draw_circle(Vector2.ZERO, hole_radius, hole_color)
-		draw_circle(Vector2.ZERO, hole_radius * 0.7, Color(0.1, 0.1, 0.1, 0.9))
-		
-		# Рисуем ободок дыры
-		draw_arc(Vector2.ZERO, hole_radius, 0, 2*PI, 32, rim_color, 2)
-		draw_arc(Vector2.ZERO, hole_radius * 0.9, 0, 2*PI, 32, Color(0.3, 0.2, 0.1), 1)
-		
-		# Рисуем стрелку вниз (в дыру)
-		draw_line(Vector2(0, hole_radius * 0.3), Vector2(0, hole_radius * 0.7), rim_color, 2)
-		draw_line(Vector2(-5, hole_radius * 0.6), Vector2(0, hole_radius * 0.7), rim_color, 2)
-		draw_line(Vector2(5, hole_radius * 0.6), Vector2(0, hole_radius * 0.7), rim_color, 2)
-		
