@@ -29,5 +29,5 @@ scenes/11/scene = ExtResource("3_ts1om")
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetScenesCollectionSource_rd0av")
 
-[node name="TileMapLayer" type="TileMapLayer" unique_id=1551868908]
+[node name="Tiles" type="TileMapLayer" unique_id=1551868908]
 tile_set = SubResource("TileSet_sbkj6")
