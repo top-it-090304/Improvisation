@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://b71xggx1c84jc"]
+[gd_scene format=4 uid="uid://b71xggx1c84jc"]
 
-[ext_resource type="PackedScene" uid="uid://b3t8kwno8437" path="res://levels/base.tscn" id="1_s5l74"]
 [ext_resource type="PackedScene" uid="uid://dntuivli2lx1s" path="res://objects/tile.tscn" id="2_wamqt"]
+[ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="2_xo37v"]
 
 [node name="6" type="Node2D" unique_id=1946799325]
 
-[node name="Base" parent="." unique_id=1989446572 instance=ExtResource("1_s5l74")]
-
 [node name="Tiles" parent="." unique_id=1551868908 instance=ExtResource("2_wamqt")]
-tile_map_data = PackedByteArray(0, 0, 7, 0, 14, 0, 0, 0, 0, 0, 0, 0, 2, 0, 8, 0, 15, 0, 0, 0, 0, 0, 0, 0, 2, 0, 9, 0, 14, 0, 0, 0, 0, 0, 0, 0, 2, 0, 9, 0, 15, 0, 0, 0, 0, 0, 0, 0, 5, 80)
+tile_map_data = PackedByteArray("AAAIAA8AAAAAAAAAAgAJAA4AAAAAAAAAAgAJAA8AAAAAAAAABVANAA0AAAAAAAAABVAHAA8AAAAAAAAABTAHAA4AAAAAAAAAAgA=")
+
+[node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("2_xo37v")]

@@ -993,3 +993,7 @@ rotation = 1.5707964
 
 [node name="Hole" parent="." unique_id=104827692 instance=ExtResource("9_l2qoq")]
 position = Vector2(480, 1632)
+fall_duration = null
+sink_depth = null
+respawn_height_offset = null
+manual_start_position = null

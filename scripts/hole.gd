@@ -17,36 +17,25 @@ var sprite: Sprite2D = null
 var collision_shape: CollisionShape2D = null
 
 func _ready() -> void:
-	# Подключаем сигнал
+	# Подключаем сигнал столкновения [cite: 6]
 	body_entered.connect(_on_body_entered)
 	
-	# Пробуем найти стартовую позицию разными способами
-	_find_start_position()
+	# Используем call_deferred, чтобы сцена успела загрузиться, 
+	# и мы могли найти положение шара
+	call_deferred("_capture_initial_ball_pos")
 
-func _find_start_position():
-	# Если задана ручная позиция - используем её
-	if manual_start_position != Vector2.ZERO:
-		start_position = manual_start_position
-		print("Использую ручную стартовую позицию: ", start_position)
-		return
+func _capture_initial_ball_pos():
+	# Ищем узел с именем "Ball" [cite: 4, 14]
+	var ball_node = get_tree().current_scene.find_child("Ball", true, false)
 	
-	# Способ 1: Ищем по имени в текущей сцене
-	var start_point = get_tree().current_scene.find_child("StartPosition", true, false)
-	if start_point:
-		start_position = start_point.global_position
-		print("Найдена StartPosition по имени: ", start_position)
-		return
-	
-	# Способ 2: Ищем по группе
-	var start_nodes = get_tree().get_nodes_in_group("start_position")
-	if start_nodes.size() > 0:
-		start_position = start_nodes[0].global_position
-		print("Найдена StartPosition по группе: ", start_position)
-		return
-	
-	# Если ничего не нашли, используем позицию дыры + смещение (как запасной вариант)
-	start_position = global_position + Vector2(0, -200)
-	print("Стартовая позиция не найдена! Использую запасную: ", start_position)
+	if ball_node:
+		# Запоминаем его координаты как исходные
+		start_position = ball_node.global_position
+		print("Исходная позиция шара сохранена: ", start_position)
+	else:
+		# Если шар не найден, используем текущую позицию лузы как страховку 
+		start_position = global_position
+		print("Предупреждение: Шар не найден, установлена позиция лузы")
 
 func _on_body_entered(body: Node2D) -> void:
 	# Если уже телепортируемся - игнорируем
