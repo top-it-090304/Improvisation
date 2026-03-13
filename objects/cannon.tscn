@@ -1,14 +1,11 @@
-[gd_scene format=3 uid="uid://jg03krgxoyig"]
+[gd_scene format=3 uid="uid://y40fw1jyh54u"]
 
-[ext_resource type="Script" uid="uid://cmdmk7g1yener" path="res://cannon.gd" id="1_03t7f"]
-[ext_resource type="Texture2D" uid="uid://dfgyngoe2opx2" path="res://000.png.a07a1bfcf57daf787d4730b7bb3f60d6.png" id="2_a53et"]
+[ext_resource type="Texture2D" uid="uid://bv8fnv7l4l5ii" path="res://sources/Cannon.png" id="1_03t7f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a53et"]
 size = Vector2(85, 58)
 
 [node name="Cannon" type="StaticBody2D" unique_id=230491907]
-script = ExtResource("1_03t7f")
-spawn_distance = 60.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1985548029]
 position = Vector2(-3.5, 0)
@@ -16,4 +13,4 @@ shape = SubResource("RectangleShape2D_a53et")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1564304100]
 scale = Vector2(0.3699436, 0.3699436)
-texture = ExtResource("2_a53et")
+texture = ExtResource("1_03t7f")

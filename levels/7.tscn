@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://birfn85h5qh8"]
+
+[ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="1_kfrw4"]
+[ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="2_kudwh"]
+[ext_resource type="PackedScene" uid="uid://df66a5km0xcvh" path="res://objects/finish.tscn" id="3_680f1"]
+[ext_resource type="PackedScene" uid="uid://y40fw1jyh54u" path="res://objects/cannon.tscn" id="4_tg2ai"]
+
+[node name="7" type="Node2D" unique_id=446506765]
+
+[node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_kfrw4")]
+
+[node name="Ball" parent="." unique_id=1990782279 instance=ExtResource("2_kudwh")]
+position = Vector2(96, 1824)
+
+[node name="Finish" parent="." unique_id=157668249 instance=ExtResource("3_680f1")]
+position = Vector2(992, 96)
+
+[node name="Cannon" parent="." unique_id=230491907 instance=ExtResource("4_tg2ai")]
+position = Vector2(304, 992)
