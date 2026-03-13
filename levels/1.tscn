@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cvwtem3ahktek" path="res://objects/smoother.tscn" id="6_725xe"]
 [ext_resource type="PackedScene" uid="uid://pk0mkt60rjop" path="res://objects/corner big.tscn" id="7_2aftt"]
 [ext_resource type="PackedScene" uid="uid://i58yha4l5qlf" path="res://objects/logo.tscn" id="8_725xe"]
+[ext_resource type="PackedScene" uid="uid://bdoci3lxrvjjf" path="res://objects/hole.tscn" id="9_344tg"]
 
 [node name="1" type="Node2D" unique_id=1989446572]
 
@@ -664,3 +665,84 @@ position = Vector2(928, 288)
 
 [node name="Block190" parent="." unique_id=940915378 instance=ExtResource("5_2aftt")]
 position = Vector2(864, 352)
+
+[node name="Finish2" parent="." unique_id=1389710409 instance=ExtResource("3_frab7")]
+position = Vector2(272, 288)
+
+[node name="Finish3" parent="." unique_id=707139785 instance=ExtResource("3_frab7")]
+position = Vector2(816, 288)
+
+[node name="Hole" parent="." unique_id=604473438 instance=ExtResource("9_344tg")]
+position = Vector2(416, 1184)
+
+[node name="Hole2" parent="." unique_id=1260189664 instance=ExtResource("9_344tg")]
+position = Vector2(672, 1184)
+
+[node name="Hole3" parent="." unique_id=260894105 instance=ExtResource("9_344tg")]
+position = Vector2(416, 1440)
+
+[node name="Hole4" parent="." unique_id=404590101 instance=ExtResource("9_344tg")]
+position = Vector2(672, 1440)
+
+[node name="Hole5" parent="." unique_id=1322011449 instance=ExtResource("9_344tg")]
+position = Vector2(416, 1120)
+
+[node name="Hole6" parent="." unique_id=611772654 instance=ExtResource("9_344tg")]
+position = Vector2(416, 1056)
+
+[node name="Hole7" parent="." unique_id=961465813 instance=ExtResource("9_344tg")]
+position = Vector2(416, 992)
+
+[node name="Hole8" parent="." unique_id=571348238 instance=ExtResource("9_344tg")]
+position = Vector2(416, 928)
+
+[node name="Hole9" parent="." unique_id=1310887532 instance=ExtResource("9_344tg")]
+position = Vector2(480, 864)
+
+[node name="Hole10" parent="." unique_id=56240987 instance=ExtResource("9_344tg")]
+position = Vector2(480, 928)
+
+[node name="Hole11" parent="." unique_id=394572849 instance=ExtResource("9_344tg")]
+position = Vector2(544, 864)
+
+[node name="Hole12" parent="." unique_id=56230600 instance=ExtResource("9_344tg")]
+position = Vector2(544, 928)
+
+[node name="Hole13" parent="." unique_id=1331882181 instance=ExtResource("9_344tg")]
+position = Vector2(544, 800)
+
+[node name="Hole14" parent="." unique_id=1719999732 instance=ExtResource("9_344tg")]
+position = Vector2(608, 864)
+
+[node name="Hole15" parent="." unique_id=324734438 instance=ExtResource("9_344tg")]
+position = Vector2(608, 928)
+
+[node name="Hole16" parent="." unique_id=1020391419 instance=ExtResource("9_344tg")]
+position = Vector2(672, 928)
+
+[node name="Hole17" parent="." unique_id=1366881541 instance=ExtResource("9_344tg")]
+position = Vector2(672, 992)
+
+[node name="Hole18" parent="." unique_id=1855301545 instance=ExtResource("9_344tg")]
+position = Vector2(672, 1056)
+
+[node name="Hole19" parent="." unique_id=909227648 instance=ExtResource("9_344tg")]
+position = Vector2(672, 1120)
+
+[node name="Hole20" parent="." unique_id=1736938289 instance=ExtResource("9_344tg")]
+position = Vector2(416, 1504)
+
+[node name="Hole21" parent="." unique_id=2121555308 instance=ExtResource("9_344tg")]
+position = Vector2(416, 1568)
+
+[node name="Hole22" parent="." unique_id=1815554049 instance=ExtResource("9_344tg")]
+position = Vector2(672, 1504)
+
+[node name="Hole23" parent="." unique_id=1592313491 instance=ExtResource("9_344tg")]
+position = Vector2(672, 1568)
+
+[node name="Hole24" parent="." unique_id=1600678127 instance=ExtResource("9_344tg")]
+position = Vector2(416, 1632)
+
+[node name="Hole25" parent="." unique_id=145776490 instance=ExtResource("9_344tg")]
+position = Vector2(672, 1632)
