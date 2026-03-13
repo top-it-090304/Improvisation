@@ -23,11 +23,12 @@ func _finish(body: Node2D) -> void:
 		# 4. ЗАВЕРШЕНИЕ
 		tween.set_parallel(false)
 		tween.tween_callback(func(): _on_animation_finished(body))
+		
 func _on_animation_finished(body):
-	# Возвращаем размер шару для следующего уровня
 	body.scale = Vector2.ONE
-	
-	# Вызываем менеджер уровней
 	var levels_manager = get_tree().current_scene.find_child("Levels", true, false)
 	if levels_manager:
-		levels_manager.next_level()
+		levels_manager.load_level(-1)
+		var ball = get_tree().current_scene.find_child("Ball", true, false)
+		if ball:
+			ball.is_active = false

@@ -29,10 +29,9 @@ func _init_background():
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
-			is_active = !is_active
-			if is_active:
-				start_mouse_pos = get_global_mouse_position()
-			else:
+			var menu_node = get_tree().current_scene.find_child("menu", true, false)
+			if menu_node:
+				menu_node.show()
 				stop_ball()
 
 func stop_ball():
