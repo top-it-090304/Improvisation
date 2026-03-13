@@ -555,7 +555,7 @@ position = Vector2(736, 800)
 rotation = 3.1415927
 
 [node name="Logo" parent="." unique_id=1148783748 instance=ExtResource("8_725xe")]
-position = Vector2(544, 424)
+position = Vector2(544, 416)
 
 [node name="Block84" parent="." unique_id=2079449921 instance=ExtResource("7_2aftt")]
 position = Vector2(352, 160)
