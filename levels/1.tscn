@@ -520,3 +520,35 @@ position = Vector2(544, 928)
 [node name="Block12" parent="." unique_id=1690131910 instance=ExtResource("4_a1scl")]
 position = Vector2(544, 928)
 rotation = -1.5707964
+
+[node name="Block15" parent="." unique_id=248871436 instance=ExtResource("4_a1scl")]
+position = Vector2(288, 480)
+rotation = 1.5707964
+
+[node name="Block21" parent="." unique_id=1272753165 instance=ExtResource("4_a1scl")]
+position = Vector2(224, 544)
+rotation = 1.5707964
+
+[node name="Block38" parent="." unique_id=2042931223 instance=ExtResource("4_a1scl")]
+position = Vector2(800, 480)
+rotation = 3.1415927
+
+[node name="Block50" parent="." unique_id=1500026008 instance=ExtResource("4_a1scl")]
+position = Vector2(864, 544)
+rotation = 3.1415927
+
+[node name="Block60" parent="." unique_id=2089400463 instance=ExtResource("4_a1scl")]
+position = Vector2(416, 608)
+rotation = 1.5707964
+
+[node name="Block66" parent="." unique_id=109620263 instance=ExtResource("4_a1scl")]
+position = Vector2(352, 672)
+rotation = 1.5707964
+
+[node name="Block68" parent="." unique_id=298067825 instance=ExtResource("4_a1scl")]
+position = Vector2(672, 608)
+rotation = 3.1415927
+
+[node name="Block82" parent="." unique_id=2025623850 instance=ExtResource("4_a1scl")]
+position = Vector2(736, 672)
+rotation = 3.1415927
