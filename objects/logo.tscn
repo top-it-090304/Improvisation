@@ -1,3 +1,50 @@
 [gd_scene format=3 uid="uid://i58yha4l5qlf"]
 
-[node name="Logo" type="Node2D" unique_id=1068970249]
+[ext_resource type="Texture2D" uid="uid://cujwkqglasjp7" path="res://sources/logo.png" id="1_0wkrq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2v23n"]
+size = Vector2(192, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnyco"]
+size = Vector2(128, 192)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_17erl"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_an3ba"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8bnqk"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bfsy7"]
+radius = 32.0
+
+[node name="Logo" type="StaticBody2D" unique_id=1148783748]
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=180670733]
+position = Vector2(0, -1.9073486e-06)
+scale = Vector2(0.25, 0.24999999)
+texture = ExtResource("1_0wkrq")
+
+[node name="Shape 1" type="CollisionShape2D" parent="." unique_id=1110387404]
+shape = SubResource("RectangleShape2D_2v23n")
+
+[node name="Shape 2" type="CollisionShape2D" parent="." unique_id=207035881]
+shape = SubResource("RectangleShape2D_tnyco")
+
+[node name="Shape 3" type="CollisionShape2D" parent="." unique_id=2111980351]
+position = Vector2(-64, -64)
+shape = SubResource("CircleShape2D_17erl")
+
+[node name="Shape 4" type="CollisionShape2D" parent="." unique_id=1448414043]
+position = Vector2(64, -64)
+shape = SubResource("CircleShape2D_an3ba")
+
+[node name="Shape 5" type="CollisionShape2D" parent="." unique_id=378660514]
+position = Vector2(-64, 64)
+shape = SubResource("CircleShape2D_8bnqk")
+
+[node name="Shape 6" type="CollisionShape2D" parent="." unique_id=1133521850]
+position = Vector2(64, 64)
+shape = SubResource("CircleShape2D_bfsy7")
