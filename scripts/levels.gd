@@ -13,12 +13,10 @@ var levels = [
 var current_level_index = -1
 var current_level_node = null
 
-# Переменные для фона
 var bg_node : Sprite2D = null
 var bg_start_pos : Vector2 = Vector2.ZERO
 
 func _ready():
-	# Первый уровень
 	load_level(current_level_index)
 	
 func _init_background():
