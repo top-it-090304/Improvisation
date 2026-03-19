@@ -36,7 +36,7 @@ position = Vector2(96, 1824)
 rotation = 3.1415927
 
 [node name="Bumper" parent="." unique_id=1779603720 instance=ExtResource("6_1x3l0")]
-position = Vector2(544, 1360)
+position = Vector2(544, 1336)
 
 [node name="Block5" parent="." unique_id=717793850 instance=ExtResource("5_680f1")]
 position = Vector2(800, 672)
@@ -195,13 +195,13 @@ position = Vector2(928, 672)
 rotation = 3.1415927
 
 [connection signal="body_entered" from="Tiles/Hole" to="Tiles/Hole" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@52169" to="Tiles/@Area2D@52169" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@52468" to="Tiles/@Area2D@52468" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@52469" to="Tiles/@Area2D@52469" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@52470" to="Tiles/@Area2D@52470" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@52472" to="Tiles/@Area2D@52472" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@59755" to="Tiles/@Area2D@59755" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@59756" to="Tiles/@Area2D@59756" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@61498" to="Tiles/@Area2D@61498" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@61499" to="Tiles/@Area2D@61499" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@61500" to="Tiles/@Area2D@61500" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@77470" to="Tiles/@Area2D@77470" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@77522" to="Tiles/@Area2D@77522" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@77523" to="Tiles/@Area2D@77523" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@77524" to="Tiles/@Area2D@77524" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@77525" to="Tiles/@Area2D@77525" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@77579" to="Tiles/@Area2D@77579" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@77580" to="Tiles/@Area2D@77580" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@77589" to="Tiles/@Area2D@77589" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@77590" to="Tiles/@Area2D@77590" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@77591" to="Tiles/@Area2D@77591" method="_finish"]
