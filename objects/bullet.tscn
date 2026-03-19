@@ -1,9 +1,6 @@
-[gd_scene format=3 uid="uid://brdgn47nb6e5b"]
+[gd_scene format=3 uid="uid://txqq2n5os8ho"]
 
 [ext_resource type="Script" uid="uid://b1qnvj4eud7s1" path="res://scripts/bullet.gd" id="1_1hbe6"]
 
-
 [node name="Bullet" type="Area2D" unique_id=501459365]
 script = ExtResource("1_1hbe6")
-speed = 800.0
-bullet_radius = 18.0

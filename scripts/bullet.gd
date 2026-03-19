@@ -13,6 +13,7 @@ var shooter: Node2D = null  # Кто выстрелил
 
 func _ready() -> void:
 	# Подключаем сигналы
+	z_index = 3 
 	body_entered.connect(_on_body_entered)
 	
 	# Настраиваем коллизию
