@@ -1,0 +1,40 @@
+[gd_scene format=4 uid="uid://dty6uvkdif7fj"]
+
+[ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="1_6uvrs"]
+[ext_resource type="PackedScene" uid="uid://dntuivli2lx1s" path="res://objects/tiles.tscn" id="2_5f8f2"]
+[ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner small.tscn" id="3_abkmy"]
+[ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="4_urk27"]
+
+[node name="8" type="Node2D" unique_id=561608826]
+
+[node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_6uvrs")]
+
+[node name="Tiles" parent="." unique_id=1551868908 instance=ExtResource("2_5f8f2")]
+tile_map_data = PackedByteArray("AAANABsAAAAAAAAAAgAOABoAAAAAAAAAAgAOABkAAAAAAAAAAgALABkAAAAAAAAAAgALABoAAAAAAAAAAgAMABsAAAAAAAAAAgACABsAAAAAAAAADGABABkAAAAAAAAAAgABABoAAAAAAAAAAgABABsAAAAAAAAAAgADABkAAAAAAAAAAgADABoAAAAAAAAAAgADABsAAAAAAAAAAgABABgAAAAAAAAAAgABABcAAAAAAAAAAgADABgAAAAAAAAAAgABABYAAAAAAAAAAgACABUAAAAAAAAAAgADABUAAAAAAAAAAgAEABUAAAAAAAAAAgAFABYAAAAAAAAAAgAFABUAAAAAAAAABQADABcAAAAAAAAACgADABwAAAAAAAAAAgABABwAAAAAAAAAAgABABUAAAAAAAAAAgAHABoAAAAAAAAACAAIABoAAAAAAAAACAAJABoAAAAAAAAACAAKABoAAAAAAAAACAAFABoAAAAAAAAABAAOABsAAAAAAAAABVALABsAAAAAAAAABTANABoAAAAAAAAABlAMABoAAAAAAAAABjACABkAAAAAAAAAAQAEABYAAAAAAAAABgACABYAAAAAAAAABmAFABcAAAAAAAAACjAHABcAAAAAAAAACQAJABcAAAAAAAAACQAMABcAAAAAAAAAAgANABcAAAAAAAAAAgALABgAAAAAAAAAAgAOABgAAAAAAAAAAgAOABcAAAAAAAAABQALABcAAAAAAAAABWANABgAAAAAAAAABgAMABgAAAAAAAAABmA=")
+
+[node name="Block" parent="." unique_id=296666591 instance=ExtResource("3_abkmy")]
+position = Vector2(992, 96)
+
+[node name="Block2" parent="." unique_id=845239466 instance=ExtResource("3_abkmy")]
+position = Vector2(96, 96)
+rotation = -1.5707964
+
+[node name="Block3" parent="." unique_id=1234852309 instance=ExtResource("3_abkmy")]
+position = Vector2(992, 1824)
+rotation = 1.5707964
+
+[node name="Block4" parent="." unique_id=1164365157 instance=ExtResource("3_abkmy")]
+position = Vector2(160, 1824)
+rotation = 1.5707964
+
+[node name="Block5" parent="." unique_id=608815950 instance=ExtResource("3_abkmy")]
+position = Vector2(160, 1824)
+rotation = 3.1415927
+
+[node name="Ball" parent="." unique_id=1990782279 instance=ExtResource("4_urk27")]
+position = Vector2(832, 1632)
+
+[connection signal="body_entered" from="Tiles/Hole" to="Tiles/Hole" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@29264" to="Tiles/@Area2D@29264" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@29265" to="Tiles/@Area2D@29265" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@29267" to="Tiles/@Area2D@29267" method="_finish"]
