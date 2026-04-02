@@ -1,31 +1,42 @@
-[gd_scene format=3 uid="uid://befj70yvk2434"]
+[gd_scene format=3 uid="uid://bctj1bpuvdb6f"]
 
 [ext_resource type="Texture2D" uid="uid://cfih8lask7lun" path="res://sources/Bumper.png" id="1_0dfj3"]
-[ext_resource type="Script" uid="uid://ck2bp8omh42s7" path="res://scripts/bumper.gd" id="1_b4j1m"]
+[ext_resource type="Script" uid="uid://ck2bp8omh42s7" path="res://scripts/bumper.gd" id="1_6ex0s"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6ex0s"]
+bounce = 0.7
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_odiup"]
-radius = 14.4
+radius = 2.56
 
-[node name="Bumper" type="Area2D" unique_id=1779603720]
-script = ExtResource("1_b4j1m")
+[sub_resource type="CircleShape2D" id="CircleShape2D_dpw6w"]
+radius = 72.0
 
-[node name="Texture" type="StaticBody2D" parent="." unique_id=603198171]
+[node name="Bumper" type="StaticBody2D" unique_id=1460981031]
+physics_material_override = SubResource("PhysicsMaterial_6ex0s")
 
-[node name="Shape" type="CollisionShape2D" parent="." unique_id=1871396643]
-scale = Vector2(5, 5)
+[node name="Shape" type="CollisionShape2D" parent="." unique_id=1692337691]
+scale = Vector2(25, 25)
 shape = SubResource("CircleShape2D_odiup")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1450917469]
+[node name="Area" type="Area2D" parent="." unique_id=479530355]
+script = ExtResource("1_6ex0s")
+
+[node name="Shape2" type="CollisionShape2D" parent="Area" unique_id=137181673]
+shape = SubResource("CircleShape2D_dpw6w")
+
+[node name="Texture" type="TextureRect" parent="." unique_id=1783162862]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -63.0
-offset_top = -63.0
-offset_right = 193.0
-offset_bottom = 193.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 192.0
+offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_0dfj3")
+metadata/_edit_use_anchors_ = true

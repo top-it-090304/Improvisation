@@ -65,5 +65,10 @@ custom_minimum_size = Vector2(205, 205)
 layout_mode = 2
 text = "7"
 
+[node name="8" type="Button" parent="GridContainer" unique_id=58373513]
+custom_minimum_size = Vector2(205, 205)
+layout_mode = 2
+text = "8"
+
 [node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("2_kfbsc")]
 position = Vector2(-64, -64)

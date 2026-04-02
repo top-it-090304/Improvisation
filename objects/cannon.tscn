@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bv8fnv7l4l5ii" path="res://sources/Cannon.png" id="1_03t7f"]
 [ext_resource type="Script" uid="uid://clh0fp7304nhq" path="res://scripts/cannon.gd" id="1_6wwdh"]
-[ext_resource type="PackedScene" uid="uid://brdgn47nb6e5b" path="res://objects/bullet.tscn" id="2_p0m71"]
+[ext_resource type="PackedScene" uid="uid://txqq2n5os8ho" path="res://objects/bullet.tscn" id="2_p0m71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a53et"]
 size = Vector2(85, 58)
