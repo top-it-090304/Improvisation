@@ -62,3 +62,30 @@ func stop_ball():
 	linear_velocity = Vector2.ZERO
 	angular_velocity = 0
 	constant_force = Vector2.ZERO
+
+func change_ball_size(new_scale: float):
+	# Выполняем изменения в безопасное для физики время
+	call_deferred("_apply_size_change", new_scale)
+
+func _apply_size_change(new_scale: float):
+	self.scale = Vector2.ONE
+
+	# 1. Меняем визуал (Убедись, что имя узла именно "Texture", как на твоих скриншотах)
+	var sprite = get_node_or_null("Texture")
+	if sprite:
+		sprite.scale = Vector2(new_scale/10, new_scale/10)
+	else:
+		print("Ошибка: Узел 'Texture' не найден в шаре!")
+
+	# 2. Меняем физическую форму (Убедись, что имя узла "Shape" и это CircleShape2D)
+	var col_shape = get_node_or_null("Shape")
+	if col_shape and col_shape.shape is CircleShape2D:
+		# Мы меняем масштаб самого узла коллизии
+		col_shape.scale = Vector2(new_scale, new_scale)
+	else:
+		print("Ошибка: Узел 'Shape' не найден или не является CircleShape2D!")
+	
+	# 3. Обновляем массу для твоих расчетов силы движения (target_force * mass)
+	mass = new_scale
+	
+	print("Размер зафиксирован на: ", new_scale)

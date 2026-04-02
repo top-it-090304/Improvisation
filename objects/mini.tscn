@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cos1nbku7c1hg"]
+
+[ext_resource type="Texture2D" uid="uid://d3x60my1usvj1" path="res://sources/Mini.png" id="1_wene8"]
+[ext_resource type="Script" uid="uid://cabj8aoaklivy" path="res://scripts/mini.gd" id="2_wy2ca"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wy2ca"]
+a = Vector2(48, 24)
+b = Vector2(-48, 24)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gidgi"]
+a = Vector2(-8, -16)
+b = Vector2(24, -16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wene8"]
+radius = 8.0
+
+[node name="Mini" type="StaticBody2D" unique_id=681371459]
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=1809261520]
+z_index = 2
+position = Vector2(-64.000015, -64)
+scale = Vector2(0.19921875, 0.19531249)
+texture = ExtResource("1_wene8")
+offset = Vector2(321.2549, 286.72003)
+
+[node name="Shape" type="CollisionPolygon2D" parent="." unique_id=409825897]
+position = Vector2(-16.000002, -32.000004)
+scale = Vector2(1.2499998, 1.2499998)
+polygon = PackedVector2Array(-36.800003, 12.000001, -37.600006, -23.2, -36.000004, 12.000006, -7.200001, 56.000008)
+
+[node name="Shape2" type="CollisionPolygon2D" parent="." unique_id=263726051]
+position = Vector2(79, 28.999992)
+scale = Vector2(1.5624998, 1.5624998)
+polygon = PackedVector2Array(-66.560005, 5.760006, -65.920006, 5.760006, -65.920006, 23.040007, -66.560005, 23.040007)
+
+[node name="Shape3" type="CollisionPolygon2D" parent="." unique_id=499767038]
+position = Vector2(164, -63)
+scale = Vector2(2.4414055, 2.4414055)
+polygon = PackedVector2Array(-42.18881, 18.841606, -41.369606, 0.8192005, -41.77921, 18.841606, -56.934414, 41.369614)
+
+[node name="Shape4" type="CollisionPolygon2D" parent="." unique_id=1284548343]
+position = Vector2(186, 9)
+scale = Vector2(2.4414055, 2.4414055)
+polygon = PackedVector2Array(-66.355225, 11.878403, -65.94562, 11.878403, -65.920006, 23.040007, -66.560005, 23.040007)
+
+[node name="ResizerTube" type="Node2D" parent="." unique_id=130132768]
+script = ExtResource("2_wy2ca")
+
+[node name="EntryBig" type="Area2D" parent="ResizerTube" unique_id=1899623755]
+
+[node name="Shape" type="CollisionShape2D" parent="ResizerTube/EntryBig" unique_id=1145924374]
+position = Vector2(0, -80)
+shape = SubResource("SegmentShape2D_wy2ca")
+
+[node name="EntrySmall" type="Area2D" parent="ResizerTube" unique_id=1061415269]
+
+[node name="Shape" type="CollisionShape2D" parent="ResizerTube/EntrySmall" unique_id=1714714885]
+position = Vector2(-8, 80)
+shape = SubResource("SegmentShape2D_gidgi")
+
+[node name="CenterZone" type="Area2D" parent="ResizerTube" unique_id=806838679]
+
+[node name="Shape" type="CollisionShape2D" parent="ResizerTube/CenterZone" unique_id=883638103]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_wene8")
+
+[connection signal="body_entered" from="ResizerTube/EntryBig" to="ResizerTube" method="_on_entry_big_body_entered"]
+[connection signal="body_entered" from="ResizerTube/EntrySmall" to="ResizerTube" method="_on_entry_small_body_entered"]
+[connection signal="body_entered" from="ResizerTube/CenterZone" to="ResizerTube" method="_on_center_zone_body_entered"]
