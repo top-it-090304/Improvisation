@@ -18,15 +18,7 @@ func _on_level_button_pressed(index: int):
 	var levels_manager = get_tree().current_scene.find_child("Levels", true, false)
 	if levels_manager:
 		levels_manager.load_level(index)
+		Data.set_result(index, false)
 		var ball = get_tree().current_scene.find_child("Ball", true, false)
 		if ball:
 			ball.is_active = true
-
-func set_level_button_color(index: int, is_success: bool):
-	var grid = $GridContainer
-	if index >= 0 and index < grid.get_child_count():
-		var button = grid.get_child(index)
-		if is_success:
-			button.modulate = Color.GREEN  # Зеленый при победе
-		else:
-			button.modulate = Color.RED    # Красный при поражении
