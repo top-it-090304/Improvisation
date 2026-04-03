@@ -1,7 +1,59 @@
 [gd_scene format=3 uid="uid://uluup61cuh50"]
 
 [ext_resource type="Script" uid="uid://cleptaarxeueu" path="res://scripts/menu.gd" id="1_cnlwo"]
+[ext_resource type="FontFile" uid="uid://303srh4j2smh" path="res://sources/Comfortaa.ttf" id="2_gbx6r"]
 [ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="2_kfbsc"]
+[ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner small.tscn" id="4_bvm7p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvm7p"]
+bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fskk"]
+bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6nun2"]
+bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbhb4"]
+bg_color = Color(0.40111968, 0.30277961, 0.17689279, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sq0xk"]
+bg_color = Color(0.2542379, 0.1858238, 0.10038101, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="Theme" id="Theme_a5bpp"]
+Button/colors/font_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+Button/colors/font_focus_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+Button/colors/font_hover_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+Button/colors/font_hover_pressed_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+Button/colors/font_pressed_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+Button/font_sizes/font_size = 80
+Button/fonts/font = ExtResource("2_gbx6r")
+Button/icons/icon = null
+Button/styles/disabled = SubResource("StyleBoxFlat_bvm7p")
+Button/styles/focus = SubResource("StyleBoxFlat_2fskk")
+Button/styles/hover = SubResource("StyleBoxFlat_6nun2")
+Button/styles/normal = SubResource("StyleBoxFlat_tbhb4")
+Button/styles/pressed = SubResource("StyleBoxFlat_sq0xk")
 
 [node name="Menu" type="Control" unique_id=470936890]
 z_index = 3
@@ -28,9 +80,12 @@ offset_right = 566.32
 offset_bottom = 970.512
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_a5bpp")
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 24
 columns = 4
 
-[node name="1" type="Button" parent="GridContainer" unique_id=1893696092]
+[node name="1" type="Button" parent="GridContainer" unique_id=105509426]
 custom_minimum_size = Vector2(205, 205)
 layout_mode = 2
 text = "1"
@@ -72,3 +127,18 @@ text = "8"
 
 [node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("2_kfbsc")]
 position = Vector2(-64, -64)
+
+[node name="Block" parent="." unique_id=296666591 instance=ExtResource("4_bvm7p")]
+position = Vector2(928, 32)
+
+[node name="Block2" parent="." unique_id=1570163092 instance=ExtResource("4_bvm7p")]
+position = Vector2(32, 32)
+rotation = -1.5707964
+
+[node name="Block3" parent="." unique_id=1633046330 instance=ExtResource("4_bvm7p")]
+position = Vector2(928, 1760)
+rotation = 1.5707964
+
+[node name="Block4" parent="." unique_id=333950220 instance=ExtResource("4_bvm7p")]
+position = Vector2(32, 1760)
+rotation = 3.1415927
