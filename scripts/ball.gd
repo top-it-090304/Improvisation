@@ -14,7 +14,8 @@ func _ready() -> void:
 	gravity_scale = 0
 	linear_damp = 0.5
 	angular_damp = 0.5
-	can_sleep = false 
+	can_sleep = false
+	_apply_size_change(1.0)
 	call_deferred("_init_background")
 
 func _init_background():

@@ -71,6 +71,7 @@ func start_teleport():
 	
 	# Запускаем анимацию
 	animate_fall_into_hole()
+	ball._apply_size_change(1.0)
 
 func animate_fall_into_hole():
 	var tween = create_tween()
