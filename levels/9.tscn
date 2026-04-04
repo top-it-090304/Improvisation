@@ -1,0 +1,19 @@
+[gd_scene format=4 uid="uid://cqlrjr57xsd"]
+
+[ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="1_3culr"]
+[ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="2_y1sio"]
+[ext_resource type="PackedScene" uid="uid://dntuivli2lx1s" path="res://objects/tiles.tscn" id="3_20boq"]
+[ext_resource type="PackedScene" uid="uid://bg8anpeoxovok" path="res://objects/carousel.tscn" id="4_6utlt"]
+
+[node name="9" type="Node2D" unique_id=811916408]
+
+[node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_3culr")]
+
+[node name="Ball" parent="." unique_id=1990782279 instance=ExtResource("2_y1sio")]
+position = Vector2(96, 1824)
+
+[node name="Tiles" parent="." unique_id=1551868908 instance=ExtResource("3_20boq")]
+tile_map_data = PackedByteArray("AAAEABwAAAAAAAAAAgAEABsAAAAAAAAAAgAEABkAAAAAAAAAAgAEABgAAAAAAAAAAgADABgAAAAAAAAAAgACABgAAAAAAAAAAgACABwAAAAAAAAAAgADABwAAAAAAAAAAgABABgAAAAAAAAAAgA=")
+
+[node name="Carousel" parent="." unique_id=1657912989 instance=ExtResource("4_6utlt")]
+position = Vector2(160, 1696)

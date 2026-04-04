@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bg8anpeoxovok"]
+
+[ext_resource type="Script" uid="uid://div526atlldsc" path="res://scripts/carousel.gd" id="1_t0csv"]
+[ext_resource type="Texture2D" uid="uid://dq732lxaf63i7" path="res://sources/Carousel.png" id="1_y0g0s"]
+
+[node name="Carousel" type="StaticBody2D" unique_id=2034328031]
+script = ExtResource("1_t0csv")
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=1214850602]
+position = Vector2(0, 1.9073486e-06)
+scale = Vector2(0.11085452, 0.110854514)
+texture = ExtResource("1_y0g0s")
+
+[node name="Shape" type="CollisionPolygon2D" parent="." unique_id=1713140393]
+position = Vector2(9.375004, 33.749985)
+scale = Vector2(1.8749999, 1.8750001)
+polygon = PackedVector2Array(-8.7333355, -21.733324, -6.6000023, -60.133324, -3.4000022, -60.133324, -1.8000021, -21.733324, 37.13333, -19.59999, 37.13333, -16.39999, -1.8000021, -14.799991, -3.4000022, 24.13334, -6.6000023, 24.13334, -8.7333355, -14.799991, -47.13334, -16.39999, -47.13334, -19.59999)

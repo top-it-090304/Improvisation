@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://clqhk15nb32oo"]
+
+[ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_yx0e3"]
+
+[node name="Cross" type="StaticBody2D" unique_id=501701313]
+
+[node name="Texture 1" type="Sprite2D" parent="." unique_id=1354880133]
+position = Vector2(-31.999998, -31.999998)
+scale = Vector2(0.61538464, 0.61538464)
+texture = ExtResource("1_yx0e3")
+region_enabled = true
+region_rect = Rect2(0, 0, 104, 104)
+
+[node name="Texture 2" type="Sprite2D" parent="." unique_id=288228922]
+position = Vector2(-32, 95.99999)
+scale = Vector2(0.61538464, 0.61538464)
+texture = ExtResource("1_yx0e3")
+region_enabled = true
+region_rect = Rect2(0, 0, 104, 104)
+
+[node name="Texture 3" type="Sprite2D" parent="." unique_id=384080221]
+position = Vector2(-96, 32)
+scale = Vector2(0.61538464, 0.61538464)
+texture = ExtResource("1_yx0e3")
+region_enabled = true
+region_rect = Rect2(0, 0, 104, 104)
+
+[node name="Texture 4" type="Sprite2D" parent="." unique_id=59147378]
+position = Vector2(31.999992, 32)
+scale = Vector2(0.61538464, 0.61538464)
+texture = ExtResource("1_yx0e3")
+region_enabled = true
+region_rect = Rect2(0, 0, 104, 104)
