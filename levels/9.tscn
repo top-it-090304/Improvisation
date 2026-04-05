@@ -4,6 +4,36 @@
 [ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="2_y1sio"]
 [ext_resource type="PackedScene" uid="uid://dntuivli2lx1s" path="res://objects/tiles.tscn" id="3_20boq"]
 [ext_resource type="PackedScene" uid="uid://bg8anpeoxovok" path="res://objects/carousel.tscn" id="4_6utlt"]
+[ext_resource type="PackedScene" uid="uid://cvwtem3ahktek" path="res://objects/smoother.tscn" id="4_rleet"]
+[ext_resource type="PackedScene" uid="uid://y40fw1jyh54u" path="res://objects/cannon.tscn" id="5_f6ak2"]
+[ext_resource type="PackedScene" uid="uid://clqhk15nb32oo" path="res://objects/cross.tscn" id="6_g38du"]
+[ext_resource type="PackedScene" uid="uid://baclftxnn0jwj" path="res://objects/block.tscn" id="7_xm8gi"]
+[ext_resource type="PackedScene" uid="uid://ds1gkkqrswhpq" path="res://objects/bouce.tscn" id="8_aret7"]
+[ext_resource type="PackedScene" uid="uid://bctj1bpuvdb6f" path="res://objects/bumper.tscn" id="9_7mwkg"]
+[ext_resource type="PackedScene" uid="uid://pk0mkt60rjop" path="res://objects/corner big.tscn" id="10_xrmne"]
+[ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner small.tscn" id="11_oktb3"]
+[ext_resource type="PackedScene" uid="uid://df66a5km0xcvh" path="res://objects/finish.tscn" id="12_7wa1r"]
+[ext_resource type="PackedScene" uid="uid://bdoci3lxrvjjf" path="res://objects/hole.tscn" id="13_yqmcf"]
+[ext_resource type="PackedScene" uid="uid://dtpxfthsgwlba" path="res://objects/round.tscn" id="14_cpwcq"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_72kyi"]
+scenes/1/scene = ExtResource("2_y1sio")
+scenes/2/scene = ExtResource("7_xm8gi")
+scenes/3/scene = ExtResource("8_aret7")
+scenes/4/scene = ExtResource("9_7mwkg")
+scenes/5/scene = ExtResource("10_xrmne")
+scenes/6/scene = ExtResource("11_oktb3")
+scenes/7/scene = ExtResource("12_7wa1r")
+scenes/8/scene = ExtResource("13_yqmcf")
+scenes/9/scene = ExtResource("14_cpwcq")
+scenes/10/scene = ExtResource("4_rleet")
+scenes/11/scene = ExtResource("1_3culr")
+scenes/12/scene = ExtResource("5_f6ak2")
+scenes/13/scene = ExtResource("6_g38du")
+
+[sub_resource type="TileSet" id="TileSet_ivqoy"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetScenesCollectionSource_72kyi")
 
 [node name="9" type="Node2D" unique_id=811916408]
 
@@ -13,7 +43,12 @@
 position = Vector2(96, 1824)
 
 [node name="Tiles" parent="." unique_id=1551868908 instance=ExtResource("3_20boq")]
-tile_map_data = PackedByteArray("AAAEABwAAAAAAAAAAgAEABsAAAAAAAAAAgAEABkAAAAAAAAAAgAEABgAAAAAAAAAAgADABgAAAAAAAAAAgACABgAAAAAAAAAAgACABwAAAAAAAAAAgADABwAAAAAAAAAAgABABgAAAAAAAAAAgAGABoAAAAAAAAADQA=")
+tile_map_data = PackedByteArray("AAABABsAAAAAAAAAAgACABsAAAAAAAAAAgAFABsAAAAAAAAAAgAFABwAAAAAAAAAAgAFABoAAAAAAAAAAgAFABkAAAAAAAAABQAEABkAAAAAAAAACmADABsAAAAAAAAAClABABwAAAAAAAAABmABABoAAAAAAAAABjAGABwAAAAAAAAABjAEABwAAAAAAAAABlAEABoAAAAAAAAABgA=")
+tile_set = SubResource("TileSet_ivqoy")
 
 [node name="Carousel" parent="." unique_id=1657912989 instance=ExtResource("4_6utlt")]
-position = Vector2(160, 1696)
+position = Vector2(160, 1632)
+
+[node name="Block" parent="." unique_id=296666591 instance=ExtResource("11_oktb3")]
+position = Vector2(96, 1824)
+rotation = 3.1415927
