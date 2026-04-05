@@ -48,12 +48,15 @@ position = Vector2(96, 1824)
 [node name="Block9" parent="." unique_id=353610109 instance=ExtResource("6_abkmy")]
 position = Vector2(504, 1672)
 
+[node name="Block51" parent="." unique_id=187666692 instance=ExtResource("6_abkmy")]
+position = Vector2(128, 1048)
+
 [node name="Block16" parent="." unique_id=296666591 instance=ExtResource("6_abkmy")]
 position = Vector2(528, 880)
 rotation = 1.5707964
 
 [node name="Tiles" parent="." unique_id=1551868908 instance=ExtResource("2_5f8f2")]
-tile_map_data = PackedByteArray("AAABABsAAAAAAAAAAgACABsAAAAAAAAAAgAFABkAAAAAAAAABQAEABkAAAAAAAAACmADABsAAAAAAAAAClABABwAAAAAAAAABmABABoAAAAAAAAABjAGABwAAAAAAAAABjAEABwAAAAAAAAABlAEABoAAAAAAAAABgABABcAAAAAAAAAAgACABcAAAAAAAAAAgADABcAAAAAAAAAAgAEABcAAAAAAAAAAgAFABcAAAAAAAAAAgABABgAAAAAAAAABmABABYAAAAAAAAACAAGABcAAAAAAAAAAgAGABkAAAAAAAAACAAKABkAAAAAAAAACQALABcAAAAAAAAACAALABkAAAAAAAAACAANABYAAAAAAAAADFAPABcAAAAAAAAAAgAOABcAAAAAAAAABTAOABkAAAAAAAAAClAMABkAAAAAAAAACmANABkAAAAAAAAAAgAFABoAAAAAAAAAAgAFABsAAAAAAAAAAgAFABwAAAAAAAAAAgANABoAAAAAAAAACjAMABoAAAAAAAAABgAOABoAAAAAAAAABmAPABwAAAAAAAAABjANABwAAAAAAAAABlAOABwAAAAAAAAACgALABoAAAAAAAAADDAHABwAAAAAAAAACAAGABsAAAAAAAAABAAHABYAAAAAAAAACgAKABYAAAAAAAAABQAJABYAAAAAAAAABWAJABcAAAAAAAAAAgAHABIAAAAAAAAABWAIABIAAAAAAAAAAgAJABIAAAAAAAAAAgAKABIAAAAAAAAAAgALABIAAAAAAAAABQALABMAAAAAAAAAAgAHABMAAAAAAAAACjALABQAAAAAAAAACjAJABUAAAAAAAAACAAKABMAAAAAAAAABgAIABMAAAAAAAAABmANABMAAAAAAAAABAAPABYAAAAAAAAACAAMABYAAAAAAAAACgAOABYAAAAAAAAACgAMABcAAAAAAAAACjANABAAAAAAAAAACAAHABEAAAAAAAAABlAJABEAAAAAAAAABjAKABAAAAAAAAAAAgAMABAAAAAAAAAABVAMAA8AAAAAAAAACgAMAAwAAAAAAAAABQALAAwAAAAAAAAACmAJAAwAAAAAAAAAClAIAAwAAAAAAAAABWAIAA0AAAAAAAAAAgAMAA0AAAAAAAAACjAKAA4AAAAAAAAABQALABAAAAAAAAAAAgAIAA4AAAAAAAAAAgALAA0AAAAAAAAABgAKAAwAAAAAAAAACAAMAA4AAAAAAAAACAAJAA0AAAAAAAAABmALAA8AAAAAAAAABlAIABAAAAAAAAAAAgAIABEAAAAAAAAAAgAJAA8AAAAAAAAADQAHABcAAAAAAAAAAgAKABcAAAAAAAAABVAJABkAAAAAAAAABVAHABkAAAAAAAAABTAIABgAAAAAAAAADQAHAA4AAAAAAAAACAAGAA4AAAAAAAAACAAGAA8AAAAAAAAACAAGABAAAAAAAAAACAAFAAwAAAAAAAAACAACABkAAAAAAAAADgAOAA4AAAAAAAAADgAOAAwAAAAAAAAACjAOAAsAAAAAAAAAAgANAAoAAAAAAAAAAgAOAAoAAAAAAAAABQAEABMAAAAAAAAAAgAGABYAAAAAAAAABlAGABUAAAAAAAAACAAEABUAAAAAAAAACAABABQAAAAAAAAADFAPABEAAAAAAAAACAAOABAAAAAAAAAACmAPABAAAAAAAAAAAgAPAA8AAAAAAAAABlAFABQAAAAAAAAADQA=")
+tile_map_data = PackedByteArray("AAABABsAAAAAAAAAAgACABsAAAAAAAAAAgAFABkAAAAAAAAABQAEABkAAAAAAAAACmADABsAAAAAAAAAClABABwAAAAAAAAABmABABoAAAAAAAAABjAGABwAAAAAAAAABjAEABwAAAAAAAAABlAEABoAAAAAAAAABgABABcAAAAAAAAAAgACABcAAAAAAAAAAgADABcAAAAAAAAAAgAEABcAAAAAAAAAAgAFABcAAAAAAAAAAgABABgAAAAAAAAABmABABYAAAAAAAAACAAGABcAAAAAAAAAAgAGABkAAAAAAAAACAAKABkAAAAAAAAACQALABcAAAAAAAAACAALABkAAAAAAAAACAANABYAAAAAAAAADFAPABcAAAAAAAAAAgAOABcAAAAAAAAABTAOABkAAAAAAAAAClAMABkAAAAAAAAACmANABkAAAAAAAAAAgANABoAAAAAAAAACjAMABoAAAAAAAAABgAOABoAAAAAAAAABmAPABwAAAAAAAAACAANABwAAAAAAAAABlAOABwAAAAAAAAACgALABoAAAAAAAAADDAHABwAAAAAAAAACAAHABYAAAAAAAAACgAKABYAAAAAAAAABQAJABYAAAAAAAAABWAJABcAAAAAAAAAAgAHABIAAAAAAAAABWAIABIAAAAAAAAAAgAJABIAAAAAAAAAAgAKABIAAAAAAAAAAgALABIAAAAAAAAABQALABMAAAAAAAAAAgAHABMAAAAAAAAACjALABQAAAAAAAAACjAJABUAAAAAAAAACAAKABMAAAAAAAAABgAIABMAAAAAAAAABmANABMAAAAAAAAABAAPABYAAAAAAAAACAAMABYAAAAAAAAACgAOABYAAAAAAAAACgAMABcAAAAAAAAACjANABAAAAAAAAAACAAHABEAAAAAAAAABlAJABEAAAAAAAAABjAKABAAAAAAAAAAAgAMABAAAAAAAAAABVAMAA8AAAAAAAAACgAMAAwAAAAAAAAABQALAAwAAAAAAAAACmAJAAwAAAAAAAAAClAIAAwAAAAAAAAABWAIAA0AAAAAAAAAAgAMAA0AAAAAAAAACjAKAA4AAAAAAAAABQALABAAAAAAAAAAAgAIAA4AAAAAAAAAAgALAA0AAAAAAAAABgAKAAwAAAAAAAAACAAMAA4AAAAAAAAACAAJAA0AAAAAAAAABmALAA8AAAAAAAAABlAIABAAAAAAAAAAAgAIABEAAAAAAAAAAgAJAA8AAAAAAAAADQAHABcAAAAAAAAAAgAKABcAAAAAAAAABVAJABkAAAAAAAAABVAHABkAAAAAAAAABTAIABgAAAAAAAAADQAHAA4AAAAAAAAACAAGAA4AAAAAAAAACAAGAA8AAAAAAAAACAAGABAAAAAAAAAACAAFAAwAAAAAAAAACAACABkAAAAAAAAADgAOAA4AAAAAAAAADgAOAAwAAAAAAAAACjAOAAsAAAAAAAAAAgANAAoAAAAAAAAAAgAOAAoAAAAAAAAABQAEABMAAAAAAAAAAgAGABYAAAAAAAAABlAGABUAAAAAAAAACAAEABUAAAAAAAAACAABABQAAAAAAAAADFAPABEAAAAAAAAACAAOABAAAAAAAAAACmAPABAAAAAAAAAAAgAPAA8AAAAAAAAABlAFABQAAAAAAAAADQAGABsAAAAAAAAABAAFABoAAAAAAAAAAgAFABsAAAAAAAAAAgAFABwAAAAAAAAAAgAPABgAAAAAAAAABgAGAAwAAAAAAAAACAAMAAoAAAAAAAAAAgALAAoAAAAAAAAAAgAJAAkAAAAAAAAAAgAIAAkAAAAAAAAAAgAHAAkAAAAAAAAAAgAGAAkAAAAAAAAAAgAEAAoAAAAAAAAADQAFAAkAAAAAAAAAAgAKAAkAAAAAAAAABQAJAAoAAAAAAAAABgAKAAoAAAAAAAAABTANAAsAAAAAAAAABgALAAkAAAAAAAAABjADAA0AAAAAAAAACAADAA8AAAAAAAAACAADAA4AAAAAAAAACQADAAwAAAAAAAAACjADAAsAAAAAAAAAAgABABIAAAAAAAAADGACAA8AAAAAAAAABVADAAkAAAAAAAAAAgACAAkAAAAAAAAAAgACAAoAAAAAAAAABmAPAAgAAAAAAAAAAgAOAAgAAAAAAAAAAgANAAgAAAAAAAAAAgAMAAcAAAAAAAAABQALAAgAAAAAAAAABgAMAAgAAAAAAAAABTAPAAkAAAAAAAAABgAPAAcAAAAAAAAABlANAAcAAAAAAAAABjAKAAcAAAAAAAAACAAIAAcAAAAAAAAACAAGAAcAAAAAAAAACAAJAAcAAAAAAAAACQAHAAcAAAAAAAAACQADAAgAAAAAAAAAAgAEAAcAAAAAAAAAAgADAAcAAAAAAAAABWAEAAgAAAAAAAAABmACAAgAAAAAAAAABlABAAcAAAAAAAAAClABAAgAAAAAAAAABmABAAYAAAAAAAAABjAFAAcAAAAAAAAAClALAAcAAAAAAAAACmACAAUAAAAAAAAADgAEAAYAAAAAAAAAAgAEAAUAAAAAAAAAAgAFAAQAAAAAAAAADQABAAMAAAAAAAAAAgACAAMAAAAAAAAAAgADAAMAAAAAAAAAAgAEAAMAAAAAAAAAAgABAAQAAAAAAAAABmAGAAUAAAAAAAAAAgAHAAUAAAAAAAAAClAGAAMAAAAAAAAAAgAHAAMAAAAAAAAAClAKAAUAAAAAAAAACgAIAAUAAAAAAAAACAAIAAMAAAAAAAAACAAOAAUAAAAAAAAADgAOAAIAAAAAAAAADgAMAAMAAAAAAAAACgAMAAUAAAAAAAAACjAJAAYAAAAAAAAABwAKAAYAAAAAAAAACjA=")
 tile_set = SubResource("TileSet_ivqoy")
 
 [node name="Block" parent="." unique_id=414615823 instance=ExtResource("3_abkmy")]
@@ -176,9 +179,6 @@ position = Vector2(176, 1248)
 position = Vector2(184, 1184)
 rotation = 1.5707964
 
-[node name="Block36" parent="." unique_id=1818926722 instance=ExtResource("6_abkmy")]
-position = Vector2(120, 1216)
-
 [node name="Block37" parent="." unique_id=1492253847 instance=ExtResource("6_abkmy")]
 position = Vector2(168, 1312)
 
@@ -217,21 +217,122 @@ rotation = 3.1415927
 [node name="Block46" parent="." unique_id=1269731474 instance=ExtResource("3_abkmy")]
 position = Vector2(992, 1120)
 
-[connection signal="body_entered" from="Tiles/@Area2D@101030" to="Tiles/@Area2D@101030" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101032" to="Tiles/@Area2D@101032" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101033" to="Tiles/@Area2D@101033" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101050" to="Tiles/@Area2D@101050" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101064" to="Tiles/@Area2D@101064" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101068" to="Tiles/@Area2D@101068" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101074" to="Tiles/@Area2D@101074" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101090" to="Tiles/@Area2D@101090" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101091" to="Tiles/@Area2D@101091" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101103" to="Tiles/@Area2D@101103" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101104" to="Tiles/@Area2D@101104" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101105" to="Tiles/@Area2D@101105" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101106" to="Tiles/@Area2D@101106" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@101107" to="Tiles/@Area2D@101107" method="_finish"]
+[node name="Block47" parent="." unique_id=378367793 instance=ExtResource("3_abkmy")]
+position = Vector2(992, 1824)
+rotation = 3.1415927
+
+[node name="Block48" parent="." unique_id=818391839 instance=ExtResource("3_abkmy")]
+position = Vector2(992, 1440)
+rotation = 1.5707964
+
+[node name="Block49" parent="." unique_id=51671493 instance=ExtResource("3_abkmy")]
+position = Vector2(992, 1440)
+rotation = 3.1415927
+
+[node name="Mini4" parent="." unique_id=1908821342 instance=ExtResource("5_5f8f2")]
+position = Vector2(480, 760)
+
+[node name="Block36" parent="." unique_id=1910998353 instance=ExtResource("6_abkmy")]
+position = Vector2(96, 1248)
+rotation = 1.5707964
+
+[node name="Mini5" parent="." unique_id=1747346110 instance=ExtResource("5_5f8f2")]
+position = Vector2(128, 896)
+rotation = 3.1415927
+
+[node name="Block50" parent="." unique_id=1059291191 instance=ExtResource("6_abkmy")]
+position = Vector2(120, 672)
+
+[node name="Block52" parent="." unique_id=177776524 instance=ExtResource("6_abkmy")]
+position = Vector2(112, 672)
+
+[node name="Block53" parent="." unique_id=1108912897 instance=ExtResource("6_abkmy")]
+position = Vector2(112, 608)
+
+[node name="Block54" parent="." unique_id=1083338935 instance=ExtResource("6_abkmy")]
+position = Vector2(120, 608)
+
+[node name="Mini6" parent="." unique_id=2080724874 instance=ExtResource("5_5f8f2")]
+position = Vector2(576, 288)
+rotation = 1.5707964
+
+[node name="Mini7" parent="." unique_id=1962615332 instance=ExtResource("5_5f8f2")]
+position = Vector2(768, 128)
+rotation = 1.5707964
+
+[node name="Block55" parent="." unique_id=414393325 instance=ExtResource("6_abkmy")]
+position = Vector2(664, 96)
+
+[node name="Block56" parent="." unique_id=1777627421 instance=ExtResource("6_abkmy")]
+position = Vector2(664, 160)
+
+[node name="Block58" parent="." unique_id=1823170749 instance=ExtResource("14_43ftr")]
+position = Vector2(704, 224)
+
+[node name="Block57" parent="." unique_id=1873623947 instance=ExtResource("6_abkmy")]
+position = Vector2(800, 304)
+rotation = 1.5707964
+
+[node name="Block59" parent="." unique_id=1141182737 instance=ExtResource("6_abkmy")]
+position = Vector2(800, 256)
+rotation = 1.5707964
+
+[node name="Block60" parent="." unique_id=724628808 instance=ExtResource("6_abkmy")]
+position = Vector2(800, 264)
+rotation = 1.5707964
+
+[node name="Block61" parent="." unique_id=1618724871 instance=ExtResource("6_abkmy")]
+position = Vector2(760, 312)
+rotation = 1.5707964
+
+[node name="Block62" parent="." unique_id=980381264 instance=ExtResource("6_abkmy")]
+position = Vector2(864, 248)
+rotation = 1.5707964
+
+[node name="Block63" parent="." unique_id=307468848 instance=ExtResource("6_abkmy")]
+position = Vector2(864, 256)
+rotation = 1.5707964
+
+[node name="Block64" parent="." unique_id=2000635092 instance=ExtResource("6_abkmy")]
+position = Vector2(992, 248)
+rotation = 1.5707964
+
+[node name="Block65" parent="." unique_id=943309743 instance=ExtResource("6_abkmy")]
+position = Vector2(992, 256)
+rotation = 1.5707964
+
+[node name="Block66" parent="." unique_id=23992214 instance=ExtResource("6_abkmy")]
+position = Vector2(728, 288)
+
+[node name="Block67" parent="." unique_id=1873228316 instance=ExtResource("6_abkmy")]
+position = Vector2(800, 312)
+rotation = 1.5707964
+
 [connection signal="body_entered" from="Tiles/Hole" to="Tiles/Hole" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@105531" to="Tiles/@Area2D@105531" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@127212" to="Tiles/@Area2D@127212" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@128275" to="Tiles/@Area2D@128275" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156449" to="Tiles/@Area2D@156449" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156451" to="Tiles/@Area2D@156451" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156452" to="Tiles/@Area2D@156452" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156461" to="Tiles/@Area2D@156461" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156465" to="Tiles/@Area2D@156465" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156478" to="Tiles/@Area2D@156478" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156481" to="Tiles/@Area2D@156481" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156485" to="Tiles/@Area2D@156485" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156501" to="Tiles/@Area2D@156501" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156502" to="Tiles/@Area2D@156502" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156512" to="Tiles/@Area2D@156512" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156513" to="Tiles/@Area2D@156513" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156514" to="Tiles/@Area2D@156514" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156515" to="Tiles/@Area2D@156515" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156516" to="Tiles/@Area2D@156516" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156524" to="Tiles/@Area2D@156524" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156525" to="Tiles/@Area2D@156525" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156527" to="Tiles/@Area2D@156527" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156537" to="Tiles/@Area2D@156537" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156551" to="Tiles/@Area2D@156551" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156552" to="Tiles/@Area2D@156552" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156570" to="Tiles/@Area2D@156570" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156571" to="Tiles/@Area2D@156571" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@156572" to="Tiles/@Area2D@156572" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@158303" to="Tiles/@Area2D@158303" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@158304" to="Tiles/@Area2D@158304" method="_finish"]
+[connection signal="body_entered" from="Tiles/Finish" to="Tiles/Finish" method="_finish"]
