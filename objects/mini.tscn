@@ -18,7 +18,7 @@ radius = 8.0
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=1809261520]
 z_index = 2
-position = Vector2(-64.000015, -64)
+position = Vector2(79.99997, -40)
 scale = Vector2(0.19921875, 0.19531249)
 texture = ExtResource("1_wene8")
 offset = Vector2(321.2549, 286.72003)
@@ -55,13 +55,13 @@ shape = SubResource("SegmentShape2D_wy2ca")
 [node name="EntrySmall" type="Area2D" parent="ResizerTube" unique_id=1061415269]
 
 [node name="Shape" type="CollisionShape2D" parent="ResizerTube/EntrySmall" unique_id=1714714885]
-position = Vector2(-8, 80)
+position = Vector2(-8, 72)
 shape = SubResource("SegmentShape2D_gidgi")
 
 [node name="CenterZone" type="Area2D" parent="ResizerTube" unique_id=806838679]
 
 [node name="Shape" type="CollisionShape2D" parent="ResizerTube/CenterZone" unique_id=883638103]
-position = Vector2(0, 16)
+position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_wene8")
 
 [connection signal="body_entered" from="ResizerTube/EntryBig" to="ResizerTube" method="_on_entry_big_body_entered"]
