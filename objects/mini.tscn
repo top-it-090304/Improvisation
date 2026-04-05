@@ -11,14 +11,14 @@ b = Vector2(-48, 24)
 a = Vector2(-8, -16)
 b = Vector2(24, -16)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wene8"]
-radius = 8.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5wtg"]
+size = Vector2(80, 24)
 
 [node name="Mini" type="StaticBody2D" unique_id=681371459]
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=1809261520]
 z_index = 2
-position = Vector2(79.99997, -40)
+position = Vector2(-63.999985, -64)
 scale = Vector2(0.19921875, 0.19531249)
 texture = ExtResource("1_wene8")
 offset = Vector2(321.2549, 286.72003)
@@ -49,7 +49,7 @@ script = ExtResource("2_wy2ca")
 [node name="EntryBig" type="Area2D" parent="ResizerTube" unique_id=1899623755]
 
 [node name="Shape" type="CollisionShape2D" parent="ResizerTube/EntryBig" unique_id=1145924374]
-position = Vector2(0, -80)
+position = Vector2(0, -88)
 shape = SubResource("SegmentShape2D_wy2ca")
 
 [node name="EntrySmall" type="Area2D" parent="ResizerTube" unique_id=1061415269]
@@ -61,9 +61,11 @@ shape = SubResource("SegmentShape2D_gidgi")
 [node name="CenterZone" type="Area2D" parent="ResizerTube" unique_id=806838679]
 
 [node name="Shape" type="CollisionShape2D" parent="ResizerTube/CenterZone" unique_id=883638103]
-position = Vector2(0, 8)
-shape = SubResource("CircleShape2D_wene8")
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_o5wtg")
 
 [connection signal="body_entered" from="ResizerTube/EntryBig" to="ResizerTube" method="_on_entry_big_body_entered"]
+[connection signal="body_exited" from="ResizerTube/EntryBig" to="ResizerTube" method="_on_entry_big_body_exited"]
 [connection signal="body_entered" from="ResizerTube/EntrySmall" to="ResizerTube" method="_on_entry_small_body_entered"]
 [connection signal="body_entered" from="ResizerTube/CenterZone" to="ResizerTube" method="_on_center_zone_body_entered"]
+[connection signal="body_exited" from="ResizerTube/CenterZone" to="ResizerTube" method="_on_center_zone_body_exited"]
