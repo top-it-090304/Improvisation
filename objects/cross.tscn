@@ -1,33 +1,269 @@
 [gd_scene format=3 uid="uid://clqhk15nb32oo"]
 
+[ext_resource type="Script" uid="uid://lnrnacdyxxyi" path="res://cross.gd" id="1_0m25m"]
 [ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_yx0e3"]
+[ext_resource type="PackedScene" uid="uid://3m1wm3mxg8ws" path="res://objects/block thin.tscn" id="2_oignu"]
+[ext_resource type="Texture2D" uid="uid://m3v5a47frrf7" path="res://sources/Fence.png" id="3_mbhbw"]
 
-[node name="Cross" type="StaticBody2D" unique_id=501701313]
+[sub_resource type="Gradient" id="Gradient_0m25m"]
+colors = PackedColorArray(0, 0, 0, 0.39215687, 0, 0, 0, 0)
 
-[node name="Texture 1" type="Sprite2D" parent="." unique_id=1354880133]
-position = Vector2(-31.999998, -31.999998)
-scale = Vector2(0.61538464, 0.61538464)
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_75ip5"]
+gradient = SubResource("Gradient_0m25m")
+width = 8
+
+[sub_resource type="Gradient" id="Gradient_75ip5"]
+offsets = PackedFloat32Array(0, 0.366485, 0.60626704, 1)
+colors = PackedColorArray(0, 0, 0, 0.39215687, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.39215687)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_spj2f"]
+gradient = SubResource("Gradient_75ip5")
+width = 192
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0m25m"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75ip5"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spj2f"]
+size = Vector2(32, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxffd"]
+size = Vector2(32, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wopl0"]
+size = Vector2(64, 192)
+
+[node name="Cross" type="Node2D" unique_id=1048308988]
+script = ExtResource("1_0m25m")
+
+[node name="Walls" type="Node2D" parent="." unique_id=1478018615]
+
+[node name="Top" parent="Walls" unique_id=1617843528 instance=ExtResource("2_oignu")]
+position = Vector2(0, -40)
+rotation = 1.5707964
+collision_layer = 0
+
+[node name="Bottom" parent="Walls" unique_id=1876620466 instance=ExtResource("2_oignu")]
+position = Vector2(0, 32)
+rotation = 1.5707964
+collision_layer = 0
+
+[node name="Left" parent="Walls" unique_id=2119590286 instance=ExtResource("2_oignu")]
+position = Vector2(-40, 0)
+collision_layer = 0
+
+[node name="Right" parent="Walls" unique_id=217183556 instance=ExtResource("2_oignu")]
+position = Vector2(32, 0)
+collision_layer = 0
+
+[node name="Texture" type="Node2D" parent="." unique_id=1103976208]
+
+[node name="Bottom" type="Sprite2D" parent="Texture" unique_id=376828005]
+self_modulate = Color(0.7647059, 0.7647059, 0.7647059, 1)
+position = Vector2(-7.6293945e-06, 0)
+scale = Vector2(0.61538464, 0.6153846)
 texture = ExtResource("1_yx0e3")
 region_enabled = true
-region_rect = Rect2(0, 0, 104, 104)
+region_rect = Rect2(0, 0, 312, 104)
 
-[node name="Texture 2" type="Sprite2D" parent="." unique_id=288228922]
-position = Vector2(-32, 95.99999)
-scale = Vector2(0.61538464, 0.61538464)
+[node name="Right" type="TextureRect" parent="Texture" unique_id=1169479640]
+offset_left = 32.0
+offset_top = -32.0
+offset_right = 40.0
+offset_bottom = 32.0
+texture = SubResource("GradientTexture1D_75ip5")
+
+[node name="Left" type="TextureRect" parent="Texture" unique_id=1843443754]
+offset_left = -32.0
+offset_top = 32.0
+offset_right = -24.0
+offset_bottom = 96.0
+rotation = 3.1415927
+texture = SubResource("GradientTexture1D_75ip5")
+
+[node name="Top" type="Sprite2D" parent="Texture" unique_id=1076268490]
+z_index = 2
+position = Vector2(3.0517578e-05, -4.7683716e-07)
+scale = Vector2(0.61538446, 0.61538464)
 texture = ExtResource("1_yx0e3")
 region_enabled = true
-region_rect = Rect2(0, 0, 104, 104)
+region_rect = Rect2(0, 0, 104, 312)
 
-[node name="Texture 3" type="Sprite2D" parent="." unique_id=384080221]
-position = Vector2(-96, 32)
-scale = Vector2(0.61538464, 0.61538464)
-texture = ExtResource("1_yx0e3")
-region_enabled = true
-region_rect = Rect2(0, 0, 104, 104)
+[node name="TextureRect" type="TextureRect" parent="Texture" unique_id=301787216]
+z_index = 2
+offset_left = 32.0
+offset_top = -96.0
+offset_right = 224.0
+offset_bottom = -32.0
+rotation = 1.5707964
+texture = SubResource("GradientTexture1D_spj2f")
 
-[node name="Texture 4" type="Sprite2D" parent="." unique_id=59147378]
-position = Vector2(31.999992, 32)
-scale = Vector2(0.61538464, 0.61538464)
-texture = ExtResource("1_yx0e3")
-region_enabled = true
-region_rect = Rect2(0, 0, 104, 104)
+[node name="Blocks" type="Node2D" parent="." unique_id=1332838556]
+
+[node name="Block" parent="Blocks" unique_id=296666591 instance=ExtResource("2_oignu")]
+position = Vector2(31.999977, -64.00001)
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block" unique_id=1983014792]
+offset_left = 2.2888184e-05
+offset_top = -31.999992
+offset_right = 8.000023
+offset_bottom = 32.000008
+color = Color(0.1882353, 0.0627451, 0.4117647, 0.5882353)
+
+[node name="Block2" parent="Blocks" unique_id=1621304050 instance=ExtResource("2_oignu")]
+position = Vector2(-40.000023, -64.00001)
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block2" unique_id=874552736]
+offset_left = 2.2888184e-05
+offset_top = -31.999992
+offset_right = 8.000023
+offset_bottom = 32.000008
+color = Color(0.1882353, 0.0627451, 0.4117647, 0.5882353)
+
+[node name="Block3" parent="Blocks" unique_id=107326375 instance=ExtResource("2_oignu")]
+position = Vector2(31.999977, 63.999992)
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block3" unique_id=230282617]
+offset_left = 2.2888184e-05
+offset_top = -32.0
+offset_right = 8.000023
+offset_bottom = 32.0
+color = Color(0.1882353, 0.0627451, 0.4117647, 0.5882353)
+
+[node name="Block4" parent="Blocks" unique_id=130683240 instance=ExtResource("2_oignu")]
+position = Vector2(-40.000023, 63.999992)
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block4" unique_id=518505451]
+offset_left = 2.2888184e-05
+offset_top = -31.999992
+offset_right = 8.0000305
+offset_bottom = 32.000008
+color = Color(0.1882353, 0.0627451, 0.4117647, 0.5882353)
+
+[node name="Block5" parent="Blocks" unique_id=1265855331 instance=ExtResource("2_oignu")]
+position = Vector2(-64.00002, -40.000008)
+rotation = 1.5707964
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block5" unique_id=177338493]
+offset_top = -32.000023
+offset_right = 8.000004
+offset_bottom = 31.999977
+color = Color(0.1882353, 0.0627451, 0.4117647, 0.5882353)
+
+[node name="Block6" parent="Blocks" unique_id=1755573872 instance=ExtResource("2_oignu")]
+position = Vector2(-64.00002, 31.999992)
+rotation = 1.5707964
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block6" unique_id=314902094]
+offset_top = -32.000015
+offset_right = 8.000008
+offset_bottom = 31.999985
+color = Color(0.1882353, 0.0627451, 0.4117647, 0.5882353)
+
+[node name="Block7" parent="Blocks" unique_id=148740606 instance=ExtResource("2_oignu")]
+position = Vector2(63.999977, -40.000008)
+rotation = 1.5707964
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block7" unique_id=1309805449]
+offset_left = 1.5258789e-05
+offset_top = -32.000023
+offset_right = 8.000015
+offset_bottom = 31.999977
+color = Color(0.1882353, 0.0627451, 0.4117647, 0.5882353)
+
+[node name="Block8" parent="Blocks" unique_id=162722801 instance=ExtResource("2_oignu")]
+position = Vector2(63.999977, 31.999992)
+rotation = 1.5707964
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block8" unique_id=1418993411]
+offset_top = -32.00002
+offset_right = 8.000008
+offset_bottom = 31.99998
+color = Color(0.1882353, 0.0627451, 0.4117647, 0.5882353)
+
+[node name="Fence" type="Node2D" parent="." unique_id=1022415762]
+z_index = 2
+
+[node name="Fence1" type="Sprite2D" parent="Fence" unique_id=178704318]
+position = Vector2(-28, -36)
+rotation = -3.1415925
+scale = Vector2(0.03125, 0.031249998)
+texture = ExtResource("3_mbhbw")
+
+[node name="Fence2" type="Sprite2D" parent="Fence" unique_id=1072852003]
+position = Vector2(28, -36)
+scale = Vector2(0.03125, 0.031249998)
+texture = ExtResource("3_mbhbw")
+
+[node name="Fence3" type="Sprite2D" parent="Fence" unique_id=466401160]
+position = Vector2(-28, 36)
+rotation = -3.1415925
+scale = Vector2(0.031249998, 0.03124998)
+texture = ExtResource("3_mbhbw")
+
+[node name="Fence4" type="Sprite2D" parent="Fence" unique_id=370567033]
+position = Vector2(28, 36)
+scale = Vector2(0.031249998, 0.031249981)
+texture = ExtResource("3_mbhbw")
+
+[node name="ColorRect" type="ColorRect" parent="Fence" unique_id=99070095]
+offset_left = 28.0
+offset_top = -40.0
+offset_right = 32.0
+offset_bottom = 40.0
+color = Color(0.1882353, 0.0627451, 0.4117647, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Fence" unique_id=133058491]
+offset_left = -32.0
+offset_top = -40.0
+offset_right = -28.0
+offset_bottom = 40.0
+color = Color(0.1882353, 0.0627451, 0.4117647, 1)
+
+[node name="Areas" type="Node2D" parent="." unique_id=756933747]
+
+[node name="Top" type="Area2D" parent="Areas" unique_id=955390514]
+z_index = 2
+
+[node name="Shape" type="CollisionShape2D" parent="Areas/Top" unique_id=1255198365]
+position = Vector2(0, -80)
+shape = SubResource("RectangleShape2D_0m25m")
+debug_color = Color(1, 0, 0.10873253, 0.41960785)
+
+[node name="Bottom" type="Area2D" parent="Areas" unique_id=36083322]
+
+[node name="Shape" type="CollisionShape2D" parent="Areas/Bottom" unique_id=1690110054]
+z_index = 2
+position = Vector2(0, 80)
+shape = SubResource("RectangleShape2D_75ip5")
+debug_color = Color(1, 0, 0.10980392, 0.41960785)
+
+[node name="Left" type="Area2D" parent="Areas" unique_id=1995222502]
+
+[node name="Shape" type="CollisionShape2D" parent="Areas/Left" unique_id=120225675]
+position = Vector2(-80, 0)
+shape = SubResource("RectangleShape2D_spj2f")
+debug_color = Color(1, 0, 0.10980392, 0.41960785)
+
+[node name="Right" type="Area2D" parent="Areas" unique_id=466196800]
+
+[node name="Shape" type="CollisionShape2D" parent="Areas/Right" unique_id=923388871]
+position = Vector2(80, 0)
+shape = SubResource("RectangleShape2D_bxffd")
+debug_color = Color(1, 0, 0.10980392, 0.41960785)
+
+[node name="z" type="Area2D" parent="Areas" unique_id=67717993]
+z_index = 2
+
+[node name="Shape" type="CollisionShape2D" parent="Areas/z" unique_id=638408725]
+shape = SubResource("RectangleShape2D_wopl0")
+debug_color = Color(2.0455568e-06, 0.64779174, 0.20977035, 0.41960785)
+
+[connection signal="body_entered" from="Areas/Top" to="." method="_on_top_body_entered"]
+[connection signal="body_entered" from="Areas/Bottom" to="." method="_on_bottom_body_entered"]
+[connection signal="body_entered" from="Areas/Left" to="." method="_on_left_body_entered"]
+[connection signal="body_entered" from="Areas/Right" to="." method="_on_right_body_entered"]
+[connection signal="body_entered" from="Areas/z" to="." method="_on_z_body_entered"]
+[connection signal="body_exited" from="Areas/z" to="." method="_on_z_body_exited"]
