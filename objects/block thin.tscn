@@ -8,8 +8,8 @@ size = Vector2(8, 64)
 [node name="Block" type="StaticBody2D" unique_id=296666591]
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=950127636]
-position = Vector2(4, 1.7520326e-06)
-scale = Vector2(0.25, 0.61538464)
+position = Vector2(4, 0)
+scale = Vector2(0.24999999, 0.6153846)
 texture = ExtResource("1_ua7mo")
 region_enabled = true
 region_rect = Rect2(0, 0, 32, 104)

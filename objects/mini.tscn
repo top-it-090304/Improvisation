@@ -3,22 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://d3x60my1usvj1" path="res://sources/Mini.png" id="1_wene8"]
 [ext_resource type="Script" uid="uid://cabj8aoaklivy" path="res://scripts/mini.gd" id="2_wy2ca"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_wy2ca"]
-a = Vector2(48, 24)
-b = Vector2(-48, 24)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wy2ca"]
+size = Vector2(106, 26)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_gidgi"]
-a = Vector2(-8, -16)
-b = Vector2(24, -16)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gidgi"]
+size = Vector2(32, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5wtg"]
-size = Vector2(80, 24)
+size = Vector2(64, 48)
 
 [node name="Mini" type="StaticBody2D" unique_id=681371459]
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=1809261520]
 z_index = 2
-position = Vector2(-63.999985, -64)
+position = Vector2(-63.99997, -64)
 scale = Vector2(0.19921875, 0.19531249)
 texture = ExtResource("1_wene8")
 offset = Vector2(321.2549, 286.72003)
@@ -49,19 +47,19 @@ script = ExtResource("2_wy2ca")
 [node name="EntryBig" type="Area2D" parent="ResizerTube" unique_id=1899623755]
 
 [node name="Shape" type="CollisionShape2D" parent="ResizerTube/EntryBig" unique_id=1145924374]
-position = Vector2(0, -88)
-shape = SubResource("SegmentShape2D_wy2ca")
+position = Vector2(3, -53)
+shape = SubResource("RectangleShape2D_wy2ca")
 
 [node name="EntrySmall" type="Area2D" parent="ResizerTube" unique_id=1061415269]
 
 [node name="Shape" type="CollisionShape2D" parent="ResizerTube/EntrySmall" unique_id=1714714885]
-position = Vector2(-8, 72)
-shape = SubResource("SegmentShape2D_gidgi")
+position = Vector2(0, 52)
+shape = SubResource("RectangleShape2D_gidgi")
 
 [node name="CenterZone" type="Area2D" parent="ResizerTube" unique_id=806838679]
 
 [node name="Shape" type="CollisionShape2D" parent="ResizerTube/CenterZone" unique_id=883638103]
-position = Vector2(0, -4)
+position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_o5wtg")
 
 [connection signal="body_entered" from="ResizerTube/EntryBig" to="ResizerTube" method="_on_entry_big_body_entered"]

@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://y40fw1jyh54u" path="res://objects/cannon.tscn" id="4_h5pkh"]
 [ext_resource type="PackedScene" uid="uid://baclftxnn0jwj" path="res://objects/block.tscn" id="4_khtqb"]
 [ext_resource type="PackedScene" uid="uid://ds1gkkqrswhpq" path="res://objects/bouce.tscn" id="5_brbjy"]
-[ext_resource type="PackedScene" uid="uid://befj70yvk2434" path="res://objects/bumper.tscn" id="6_8pynp"]
+[ext_resource type="PackedScene" uid="uid://clqhk15nb32oo" path="res://objects/cross.tscn" id="5_sd2v4"]
+[ext_resource type="PackedScene" uid="uid://bctj1bpuvdb6f" path="res://objects/bumper.tscn" id="6_8pynp"]
+[ext_resource type="PackedScene" uid="uid://bg8anpeoxovok" path="res://objects/carousel.tscn" id="7_4xlfa"]
 [ext_resource type="PackedScene" uid="uid://pk0mkt60rjop" path="res://objects/corner big.tscn" id="7_jhkij"]
 [ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner small.tscn" id="8_dmf6i"]
 [ext_resource type="PackedScene" uid="uid://df66a5km0xcvh" path="res://objects/finish.tscn" id="9_e8las"]
@@ -26,6 +28,8 @@ scenes/9/scene = ExtResource("11_ewp8b")
 scenes/10/scene = ExtResource("2_mbkqw")
 scenes/11/scene = ExtResource("3_ts1om")
 scenes/12/scene = ExtResource("4_h5pkh")
+scenes/13/scene = ExtResource("5_sd2v4")
+scenes/15/scene = ExtResource("7_4xlfa")
 
 [sub_resource type="TileSet" id="TileSet_sbkj6"]
 tile_size = Vector2i(64, 64)
