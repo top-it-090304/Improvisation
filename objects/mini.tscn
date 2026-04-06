@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cabj8aoaklivy" path="res://scripts/mini.gd" id="2_wy2ca"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wy2ca"]
-size = Vector2(106, 26)
+size = Vector2(112, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gidgi"]
 size = Vector2(32, 8)
@@ -16,7 +16,7 @@ size = Vector2(64, 48)
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=1809261520]
 z_index = 2
-position = Vector2(-63.99997, -64)
+position = Vector2(-63.999992, -64)
 scale = Vector2(0.19921875, 0.19531249)
 texture = ExtResource("1_wene8")
 offset = Vector2(321.2549, 286.72003)
@@ -47,7 +47,7 @@ script = ExtResource("2_wy2ca")
 [node name="EntryBig" type="Area2D" parent="ResizerTube" unique_id=1899623755]
 
 [node name="Shape" type="CollisionShape2D" parent="ResizerTube/EntryBig" unique_id=1145924374]
-position = Vector2(3, -53)
+position = Vector2(0, -53)
 shape = SubResource("RectangleShape2D_wy2ca")
 
 [node name="EntrySmall" type="Area2D" parent="ResizerTube" unique_id=1061415269]

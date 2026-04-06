@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="1_2hcgm"]
 [ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="2_m3pdo"]
+[ext_resource type="PackedScene" uid="uid://cos1nbku7c1hg" path="res://objects/mini.tscn" id="3_m3pdo"]
 
 [node name="10" type="Node2D" unique_id=1126198461]
 
@@ -9,3 +10,6 @@
 
 [node name="Ball" parent="." unique_id=1990782279 instance=ExtResource("2_m3pdo")]
 position = Vector2(96, 1824)
+
+[node name="Mini" parent="." unique_id=681371459 instance=ExtResource("3_m3pdo")]
+position = Vector2(216, 1664)
