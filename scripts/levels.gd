@@ -55,8 +55,12 @@ func next_level():
 		print("Уровни закончились")
 		current_level_index = 0
 		call_deferred("load_level", current_level_index)
-		
+
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		if current_level_index != -1:
 			load_level(-1)
+
+#func pause():
+	#if current_level_index != -1:
+		#load_level(-1)
