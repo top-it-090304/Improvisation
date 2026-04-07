@@ -1082,6 +1082,19 @@ position = Vector2(480, 488)
 position = Vector2(480, 600)
 rotation = 1.5707964
 
+[node name="Block268" parent="." unique_id=95858651 instance=ExtResource("10_td6t5")]
+position = Vector2(968, 1336)
+
+[node name="Block270" parent="." unique_id=396895831 instance=ExtResource("10_td6t5")]
+position = Vector2(888, 1336)
+rotation = -1.5707964
+
+[node name="Block306" parent="." unique_id=856068879 instance=ExtResource("6_yo1th")]
+position = Vector2(920, 1336)
+
+[node name="Block307" parent="." unique_id=2104148636 instance=ExtResource("6_yo1th")]
+position = Vector2(928, 1336)
+
 [connection signal="body_entered" from="Tiles/Hole" to="Tiles/Hole" method="_finish"]
 [connection signal="body_entered" from="Tiles/@Area2D@66582" to="Tiles/@Area2D@66582" method="_finish"]
 [connection signal="body_entered" from="Tiles/@Area2D@66584" to="Tiles/@Area2D@66584" method="_finish"]
