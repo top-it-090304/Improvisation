@@ -18,7 +18,6 @@ config/icon="uid://cujwkqglasjp7"
 [autoload]
 
 Data="*uid://k1wkkjmy10ev"
-Levels="*uid://bn56gkwnwns3g"
 
 [display]
 

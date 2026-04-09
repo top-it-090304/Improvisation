@@ -35,9 +35,10 @@ func load_level(index):
 	var bg = get_tree().current_scene.find_child("Background", true, false)
 	if bg:
 		bg.global_position = get_viewport_rect().size / 2
-	current_level_index = index 
+	current_level_index = index 	
 	if current_level_node != null:
 		current_level_node.queue_free()
+		
 	var level_resource
 	if index != -1:
 		level_resource = load(levels[index])
@@ -45,6 +46,7 @@ func load_level(index):
 		level_resource = load("res://levels/menu.tscn")
 	current_level_node = level_resource.instantiate()
 	add_child(current_level_node)
+	print(index)
 
 func next_level():
 	current_level_index += 1
@@ -60,6 +62,7 @@ func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		if current_level_index != -1:
 			load_level(-1)
+			print("input")
 
 #func pause():
 	#if current_level_index != -1:
