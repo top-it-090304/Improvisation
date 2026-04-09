@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://djt1a8n5rq3a6"]
 
 [ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_71j4m"]
-[ext_resource type="PackedScene" uid="uid://bipkv1ajnxeua" path="res://objects/pause.tscn" id="3_pmfem"]
 [ext_resource type="Script" uid="uid://bn56gkwnwns3g" path="res://scripts/levels.gd" id="6_gnr4b"]
 
 [node name="World" type="Node2D" unique_id=1338697159]
@@ -15,5 +14,3 @@ texture = ExtResource("1_71j4m")
 [node name="Levels" type="Node2D" parent="." unique_id=847851399]
 z_index = 3
 script = ExtResource("6_gnr4b")
-
-[node name="Pause" parent="." unique_id=1615470882 instance=ExtResource("3_pmfem")]

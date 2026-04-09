@@ -994,3 +994,6 @@ rotation = 1.5707964
 
 [node name="Block186" parent="." unique_id=888725073 instance=ExtResource("7_qesyf")]
 position = Vector2(96, 1248)
+
+[node name="Block290" parent="." unique_id=1146010951 instance=ExtResource("5_qesyf")]
+position = Vector2(800, 544)
