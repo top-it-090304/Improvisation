@@ -328,16 +328,17 @@ text = "Сбросить статистику"
 
 [node name="MenuIcon" type="TextureButton" parent="." unique_id=1607378180]
 z_index = 10
-offset_left = -120.0
-offset_top = -56.0
-offset_right = 561.0
-offset_bottom = 613.0
+offset_left = -152.00002
+offset_top = 800.0
+offset_right = 1096.4998
+offset_bottom = 3476.0
 scale = Vector2(0.07048458, 0.071748875)
 texture_normal = ExtResource("10_j7211")
 texture_pressed = ExtResource("10_j7211")
 texture_hover = ExtResource("10_j7211")
 texture_disabled = ExtResource("10_j7211")
 texture_focused = ExtResource("10_j7211")
+stretch_mode = 4
 
 [node name="Menu" type="Control" parent="." unique_id=2065088539]
 layout_mode = 3
