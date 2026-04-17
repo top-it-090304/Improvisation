@@ -2,6 +2,9 @@ extends Node2D
 
 @onready var camera = $Camera2D
 @onready var levels_manager = get_tree().root.find_child("Main", true, false)
+@onready var menu = get_tree().root.find_child("Menu", true, false)
+@onready var real_btn = get_tree().root.find_child("Real", true, false)
+@onready var slow_btn = get_tree().root.find_child("Slow", true, false)
 
 var levels = [
 	"res://levels/1.tscn",
@@ -30,7 +33,9 @@ func _ready():
 	pass
 
 func load_level(index):
+	menu._ready()
 	current_level_index = index
+	
 	if current_level_node != null:
 		current_level_node.queue_free()
 		
@@ -43,9 +48,9 @@ func load_level(index):
 		move_camera(level_view_pos)
 	else:
 		move_camera(main_menu_pos)
-		level_resource = load("res://levels/menu.tscn")
 	
 func _on_settings_icon_pressed():
+	update_frames()
 	move_camera(settings_pos)
 
 func _on_back_icon_pressed():
@@ -58,3 +63,42 @@ func _on_menu_icon_pressed() -> void:
 func move_camera(target_pos):
 	var tween = create_tween()
 	tween.tween_property(camera, "position", target_pos, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
+
+
+
+#settings
+func _on_real_pressed() -> void:
+	Data.set_slow_mode(false)
+	update_frames()
+	
+func _on_slow_pressed() -> void:
+	Data.set_slow_mode(true)
+	update_frames()
+
+func update_frames():
+	var style_real = real_btn.get_theme_stylebox("normal").duplicate()
+	var style_slow = slow_btn.get_theme_stylebox("normal").duplicate()
+	
+	if Data.slow:
+		style_slow.border_width_left = 8
+		style_slow.border_width_right = 8
+		style_slow.border_width_top = 8
+		style_slow.border_width_bottom = 8
+		style_real.border_width_left = 0
+		style_real.border_width_right = 0
+		style_real.border_width_top = 0
+		style_real.border_width_bottom = 0
+	else:
+		style_real.border_width_left = 8
+		style_real.border_width_right = 8
+		style_real.border_width_top = 8
+		style_real.border_width_bottom = 8
+		style_slow.border_width_left = 0
+		style_slow.border_width_right = 0
+		style_slow.border_width_top = 0
+		style_slow.border_width_bottom = 0
+
+	real_btn.add_theme_stylebox_override("normal", style_real)
+	slow_btn.add_theme_stylebox_override("normal", style_slow)
+	real_btn.add_theme_stylebox_override("hover", style_real)
+	slow_btn.add_theme_stylebox_override("hover", style_slow)

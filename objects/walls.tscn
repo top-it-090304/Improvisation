@@ -11,6 +11,7 @@ clip_children = 1
 clip_contents = true
 offset_right = 1088.0
 offset_bottom = 64.0
+mouse_filter = 2
 
 [node name="Shadow" type="Sprite2D" parent="Visual/Top" unique_id=363062031]
 position = Vector2(543.9947, 959.99854)
@@ -23,6 +24,7 @@ clip_contents = true
 offset_top = 1856.0
 offset_right = 1088.0
 offset_bottom = 1920.0
+mouse_filter = 2
 
 [node name="Shadow" type="Sprite2D" parent="Visual/Bottom" unique_id=1506828354]
 position = Vector2(543.9945, -895.9937)
@@ -35,6 +37,7 @@ clip_contents = true
 offset_top = 64.0
 offset_right = 64.0
 offset_bottom = 1856.0
+mouse_filter = 2
 
 [node name="Shadow" type="Sprite2D" parent="Visual/Left" unique_id=32306905]
 position = Vector2(543.99805, 896.0005)
@@ -48,6 +51,7 @@ offset_left = 1024.0
 offset_top = 64.0
 offset_right = 1088.0
 offset_bottom = 1856.0
+mouse_filter = 2
 
 [node name="Shadow" type="Sprite2D" parent="Visual/Right" unique_id=27165122]
 position = Vector2(-479.991, 896.0028)

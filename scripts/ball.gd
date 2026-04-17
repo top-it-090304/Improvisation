@@ -1,8 +1,8 @@
 extends RigidBody2D
 
-const G_SCALE = 1000.0 
 const MAX_OFFSET = 200.0
 const TILT_STRENGTH = 50.0
+var G_SCALE = 1000
 
 var is_active = false
 var start_mouse_pos = Vector2.ZERO
@@ -11,6 +11,10 @@ var bg_node : Sprite2D = null
 var bg_start_pos : Vector2 = Vector2.ZERO
 
 func _ready() -> void:
+	if Data.slow:
+		G_SCALE = 100
+	else:
+		G_SCALE = 1000
 	gravity_scale = 0
 	linear_damp = 0.5
 	angular_damp = 0.5

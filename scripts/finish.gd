@@ -29,7 +29,7 @@ func _on_animation_finished(body):
 	var levels_manager = get_tree().root.find_child("Main", true, false)
 	Data.set_result(levels_manager.current_level_index, true)
 	if levels_manager:
-		levels_manager.load_level(0)
+		levels_manager.load_level(-1)
 		var ball = get_tree().current_scene.find_child("Ball", true, false)
 		if ball:
 			ball.is_active = false
