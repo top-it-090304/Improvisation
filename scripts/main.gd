@@ -54,16 +54,16 @@ func _on_settings_icon_pressed():
 	move_camera(settings_pos)
 
 func _on_back_icon_pressed():
+	menu.update_buttons_color()
 	move_camera(main_menu_pos)
 	
 func _on_menu_icon_pressed() -> void:
-	move_camera(main_menu_pos)
+	menu.update_buttons_color()
 	levels_manager.load_level(-1)
 
 func move_camera(target_pos):
 	var tween = create_tween()
 	tween.tween_property(camera, "position", target_pos, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-
 
 
 #settings
@@ -102,3 +102,7 @@ func update_frames():
 	slow_btn.add_theme_stylebox_override("normal", style_slow)
 	real_btn.add_theme_stylebox_override("hover", style_real)
 	slow_btn.add_theme_stylebox_override("hover", style_slow)
+
+func _on_reset_pressed() -> void:
+	Data.reset()
+	_on_back_icon_pressed()

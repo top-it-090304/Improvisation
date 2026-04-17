@@ -7,6 +7,7 @@ var slow = false
 
 func _ready():
 	load_game()
+
 func load_game():
 	var config = ConfigFile.new()
 	var err = config.load(SAVE_PATH)
@@ -23,6 +24,10 @@ func set_result(index: int, is_win: bool):
 
 func set_slow_mode(value: bool):
 	slow = value
+	save_game()
+	
+func reset():
+	level_colors = {}
 	save_game()
 
 func save_game():
