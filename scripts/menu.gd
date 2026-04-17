@@ -6,7 +6,8 @@ var default_color = Color.WHITE
 func _ready():
 	var buttons = $GridContainer.get_children()
 	for i in range(buttons.size()):
-		default_color = buttons[0].self_modulate
+		if Data.level_colors.size() == 0:
+			default_color = buttons[i].self_modulate
 		if not buttons[i].pressed.is_connected(_on_level_button_pressed):
 			buttons[i].pressed.connect(_on_level_button_pressed.bind(i))
 	update_buttons_color()
