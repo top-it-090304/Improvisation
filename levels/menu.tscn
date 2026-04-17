@@ -4,6 +4,8 @@
 [ext_resource type="FontFile" uid="uid://303srh4j2smh" path="res://sources/Comfortaa.ttf" id="2_gbx6r"]
 [ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="2_kfbsc"]
 [ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner small.tscn" id="4_bvm7p"]
+[ext_resource type="Texture2D" uid="uid://cnt2dnj8h60d1" path="res://sources/Settings icon.png" id="5_2fskk"]
+[ext_resource type="Texture2D" uid="uid://cxdkktjf8al1c" path="res://sources/Logo.png" id="6_6nun2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvm7p"]
 bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
@@ -74,10 +76,10 @@ anchor_left = -0.067
 anchor_top = -0.036000002
 anchor_right = -0.067
 anchor_bottom = -0.036000002
-offset_left = 522.32
-offset_top = 950.512
-offset_right = 566.32
-offset_bottom = 970.512
+offset_left = 98.32
+offset_top = 629.012
+offset_right = 990.32
+offset_bottom = 1292.012
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_a5bpp")
@@ -151,3 +153,13 @@ rotation = 1.5707964
 [node name="Block4" parent="." unique_id=333950220 instance=ExtResource("4_bvm7p")]
 position = Vector2(32, 1760)
 rotation = 3.1415927
+
+[node name="SettingsIcon" type="Sprite2D" parent="." unique_id=682955812]
+position = Vector2(748.00006, 320)
+scale = Vector2(0.3377001, 0.3333333)
+texture = ExtResource("5_2fskk")
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=613667326]
+position = Vector2(280, 320)
+scale = Vector2(0.52421653, 0.5505376)
+texture = ExtResource("6_6nun2")

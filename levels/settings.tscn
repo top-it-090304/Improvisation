@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dbvtkv8dbayxn"]
+
+[ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="1_tbynn"]
+[ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner small.tscn" id="2_q06cn"]
+[ext_resource type="Texture2D" uid="uid://mm35fqoww62c" path="res://sources/Settings text.png" id="3_ao5c1"]
+[ext_resource type="Texture2D" uid="uid://bieoglkcbya" path="res://sources/Back icon.png" id="4_q06cn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tbynn"]
+
+[node name="Settings" type="Node2D" unique_id=940752187]
+
+[node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_tbynn")]
+
+[node name="Block" parent="." unique_id=296666591 instance=ExtResource("2_q06cn")]
+position = Vector2(992, 96)
+
+[node name="Block2" parent="." unique_id=961172283 instance=ExtResource("2_q06cn")]
+position = Vector2(992, 1824)
+rotation = 1.5707964
+
+[node name="Block3" parent="." unique_id=841332715 instance=ExtResource("2_q06cn")]
+position = Vector2(96, 1824)
+rotation = 3.1415927
+
+[node name="Block4" parent="." unique_id=1794785138 instance=ExtResource("2_q06cn")]
+position = Vector2(96, 96)
+rotation = -1.5707964
+
+[node name="Settings" type="Sprite2D" parent="." unique_id=1119584796]
+position = Vector2(704, 384.00003)
+scale = Vector2(0.3181818, 0.3333333)
+texture = ExtResource("3_ao5c1")
+
+[node name="Back" type="Sprite2D" parent="." unique_id=1060294641]
+position = Vector2(208, 172)
+scale = Vector2(0.11627907, 0.11458334)
+texture = SubResource("CompressedTexture2D_tbynn")
+
+[node name="BackIcon" type="Sprite2D" parent="." unique_id=1458345760]
+position = Vector2(276, 384)
+scale = Vector2(0.33770013, 0.33333337)
+texture = ExtResource("4_q06cn")
