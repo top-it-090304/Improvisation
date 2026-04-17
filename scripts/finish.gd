@@ -26,10 +26,10 @@ func _finish(body: Node2D) -> void:
 		
 func _on_animation_finished(body):
 	body.scale = Vector2.ONE
-	var levels_manager = get_tree().current_scene.find_child("Levels", true, false)
+	var levels_manager = get_tree().root.find_child("Main", true, false)
 	Data.set_result(levels_manager.current_level_index, true)
 	if levels_manager:
-		levels_manager.load_level(-1)
+		levels_manager.load_level(0)
 		var ball = get_tree().current_scene.find_child("Ball", true, false)
 		if ball:
 			ball.is_active = false

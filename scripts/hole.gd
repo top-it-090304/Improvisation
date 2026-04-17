@@ -46,7 +46,7 @@ func _on_body_entered(body: Node2D) -> void:
 		ball = body
 		ball_start_scale = ball.scale
 		print("Шар коснулся дыры! Телепортирую на: ", start_position)
-		var levels_manager = get_tree().current_scene.find_child("Levels", true, false)
+		var levels_manager = get_tree().root.find_child("Main", true, false)
 		Data.set_result(levels_manager.current_level_index, false)
 		call_deferred("start_teleport")
 

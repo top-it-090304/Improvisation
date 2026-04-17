@@ -1,23 +1,19 @@
 extends Control
 
-@onready var levels = get_node("Levels")
+@onready var main = get_tree().root.find_child("Main", true, false)
 
 func _ready():
-	var grid = $GridContainer # Убедись, что путь к сетке кнопок верный
+	var grid = $GridContainer
 	var buttons = grid.get_children()
-	
 	for i in range(buttons.size()):
-		# Подключаем нажатие (если еще не подключено в редакторе)
 		if not buttons[i].pressed.is_connected(_on_level_button_pressed):
 			buttons[i].pressed.connect(_on_level_button_pressed.bind(i))
 		if Data.level_colors.has(i):
 			buttons[i].self_modulate = Data.level_colors[i]
 
 func _on_level_button_pressed(index: int):
-	self.hide()
-	var levels_manager = get_tree().current_scene.find_child("Levels", true, false)
-	if levels_manager:
-		levels_manager.load_level(index)
+	if main:
+		main.load_level(index)
 		Data.set_result(index, false)
 		var ball = get_tree().current_scene.find_child("Ball", true, false)
 		if ball:

@@ -16,16 +16,6 @@ func _ready() -> void:
 	angular_damp = 0.5
 	can_sleep = false
 	_apply_size_change(1.0)
-	call_deferred("_init_background")
-
-func _init_background():
-	bg_node = get_tree().current_scene.find_child("Background", true, false)
-	if bg_node:
-		var screen_center = get_viewport_rect().size / 2
-		bg_node.global_position = screen_center
-		bg_start_pos = screen_center
-		if bg_node is Sprite2D:
-			bg_node.centered = true
 
 func _physics_process(_delta: float) -> void:
 	if not is_active:
