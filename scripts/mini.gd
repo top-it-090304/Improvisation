@@ -12,17 +12,21 @@ func _on_entry_big_body_entered(body):
 	is_shrinking = true
 func _on_entry_big_body_exited(body: Node2D) -> void:
 	if not inside and from == true:
-		body.change_ball_size(big_val)
-		is_shrinking = false
+		if body.has_method("change_ball_size"):
+			body.change_ball_size(big_val)
+			is_shrinking = false
 
 func _on_entry_small_body_entered(body):
-	from = false
-	is_shrinking = false
+	if body.has_method("change_ball_size"):
+		from = false
+		is_shrinking = false
 
 func _on_center_zone_body_entered(body: Node2D) -> void:
-	inside = true
-	var target = small_val if is_shrinking else big_val
-	body.change_ball_size(target)
+	if body.has_method("change_ball_size"):
+		inside = true
+		var target = small_val if is_shrinking else big_val
+		body.change_ball_size(target)
 
 func _on_center_zone_body_exited(body: Node2D) -> void:
-	inside = false
+	if body.has_method("change_ball_size"):
+		inside = false
