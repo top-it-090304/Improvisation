@@ -1,5 +1,8 @@
 extends Area2D
 
+@onready var camera = get_viewport().get_camera_2d()
+var level1_view_pos = Vector2(-1080-64, -64)
+
 # Настройки телепортации
 @export var fall_duration: float = 0.8      # Длительность падения
 @export var sink_depth: float = 30.0        # Глубина "проваливания" в дыру
@@ -72,6 +75,8 @@ func start_teleport():
 	# Запускаем анимацию
 	animate_fall_into_hole()
 	ball._apply_size_change(1.0)
+	move_camera(level1_view_pos)
+	
 
 func animate_fall_into_hole():
 	var tween = create_tween()
@@ -136,3 +141,7 @@ func finish_teleport():
 		ball = null
 		is_teleporting = false
 		print("Телепортация завершена")
+
+func move_camera(target_pos):
+	var tween = create_tween()
+	tween.tween_property(camera, "position", target_pos, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
