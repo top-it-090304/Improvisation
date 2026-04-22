@@ -61,6 +61,12 @@ func _on_back_icon_pressed():
 func _on_menu_icon_pressed() -> void:
 	menu.update_buttons_color()
 	levels_manager.load_level(-1)
+	
+func _on_area_1_area_entered(body: Node2D) -> void:
+	move_camera(level_view_pos)
+
+func _on_area_2_area_entered(body: Node2D) -> void:
+	move_camera(level_view_pos)
 
 func move_camera(target_pos):
 	var tween = create_tween()

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cjoahdr0m8eog"]
 
 [ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="1_nacan"]
+[ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_pjcgy"]
 [ext_resource type="PackedScene" uid="uid://df66a5km0xcvh" path="res://objects/finish.tscn" id="2_ldnja"]
 [ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="3_uv2qy"]
 [ext_resource type="PackedScene" uid="uid://baclftxnn0jwj" path="res://objects/block.tscn" id="4_uv2qy"]
@@ -10,6 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://dtpxfthsgwlba" path="res://objects/round.tscn" id="8_tmm02"]
 
 [node name="4" type="Node2D" unique_id=1768472998]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1224979480]
+self_modulate = Color(0.7654146, 0.7654147, 0.76541466, 1)
+position = Vector2(544, 959.99994)
+scale = Vector2(0.6234957, 0.6189555)
+texture = ExtResource("1_pjcgy")
 
 [node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_nacan")]
 
