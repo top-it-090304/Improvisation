@@ -16,7 +16,8 @@ var levels = [
 	"res://levels/7.tscn",
 	"res://levels/8.tscn",
 	"res://levels/9.tscn",
-	"res://levels/10.tscn"
+	"res://levels/10.tscn",
+	"res://levels/11.tscn"
 ]
 
 var main_menu_pos = Vector2(-64, -64)

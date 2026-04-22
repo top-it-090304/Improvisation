@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ds1gkkqrswhpq" path="res://objects/bouce.tscn" id="5_brbjy"]
 [ext_resource type="PackedScene" uid="uid://clqhk15nb32oo" path="res://objects/cross.tscn" id="5_sd2v4"]
 [ext_resource type="PackedScene" uid="uid://bctj1bpuvdb6f" path="res://objects/bumper.tscn" id="6_8pynp"]
+[ext_resource type="PackedScene" uid="uid://cos1nbku7c1hg" path="res://objects/mini.tscn" id="6_nurn5"]
 [ext_resource type="PackedScene" uid="uid://bg8anpeoxovok" path="res://objects/carousel.tscn" id="7_4xlfa"]
 [ext_resource type="PackedScene" uid="uid://pk0mkt60rjop" path="res://objects/corner big.tscn" id="7_jhkij"]
 [ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner small.tscn" id="8_dmf6i"]
@@ -29,6 +30,7 @@ scenes/10/scene = ExtResource("2_mbkqw")
 scenes/11/scene = ExtResource("3_ts1om")
 scenes/12/scene = ExtResource("4_h5pkh")
 scenes/13/scene = ExtResource("5_sd2v4")
+scenes/14/scene = ExtResource("6_nurn5")
 scenes/15/scene = ExtResource("7_4xlfa")
 
 [sub_resource type="TileSet" id="TileSet_sbkj6"]
