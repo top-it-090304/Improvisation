@@ -431,9 +431,14 @@ text = "10"
 layout_mode = 2
 text = "11"
 
+[node name="12" type="Button" parent="Menu/GridContainer" unique_id=578371999]
+layout_mode = 2
+text = "12"
+
 [connection signal="pressed" from="SettingsIcon" to="." method="_on_settings_icon_pressed"]
 [connection signal="pressed" from="BackIcon" to="." method="_on_back_icon_pressed"]
 [connection signal="pressed" from="Control/Slow" to="." method="_on_slow_pressed"]
 [connection signal="pressed" from="Control/Real" to="." method="_on_real_pressed"]
 [connection signal="pressed" from="Control/Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="MenuIcon" to="." method="_on_menu_icon_pressed"]
+[connection signal="pressed" from="MenuIcon2" to="." method="_on_menu_icon_pressed"]
