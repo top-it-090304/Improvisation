@@ -20,11 +20,8 @@ var sprite: Sprite2D = null
 var collision_shape: CollisionShape2D = null
 
 func _ready() -> void:
-	# Подключаем сигнал столкновения [cite: 6]
 	body_entered.connect(_on_body_entered)
 	
-	# Используем call_deferred, чтобы сцена успела загрузиться, 
-	# и мы могли найти положение шара
 	call_deferred("_capture_initial_ball_pos")
 
 func _capture_initial_ball_pos():

@@ -46,6 +46,7 @@ func start_shock_teleport():
 	
 	is_teleporting = true
 	
+	# Отключаем физику и управление
 	if "is_active" in ball:
 		ball.is_active = false
 	
@@ -53,7 +54,7 @@ func start_shock_teleport():
 	ball.linear_velocity = Vector2.ZERO
 	ball.set_deferred("collision_layer", 0)
 	ball.set_deferred("collision_mask", 0)
-	
+	ball._apply_size_change(1.0)
 	animate_shock_effect()
 	move_camera(level1_view_pos)
 
