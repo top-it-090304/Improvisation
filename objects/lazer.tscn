@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://tlbwra3l0r8u"]
+
+[ext_resource type="Script" uid="uid://nhlaxppgyl8m" path="res://scripts/lazer.gd" id="1_2gxyl"]
+
+[sub_resource type="Gradient" id="Gradient_xkewd"]
+colors = PackedColorArray(1, 1, 1, 0, 0, 0.53176373, 3.3035357, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2gxyl"]
+gradient = SubResource("Gradient_xkewd")
+width = 2
+
+[sub_resource type="Gradient" id="Gradient_3ti1a"]
+colors = PackedColorArray(0, 0.532, 3.304, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_blkjl"]
+gradient = SubResource("Gradient_3ti1a")
+width = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a084p"]
+size = Vector2(4, 64)
+
+[node name="Lazer" type="Node2D" unique_id=1493866930]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1530456034]
+offset_left = -2.0
+offset_top = -32.0
+offset_bottom = 32.0
+texture = SubResource("GradientTexture1D_2gxyl")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=843042493]
+offset_top = -32.0
+offset_right = 2.0
+offset_bottom = 32.0
+texture = SubResource("GradientTexture1D_blkjl")
+
+[node name="Area" type="Area2D" parent="." unique_id=1788184189]
+script = ExtResource("1_2gxyl")
+
+[node name="Shape" type="CollisionShape2D" parent="Area" unique_id=818377462]
+shape = SubResource("RectangleShape2D_a084p")
