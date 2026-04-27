@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://bctj1bpuvdb6f"]
 
-[ext_resource type="Texture2D" uid="uid://cfih8lask7lun" path="res://sources/Bumper.png" id="1_0dfj3"]
+[ext_resource type="Texture2D" uid="uid://b8itkf8y4e2tj" path="res://sources/Bumper.png" id="1_0dfj3"]
 [ext_resource type="Script" uid="uid://ck2bp8omh42s7" path="res://scripts/bumper.gd" id="1_6ex0s"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6ex0s"]
 bounce = 0.7
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_odiup"]
-radius = 2.56
+radius = 2.24
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dpw6w"]
-radius = 67.00746
+radius = 62.0
 
 [node name="Bumper" type="StaticBody2D" unique_id=1460981031]
 physics_material_override = SubResource("PhysicsMaterial_6ex0s")

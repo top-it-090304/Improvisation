@@ -1,10 +1,24 @@
-[gd_scene format=3 uid="uid://d2y2ms5a330ls"]
+[gd_scene format=4 uid="uid://d2y2ms5a330ls"]
 
 [ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="1_cunfx"]
+[ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_fj8ql"]
 [ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="2_61137"]
 [ext_resource type="PackedScene" uid="uid://cngilitbdmsmo" path="res://objects/magnet.tscn" id="3_g0eal"]
+[ext_resource type="PackedScene" uid="uid://dntuivli2lx1s" path="res://objects/tiles.tscn" id="4_61137"]
+[ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner small.tscn" id="5_g0eal"]
+[ext_resource type="PackedScene" uid="uid://cos1nbku7c1hg" path="res://objects/mini.tscn" id="6_nsfye"]
+[ext_resource type="PackedScene" uid="uid://bdoci3lxrvjjf" path="res://objects/hole.tscn" id="7_ah0wn"]
+[ext_resource type="PackedScene" uid="uid://bctj1bpuvdb6f" path="res://objects/bumper.tscn" id="8_r3px4"]
+[ext_resource type="PackedScene" uid="uid://cvwtem3ahktek" path="res://objects/smoother.tscn" id="9_16tqu"]
+[ext_resource type="PackedScene" uid="uid://df66a5km0xcvh" path="res://objects/finish.tscn" id="10_d0d5u"]
 
 [node name="13" type="Node2D" unique_id=400572631]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1546850334]
+self_modulate = Color(0.7654146, 0.7654147, 0.76541466, 1)
+position = Vector2(544, 959.99994)
+scale = Vector2(0.6234957, 0.6189555)
+texture = ExtResource("1_fj8ql")
 
 [node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_cunfx")]
 
@@ -12,4 +26,75 @@
 position = Vector2(96, 1824)
 
 [node name="Magnet" parent="." unique_id=171901231 instance=ExtResource("3_g0eal")]
-position = Vector2(200, 1648)
+position = Vector2(960, 1584)
+rotation = 3.1415927
+
+[node name="Tiles" parent="." unique_id=1551868908 instance=ExtResource("4_61137")]
+tile_map_data = PackedByteArray("AAAPAAEAAAAAAAAABgABAAEAAAAAAAAABmABABwAAAAAAAAABjAPABwAAAAAAAAABlABABsAAAAAAAAAAgACABsAAAAAAAAAAgADABsAAAAAAAAAAgAEABsAAAAAAAAAAgAFABsAAAAAAAAAAgAGABsAAAAAAAAAAgAIABsAAAAAAAAAAgALABsAAAAAAAAAAgAMABsAAAAAAAAAAgANABsAAAAAAAAAAgAOABsAAAAAAAAAClAPABUAAAAAAAAAAgAOABUAAAAAAAAAAgANABUAAAAAAAAAAgAMABUAAAAAAAAAAgALABUAAAAAAAAABWAPABYAAAAAAAAABgAPABQAAAAAAAAABlALABYAAAAAAAAAAgANABkAAAAAAAAACAAOABkAAAAAAAAACAALABcAAAAAAAAAAgALABgAAAAAAAAAAgALABkAAAAAAAAACjAMABYAAAAAAAAABmAJABgAAAAAAAAABAAGABoAAAAAAAAAAgAGABkAAAAAAAAAAgAGABgAAAAAAAAAAgAGABcAAAAAAAAAAgAGABYAAAAAAAAAAgAGABUAAAAAAAAABWAHABUAAAAAAAAAAgAIABUAAAAAAAAAAgAJABUAAAAAAAAAClAHABYAAAAAAAAABmAFABoAAAAAAAAABlACABkAAAAAAAAACAADABkAAAAAAAAACAAEABkAAAAAAAAACAAMABQAAAAAAAAAAgAMABMAAAAAAAAAAgAMABIAAAAAAAAAAgAMABEAAAAAAAAABQALABEAAAAAAAAAAgAKABEAAAAAAAAAAgAJABEAAAAAAAAAAgAIABEAAAAAAAAAAgAHABEAAAAAAAAAAgAHABIAAAAAAAAAAgAHABMAAAAAAAAABVAGABMAAAAAAAAAAgAFABMAAAAAAAAAAgAEABMAAAAAAAAAAgADABMAAAAAAAAABWADABQAAAAAAAAAAgAEABQAAAAAAAAABmAGABIAAAAAAAAABlAIABIAAAAAAAAABmANABQAAAAAAAAABjALABQAAAAAAAAABlALABIAAAAAAAAABgADABUAAAAAAAAABAABABEAAAAAAAAAAgACABEAAAAAAAAAAgADABEAAAAAAAAAAgAEABEAAAAAAAAAAgAFABEAAAAAAAAABVABABIAAAAAAAAABmABABAAAAAAAAAABjABABoAAAAAAAAABjAFABAAAAAAAAAAAgAHABAAAAAAAAAAAgAEABAAAAAAAAAABlAIABAAAAAAAAAABjAFAA4AAAAAAAAAAgAHAAwAAAAAAAAACgAJAAwAAAAAAAAABTAKAAwAAAAAAAAAAgAHAA4AAAAAAAAAAgAIAA4AAAAAAAAAAgALAAwAAAAAAAAAAgAMAAwAAAAAAAAAAgANAAwAAAAAAAAAAgAOABMAAAAAAAAADwAOABEAAAAAAAAACjAOABAAAAAAAAAAAgAOAA8AAAAAAAAAAgAOAA4AAAAAAAAABQANAA4AAAAAAAAAAgAGAA8AAAAAAAAADVANAA8AAAAAAAAABgAPAA0AAAAAAAAABgAPAAsAAAAAAAAABlAJAA4AAAAAAAAAClAMAA4AAAAAAAAACmAEAA4AAAAAAAAACmAPAAwAAAAAAAAACmAFAAwAAAAAAAAAAgAFAAsAAAAAAAAAAgAHAA0AAAAAAAAAAgAHAAoAAAAAAAAAAgAIAAoAAAAAAAAAAgAJAAoAAAAAAAAAAgAJAAsAAAAAAAAAAgAGAAoAAAAAAAAAAgAFAAoAAAAAAAAAAgABAAsAAAAAAAAAAgACAAsAAAAAAAAAAgADAAsAAAAAAAAAAgAEAAsAAAAAAAAAAgABAAwAAAAAAAAABmAEAAwAAAAAAAAABgAEAAoAAAAAAAAABlABAAoAAAAAAAAABjAIAAsAAAAAAAAABgAGAAsAAAAAAAAABmAKAAsAAAAAAAAABjALAAsAAAAAAAAACAAJAAkAAAAAAAAAAgAKAAkAAAAAAAAAAgANAAkAAAAAAAAAAgAOAAkAAAAAAAAAAgAPAAkAAAAAAAAAAgAKAAoAAAAAAAAABmAMAAkAAAAAAAAACmAOAAoAAAAAAAAACAAIAAkAAAAAAAAABlAPAAgAAAAAAAAABlAPAAoAAAAAAAAABgAOAAcAAAAAAAAADgAJAAgAAAAAAAAAAgAJAAcAAAAAAAAABWAKAAcAAAAAAAAAAgALAAcAAAAAAAAAAgAMAAcAAAAAAAAABVAKAAgAAAAAAAAABmANAAIAAAAAAAAAAgAMAAIAAAAAAAAABWAMAAMAAAAAAAAAAgAMAAQAAAAAAAAAAgAOAAIAAAAAAAAABAAMAAUAAAAAAAAAAgAMAAYAAAAAAAAAAgALAAYAAAAAAAAABlANAAMAAAAAAAAABmAOAAQAAAAAAAAACAAOAAUAAAAAAAAACAAKAAEAAAAAAAAAAgAKAAIAAAAAAAAAAgAKAAMAAAAAAAAAAgAKAAQAAAAAAAAAAgAKAAUAAAAAAAAABVAHAAIAAAAAAAAACgAHAAMAAAAAAAAABVAHAAUAAAAAAAAACmAHAAgAAAAAAAAADwAKABsAAAAAAAAAAgAHABsAAAAAAAAAAgAJABsAAAAAAAAAAgAHABoAAAAAAAAABjAIAAUAAAAAAAAAAgAJAAUAAAAAAAAAAgAJAAQAAAAAAAAABlAFAAkAAAAAAAAAAgAFAAgAAAAAAAAAAgAFAAcAAAAAAAAAAgAFAAYAAAAAAAAAAgAFAAUAAAAAAAAAAgAFAAQAAAAAAAAAAgAFAAMAAAAAAAAAAgAGAAMAAAAAAAAAAgAGAAIAAAAAAAAABlAGAAQAAAAAAAAABmAGAAkAAAAAAAAABjAFAAEAAAAAAAAACjAEAAMAAAAAAAAAAgADAAMAAAAAAAAABTADAAIAAAAAAAAABQACAAIAAAAAAAAACmABAAQAAAAAAAAACAABAAUAAAAAAAAAAgACAAUAAAAAAAAAAgADAAUAAAAAAAAAClACAAMAAAAAAAAABgAEAAIAAAAAAAAABjAGAAEAAAAAAAAABmAEAAEAAAAAAAAABgABAAYAAAAAAAAABmAEAAQAAAAAAAAABgAHAAYAAAAAAAAADAAIAA0AAAAAAAAABjALAAEAAAAAAAAABmAJAAEAAAAAAAAABgA=")
+
+[node name="Block" parent="." unique_id=296666591 instance=ExtResource("5_g0eal")]
+position = Vector2(96, 1824)
+rotation = -1.5707964
+
+[node name="Magnet2" parent="." unique_id=1375823782 instance=ExtResource("3_g0eal")]
+position = Vector2(160, 1440)
+
+[node name="Mini" parent="." unique_id=681371459 instance=ExtResource("6_nsfye")]
+position = Vector2(672, 1272)
+rotation = 3.1415927
+
+[node name="Hole" parent="." unique_id=157668249 instance=ExtResource("7_ah0wn")]
+position = Vector2(544, 1184)
+
+[node name="Mini2" parent="." unique_id=1425968169 instance=ExtResource("6_nsfye")]
+position = Vector2(128, 1280)
+
+[node name="Bumper" parent="." unique_id=1460981031 instance=ExtResource("8_r3px4")]
+position = Vector2(704, 960)
+
+[node name="Bumper2" parent="." unique_id=69290579 instance=ExtResource("8_r3px4")]
+position = Vector2(192, 960)
+
+[node name="Mini3" parent="." unique_id=1464203577 instance=ExtResource("6_nsfye")]
+position = Vector2(192, 832)
+rotation = -1.5707964
+
+[node name="Block2" parent="." unique_id=1050511320 instance=ExtResource("9_16tqu")]
+position = Vector2(896, 800)
+rotation = 1.5707964
+
+[node name="Block3" parent="." unique_id=63699832 instance=ExtResource("9_16tqu")]
+position = Vector2(352, 832)
+rotation = 3.1415927
+
+[node name="Block4" parent="." unique_id=1535671238 instance=ExtResource("9_16tqu")]
+position = Vector2(704, 608)
+rotation = 1.5707964
+
+[node name="Mini4" parent="." unique_id=741549793 instance=ExtResource("6_nsfye")]
+position = Vector2(576, 192)
+
+[node name="Magnet3" parent="." unique_id=759848934 instance=ExtResource("3_g0eal")]
+position = Vector2(128, 496)
+
+[node name="Finish" parent="." unique_id=1600832836 instance=ExtResource("10_d0d5u")]
+position = Vector2(192, 576)
+
+[node name="Block5" parent="." unique_id=614108995 instance=ExtResource("5_g0eal")]
+position = Vector2(96, 288)
+rotation = 3.1415927
+
+[node name="Block6" parent="." unique_id=1861130968 instance=ExtResource("5_g0eal")]
+position = Vector2(672, 544)
+rotation = 3.1415927
+
+[connection signal="body_entered" from="Tiles/Hole" to="Tiles/Hole" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@154276" to="Tiles/@Area2D@154276" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@154292" to="Tiles/@Area2D@154292" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@154293" to="Tiles/@Area2D@154293" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@154294" to="Tiles/@Area2D@154294" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@154371" to="Tiles/@Area2D@154371" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@154379" to="Tiles/@Area2D@154379" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@154398" to="Tiles/@Area2D@154398" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@154399" to="Tiles/@Area2D@154399" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@155230" to="Tiles/@Area2D@155230" method="_finish"]
