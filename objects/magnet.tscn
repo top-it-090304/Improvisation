@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cngilitbdmsmo"]
+
+[ext_resource type="Texture2D" uid="uid://dbpk6nppf5hnt" path="res://sources/Magnet.png" id="1_3c6y4"]
+[ext_resource type="Script" uid="uid://cvwu30rsdp15j" path="res://scripts/magnet.gd" id="2_3511l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3c6y4"]
+radius = 192.1666
+
+[node name="Magnet" type="StaticBody2D" unique_id=171901231]
+
+[node name="Magnet" type="Sprite2D" parent="." unique_id=1041352941]
+position = Vector2(64, 72)
+scale = Vector2(0.20382166, 0.1953867)
+texture = ExtResource("1_3c6y4")
+
+[node name="Shape" type="CollisionPolygon2D" parent="." unique_id=891541016]
+position = Vector2(16, 32)
+polygon = PackedVector2Array(-14, 64, -15.610273, 54.74393, -12, -31, 14, -31, 17.606375, -22.438654, 14, 56, 17, 67, 24, 75, 34, 82, 41, 84, 48, 85, 56, 84, 64, 81, 72, 76, 78, 69, 82, 56, 78.334366, -23.727562, 83, -31, 109, -31, 112, 56, 109, 69, 103, 83, 96, 90, 89, 97, 80, 103, 71, 107, 60, 110, 48, 112, 36, 111, 24, 107, 12, 101, 1, 92, -8, 81, -12, 72)
+
+[node name="Area" type="Area2D" parent="." unique_id=446728764]
+gravity_point = true
+gravity_point_unit_distance = 5.798
+script = ExtResource("2_3511l")
+
+[node name="Shape" type="CollisionShape2D" parent="Area" unique_id=1315937629]
+position = Vector2(64, 64)
+shape = SubResource("CircleShape2D_3c6y4")

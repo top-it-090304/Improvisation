@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d2y2ms5a330ls"]
+
+[ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="1_cunfx"]
+[ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="2_61137"]
+[ext_resource type="PackedScene" uid="uid://cngilitbdmsmo" path="res://objects/magnet.tscn" id="3_g0eal"]
+
+[node name="13" type="Node2D" unique_id=400572631]
+
+[node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_cunfx")]
+
+[node name="Ball" parent="." unique_id=1990782279 instance=ExtResource("2_61137")]
+position = Vector2(96, 1824)
+
+[node name="Magnet" parent="." unique_id=171901231 instance=ExtResource("3_g0eal")]
+position = Vector2(200, 1648)

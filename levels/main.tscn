@@ -322,17 +322,17 @@ script = ExtResource("1_jw1n3")
 
 [node name="GridContainer" type="GridContainer" parent="Menu" unique_id=1946072427]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.204
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.71223956
 offset_left = -446.0
 offset_top = -331.5
 offset_right = 446.0
 offset_bottom = 331.5
-grow_horizontal = 2
-grow_vertical = 2
+grow_horizontal = 0
+grow_vertical = 0
 pivot_offset = Vector2(670, 491.5)
 theme = SubResource("Theme_a5bpp")
 theme_override_constants/h_separation = 24
@@ -396,6 +396,10 @@ text = "11"
 [node name="12" type="Button" parent="Menu/GridContainer" unique_id=578371999]
 layout_mode = 2
 text = "12"
+
+[node name="13" type="Button" parent="Menu/GridContainer" unique_id=1489103302]
+layout_mode = 2
+text = "13"
 
 [connection signal="pressed" from="SettingsIcon" to="." method="_on_settings_icon_pressed"]
 [connection signal="pressed" from="BackIcon" to="." method="_on_back_icon_pressed"]
