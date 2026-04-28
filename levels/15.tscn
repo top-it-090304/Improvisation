@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://dq07mybcqem3g"]
 
+[ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="1_2m2n0"]
+[ext_resource type="PackedScene" uid="uid://dntuivli2lx1s" path="res://objects/tiles.tscn" id="2_c6pxv"]
+[ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="3_v136i"]
+[ext_resource type="PackedScene" uid="uid://ds1gkkqrswhpq" path="res://objects/door.tscn" id="4_1imjg"]
+[ext_resource type="PackedScene" uid="uid://rhtap6uv74if" path="res://objects/door button.tscn" id="5_c6pxv"]
+
 [node name="15" type="Node2D" unique_id=921702113]
+
+[node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_2m2n0")]
+
+[node name="Tiles" parent="." unique_id=1551868908 instance=ExtResource("2_c6pxv")]
+
+[node name="Ball" parent="." unique_id=1990782279 instance=ExtResource("3_v136i")]
+position = Vector2(96, 96)
+
+[node name="Door" parent="." unique_id=746402055 instance=ExtResource("4_1imjg")]
+position = Vector2(128, 224)
+
+[node name="DoorButton" parent="." unique_id=1649226768 instance=ExtResource("5_c6pxv")]
+position = Vector2(224, 160)
