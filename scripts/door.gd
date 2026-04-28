@@ -4,8 +4,8 @@ extends Node2D
 @export var closed_scale: Vector2 = Vector2(1, 1)
 @export var open_scale: Vector2 = Vector2(0.1, 1)
 
-@onready var left_door = $Door/Left
-@onready var right_door = $Door/Right
+@onready var left_door = get_node("../../Door/Left")
+@onready var right_door = get_node("../../Door/Right")
 
 var is_open: bool = false
 

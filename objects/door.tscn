@@ -19,27 +19,27 @@ offset_bottom = 16.0
 color = Color(5.1740557e-07, 0.24498776, 0.080833115, 1)
 
 [node name="Left" type="AnimatableBody2D" parent="." unique_id=811081160]
+position = Vector2(-64, 0)
 
 [node name="Texture" type="ColorRect" parent="Left" unique_id=855897234]
-offset_left = -64.0
 offset_top = -16.0
-offset_right = -8.0
+offset_right = 56.0
 offset_bottom = 16.0
 color = Color(0, 0.52640617, 0.20759887, 1)
 
 [node name="Shape" type="CollisionShape2D" parent="Left" unique_id=552036561]
-position = Vector2(-36, 0)
+position = Vector2(28, 0)
 shape = SubResource("RectangleShape2D_aqk2v")
 
 [node name="Right" type="AnimatableBody2D" parent="." unique_id=1673508169]
+position = Vector2(64, 0)
 
 [node name="Texture" type="ColorRect" parent="Right" unique_id=537194935]
-offset_left = 8.0
+offset_left = -56.0
 offset_top = -16.0
-offset_right = 64.0
 offset_bottom = 16.0
 color = Color(0, 0.52640617, 0.20759887, 1)
 
 [node name="Shape" type="CollisionShape2D" parent="Right" unique_id=2132934069]
-position = Vector2(36, 0)
+position = Vector2(-28, 0)
 shape = SubResource("RectangleShape2D_j7xx1")
