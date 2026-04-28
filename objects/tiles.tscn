@@ -12,7 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://bg8anpeoxovok" path="res://objects/carousel.tscn" id="7_4xlfa"]
 [ext_resource type="PackedScene" uid="uid://pk0mkt60rjop" path="res://objects/corner big.tscn" id="7_jhkij"]
 [ext_resource type="PackedScene" uid="uid://bkjvc0q7qw6bh" path="res://objects/corner small.tscn" id="8_dmf6i"]
+[ext_resource type="PackedScene" uid="uid://rhtap6uv74if" path="res://objects/door open.tscn" id="8_xvcq3"]
 [ext_resource type="PackedScene" uid="uid://df66a5km0xcvh" path="res://objects/finish.tscn" id="9_e8las"]
+[ext_resource type="PackedScene" uid="uid://dvu8scvhfdxha" path="res://objects/door close.tscn" id="9_fyl88"]
 [ext_resource type="PackedScene" uid="uid://bdoci3lxrvjjf" path="res://objects/hole.tscn" id="10_dp27q"]
 [ext_resource type="PackedScene" uid="uid://dtpxfthsgwlba" path="res://objects/round.tscn" id="11_ewp8b"]
 
@@ -32,6 +34,8 @@ scenes/12/scene = ExtResource("4_h5pkh")
 scenes/13/scene = ExtResource("5_sd2v4")
 scenes/14/scene = ExtResource("6_nurn5")
 scenes/15/scene = ExtResource("7_4xlfa")
+scenes/16/scene = ExtResource("8_xvcq3")
+scenes/17/scene = ExtResource("9_fyl88")
 
 [sub_resource type="TileSet" id="TileSet_sbkj6"]
 tile_size = Vector2i(64, 64)
