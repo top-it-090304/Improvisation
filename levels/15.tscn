@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dq07mybcqem3g"]
 
 [ext_resource type="PackedScene" uid="uid://da42ck6cfmqf5" path="res://objects/walls.tscn" id="1_2m2n0"]
+[ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_vb8tp"]
 [ext_resource type="PackedScene" uid="uid://dntuivli2lx1s" path="res://objects/tiles.tscn" id="2_c6pxv"]
 [ext_resource type="PackedScene" uid="uid://cvt7yxp5uxv2g" path="res://objects/ball.tscn" id="3_v136i"]
 [ext_resource type="PackedScene" uid="uid://ds1gkkqrswhpq" path="res://objects/door.tscn" id="4_1imjg"]
@@ -11,13 +12,25 @@
 [ext_resource type="PackedScene" uid="uid://tlbwra3l0r8u" path="res://objects/lazer.tscn" id="9_6pg1h"]
 [ext_resource type="PackedScene" uid="uid://3m1wm3mxg8ws" path="res://objects/block thin.tscn" id="10_c8mis"]
 [ext_resource type="PackedScene" uid="uid://bxgsu560ymiuc" path="res://objects/block mini.tscn" id="11_if81t"]
+[ext_resource type="PackedScene" uid="uid://bdoci3lxrvjjf" path="res://objects/hole.tscn" id="12_if81t"]
+[ext_resource type="PackedScene" uid="uid://df66a5km0xcvh" path="res://objects/finish.tscn" id="13_7bii0"]
 
 [node name="15" type="Node2D" unique_id=921702113]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=893263913]
+self_modulate = Color(0.7654146, 0.7654147, 0.76541466, 1)
+position = Vector2(544, 960)
+scale = Vector2(0.62349576, 0.6189555)
+texture = ExtResource("1_vb8tp")
+
+[node name="Lazer12" parent="." unique_id=1493866930 instance=ExtResource("9_6pg1h")]
+position = Vector2(304, 1760)
+rotation = 1.5707964
 
 [node name="Walls" parent="." unique_id=1616081594 instance=ExtResource("1_2m2n0")]
 
 [node name="Tiles" parent="." unique_id=1551868908 instance=ExtResource("2_c6pxv")]
-tile_map_data = PackedByteArray("AAACAAEAAAAAAAAAAgACAAIAAAAAAAAAAgACAAMAAAAAAAAACjABAAUAAAAAAAAAClACAAUAAAAAAAAACAADAAUAAAAAAAAACmAEAAUAAAAAAAAABVAEAAQAAAAAAAAAAgAEAAMAAAAAAAAAAgAEAAIAAAAAAAAACgAHAAEAAAAAAAAAAgAHAAIAAAAAAAAAAgAHAAMAAAAAAAAAAgAHAAQAAAAAAAAAAgAHAAUAAAAAAAAAAgAGAAEAAAAAAAAABgAIAAEAAAAAAAAABmABAAEAAAAAAAAABmADAAQAAAAAAAAABlABAAQAAAAAAAAABjABAAYAAAAAAAAABmAHAAYAAAAAAAAAAgAHAAcAAAAAAAAABVAGAAcAAAAAAAAAAgAFAAcAAAAAAAAACmADAAcAAAAAAAAAClACAAcAAAAAAAAACmAGAAYAAAAAAAAABlAEAAcAAAAAAAAACAACAAkAAAAAAAAADwAEAAgAAAAAAAAACgACAAsAAAAAAAAACmAEAAkAAAAAAAAAAgADAAsAAAAAAAAAAgAEAAoAAAAAAAAAAgAEAAsAAAAAAAAABVADAAoAAAAAAAAABlABAA4AAAAAAAAAAgACAA4AAAAAAAAAAgADAA4AAAAAAAAAAgAEAA4AAAAAAAAAAgAFAA4AAAAAAAAAAgAGAA4AAAAAAAAABVAGAA0AAAAAAAAAAgAGAAwAAAAAAAAAAgAGAAsAAAAAAAAACgAGAAoAAAAAAAAACAAGAAkAAAAAAAAACQABAA0AAAAAAAAAEAAFAA0AAAAAAAAABlABAA8AAAAAAAAABmAGAAgAAAAAAAAAEQAJAAkAAAAAAAAADQAIAAwAAAAAAAAADwAJAA0AAAAAAAAABlAHAA0AAAAAAAAABjAMAAkAAAAAAAAADlAIAAYAAAAAAAAAEAA=")
+tile_map_data = PackedByteArray("AAACAAEAAAAAAAAAAgACAAIAAAAAAAAAAgACAAMAAAAAAAAACjABAAUAAAAAAAAAClACAAUAAAAAAAAACAADAAUAAAAAAAAACmAEAAUAAAAAAAAABVAEAAQAAAAAAAAACgAEAAMAAAAAAAAACAAEAAIAAAAAAAAACQAHAAEAAAAAAAAAAgAHAAIAAAAAAAAACiAHAAMAAAAAAAAACAAHAAQAAAAAAAAAChAHAAUAAAAAAAAAAgAGAAEAAAAAAAAABgAIAAEAAAAAAAAABmABAAEAAAAAAAAABmADAAQAAAAAAAAABlABAAQAAAAAAAAABjABAAYAAAAAAAAABmAHAAYAAAAAAAAAAgAHAAcAAAAAAAAABVAGAAcAAAAAAAAAAgAFAAcAAAAAAAAACmADAAcAAAAAAAAAClACAAcAAAAAAAAACmAGAAYAAAAAAAAABlAEAAcAAAAAAAAACAACAAkAAAAAAAAADwAEAAgAAAAAAAAACgACAAsAAAAAAAAACmAEAAkAAAAAAAAAAgADAAsAAAAAAAAAAgAEAAoAAAAAAAAAAgAEAAsAAAAAAAAABVADAAoAAAAAAAAABlABAA4AAAAAAAAAAgACAA4AAAAAAAAAAgADAA4AAAAAAAAAClAEAA4AAAAAAAAACAAFAA4AAAAAAAAACmAGAA4AAAAAAAAAAgAGAA0AAAAAAAAACgAGAAwAAAAAAAAACAAGAAsAAAAAAAAACQAGAAoAAAAAAAAACAAGAAkAAAAAAAAACQABAA0AAAAAAAAAEAAFAA0AAAAAAAAABlAGAAgAAAAAAAAAEQAIAAwAAAAAAAAADwAJAA0AAAAAAAAABlAHAA0AAAAAAAAABjAMAAkAAAAAAAAADlAIAAYAAAAAAAAAEAAIAAUAAAAAAAAAAgAJAAUAAAAAAAAAClAIAAQAAAAAAAAABjALAAUAAAAAAAAADwALAAMAAAAAAAAAAgAKAAMAAAAAAAAAAgAJAAMAAAAAAAAABTAKAAEAAAAAAAAACAANAAQAAAAAAAAABQAMAAMAAAAAAAAABQAMAAQAAAAAAAAABgANAAUAAAAAAAAACjANAAYAAAAAAAAACAAOAAYAAAAAAAAADGAPAAEAAAAAAAAACAANAAMAAAAAAAAABjAOAAQAAAAAAAAAEQALAAsAAAAAAAAADAAPAAwAAAAAAAAAAgAOAAwAAAAAAAAACmAMAAwAAAAAAAAACQAPAA0AAAAAAAAABgAPAAsAAAAAAAAABlANAAwAAAAAAAAAEAANAA4AAAAAAAAADwALAA0AAAAAAAAACQALAA8AAAAAAAAACQAMABAAAAAAAAAACQALAA4AAAAAAAAACAANABAAAAAAAAAACAAOABAAAAAAAAAACQAPAA4AAAAAAAAACAAPABIAAAAAAAAAAgAOABIAAAAAAAAABWANABIAAAAAAAAACAAMABIAAAAAAAAABQALABIAAAAAAAAAAgAKABIAAAAAAAAABTAKABEAAAAAAAAABQAJABAAAAAAAAAAAgAJAA8AAAAAAAAACgAJABEAAAAAAAAAAgAPABMAAAAAAAAABgAPABEAAAAAAAAABlAJABIAAAAAAAAABgAKABAAAAAAAAAABjALABEAAAAAAAAABjAGABAAAAAAAAAAEQAIABEAAAAAAAAABWAHABEAAAAAAAAACAAGABEAAAAAAAAABQAIABAAAAAAAAAABlADABQAAAAAAAAAEAACABMAAAAAAAAAAgADABUAAAAAAAAAAgAEABUAAAAAAAAAAgAEABQAAAAAAAAAAgAEABMAAAAAAAAAAgAEABEAAAAAAAAAAgAFABEAAAAAAAAAAgABAA8AAAAAAAAABmAHABIAAAAAAAAAAgAHABMAAAAAAAAACjAHABQAAAAAAAAACAAHABUAAAAAAAAACQABABMAAAAAAAAAAgACABEAAAAAAAAABWADABIAAAAAAAAADQABABIAAAAAAAAABjAGABIAAAAAAAAABgAGABMAAAAAAAAACAAHABYAAAAAAAAAEQAEABYAAAAAAAAAAgAFABYAAAAAAAAACAAFABcAAAAAAAAAAgAGABcAAAAAAAAAAgAHABcAAAAAAAAACAAIABcAAAAAAAAAAgAJABYAAAAAAAAABVAJABUAAAAAAAAAAgAJABcAAAAAAAAACAAEABcAAAAAAAAABTADABYAAAAAAAAABgAIABYAAAAAAAAABlAJABQAAAAAAAAACgAIABIAAAAAAAAABmALABQAAAAAAAAADwANABMAAAAAAAAAAgANABQAAAAAAAAAAgANABUAAAAAAAAAAgANABYAAAAAAAAABVAMABYAAAAAAAAAAgALABYAAAAAAAAACmAJABgAAAAAAAAABQAJABkAAAAAAAAABTAKABkAAAAAAAAAAgALABkAAAAAAAAAClAOABMAAAAAAAAABmAIABgAAAAAAAAABgANABkAAAAAAAAACmAMABkAAAAAAAAACAAKABgAAAAAAAAABjAMABUAAAAAAAAABlAOABkAAAAAAAAAAgAOABgAAAAAAAAACgANABgAAAAAAAAABlAMABMAAAAAAAAABgAOABsAAAAAAAAACjAOABoAAAAAAAAAAgANABoAAAAAAAAABgAMABsAAAAAAAAACQAKABoAAAAAAAAAAgAKABsAAAAAAAAACjALABoAAAAAAAAAEAAIABoAAAAAAAAAEQAHABsAAAAAAAAAAgAHABwAAAAAAAAAAgAHABkAAAAAAAAACgAHABoAAAAAAAAAAgAIABwAAAAAAAAABjAGABwAAAAAAAAABlAIAAoAAAAAAAAABTAJAAkAAAAAAAAADQAFABgAAAAAAAAACjAFABkAAAAAAAAACAAFABoAAAAAAAAACgAFABsAAAAAAAAACjAEABgAAAAAAAAABgAGABgAAAAAAAAABmADABsAAAAAAAAABAACABcAAAAAAAAADwABABkAAAAAAAAAClADABkAAAAAAAAACQABABoAAAAAAAAABmABABwAAAAAAAAABjABABsAAAAAAAAAEAABABgAAAAAAAAABjACABkAAAAAAAAACAA=")
 
 [node name="Ball" parent="." unique_id=1990782279 instance=ExtResource("3_v136i")]
 position = Vector2(96, 96)
@@ -42,14 +55,14 @@ position = Vector2(224, 96)
 position = Vector2(96, 480)
 
 [node name="Door2" parent="." unique_id=1090088396 instance=ExtResource("4_1imjg")]
-position = Vector2(224, 832)
+position = Vector2(208, 832)
 rotation = 1.5707964
 
 [node name="Block3" parent="." unique_id=14795852 instance=ExtResource("4_rj0rw")]
 position = Vector2(96, 864)
 rotation = 3.1415927
 
-[node name="Lazer" parent="." unique_id=1493866930 instance=ExtResource("9_6pg1h")]
+[node name="Lazer" parent="." unique_id=1474362710 instance=ExtResource("9_6pg1h")]
 position = Vector2(480, 576)
 rotation = 1.5707964
 
@@ -77,9 +90,6 @@ position = Vector2(640, 504)
 position = Vector2(536, 536)
 rotation = 1.5707964
 
-[node name="Block12" parent="." unique_id=272575449 instance=ExtResource("4_rj0rw")]
-position = Vector2(536, 680)
-
 [node name="Block13" parent="." unique_id=1871548590 instance=ExtResource("4_rj0rw")]
 position = Vector2(680, 680)
 rotation = -1.5707964
@@ -89,9 +99,6 @@ position = Vector2(640, 736)
 
 [node name="Block15" parent="." unique_id=614744659 instance=ExtResource("10_c8mis")]
 position = Vector2(640, 800)
-
-[node name="Block16" parent="." unique_id=606169926 instance=ExtResource("10_c8mis")]
-position = Vector2(640, 864)
 
 [node name="Block17" parent="." unique_id=1964685355 instance=ExtResource("10_c8mis")]
 position = Vector2(480, 896)
@@ -194,10 +201,6 @@ rotation = 3.1415927
 position = Vector2(672, 472)
 rotation = 1.5707964
 
-[node name="Block6" parent="." unique_id=588085091 instance=ExtResource("10_c8mis")]
-position = Vector2(736, 472)
-rotation = 1.5707964
-
 [node name="Block47" parent="." unique_id=1721770472 instance=ExtResource("10_c8mis")]
 position = Vector2(800, 472)
 rotation = 1.5707964
@@ -222,6 +225,184 @@ position = Vector2(952, 496)
 [node name="Block53" parent="." unique_id=1774736162 instance=ExtResource("11_if81t")]
 position = Vector2(952, 504)
 
+[node name="Block6" parent="." unique_id=1033763626 instance=ExtResource("4_rj0rw")]
+position = Vector2(544, 416)
+rotation = -1.5707964
+
+[node name="Door3" parent="." unique_id=1279432524 instance=ExtResource("4_1imjg")]
+position = Vector2(592, 128)
+rotation = 1.5707964
+
+[node name="Door4" parent="." unique_id=246507148 instance=ExtResource("4_1imjg")]
+position = Vector2(752, 128)
+rotation = 1.5707964
+
+[node name="Mini2" parent="." unique_id=966982332 instance=ExtResource("5_6pg1h")]
+position = Vector2(928, 192)
+
+[node name="Door5" parent="." unique_id=523051367 instance=ExtResource("4_1imjg")]
+position = Vector2(512, 992)
+
+[node name="Block54" parent="." unique_id=1740408251 instance=ExtResource("4_rj0rw")]
+position = Vector2(480, 936)
+rotation = -1.5707964
+
+[node name="Block55" parent="." unique_id=697697461 instance=ExtResource("4_rj0rw")]
+position = Vector2(224, 1312)
+rotation = 1.5707964
+
+[node name="Block56" parent="." unique_id=1597127351 instance=ExtResource("4_rj0rw")]
+position = Vector2(224, 1312)
+rotation = 3.1415927
+
+[node name="Lazer4" parent="." unique_id=692589410 instance=ExtResource("9_6pg1h")]
+position = Vector2(192, 992)
+
+[node name="Door6" parent="." unique_id=32594787 instance=ExtResource("4_1imjg")]
+position = Vector2(384, 1360)
+
+[node name="Block57" parent="." unique_id=1657990677 instance=ExtResource("4_rj0rw")]
+position = Vector2(96, 1312)
+rotation = -1.5707964
+
+[node name="Hole" parent="." unique_id=157668249 instance=ExtResource("12_if81t")]
+position = Vector2(96, 992)
+
+[node name="Block58" parent="." unique_id=645936089 instance=ExtResource("4_rj0rw")]
+position = Vector2(352, 1440)
+rotation = 3.1415927
+
+[node name="Lazer5" parent="." unique_id=883792959 instance=ExtResource("9_6pg1h")]
+position = Vector2(544, 1176)
+rotation = 1.5707964
+
+[node name="Lazer6" parent="." unique_id=1252903434 instance=ExtResource("9_6pg1h")]
+position = Vector2(608, 1176)
+rotation = 1.5707964
+
+[node name="Mini3" parent="." unique_id=1809806136 instance=ExtResource("5_6pg1h")]
+position = Vector2(768, 1536)
+rotation = -1.5707964
+
+[node name="Block59" parent="." unique_id=488630694 instance=ExtResource("4_rj0rw")]
+position = Vector2(608, 1504)
+rotation = -1.5707964
+
+[node name="Block60" parent="." unique_id=1883776157 instance=ExtResource("4_rj0rw")]
+position = Vector2(608, 1504)
+rotation = 3.1415927
+
+[node name="Lazer7" parent="." unique_id=1760985464 instance=ExtResource("9_6pg1h")]
+position = Vector2(960, 1312)
+
+[node name="Lazer8" parent="." unique_id=1789170059 instance=ExtResource("9_6pg1h")]
+position = Vector2(960, 1376)
+
+[node name="Lazer9" parent="." unique_id=827017559 instance=ExtResource("9_6pg1h")]
+position = Vector2(960, 1440)
+
+[node name="Lazer10" parent="." unique_id=877387538 instance=ExtResource("9_6pg1h")]
+position = Vector2(960, 1504)
+
+[node name="Block61" parent="." unique_id=99134243 instance=ExtResource("10_c8mis")]
+position = Vector2(984, 544)
+
+[node name="Block62" parent="." unique_id=276022495 instance=ExtResource("10_c8mis")]
+position = Vector2(984, 608)
+
+[node name="Lazer11" parent="." unique_id=340414035 instance=ExtResource("9_6pg1h")]
+position = Vector2(672, 864)
+rotation = 1.5707964
+
+[node name="Block16" parent="." unique_id=606169926 instance=ExtResource("10_c8mis")]
+position = Vector2(640, 864)
+
+[node name="Mini4" parent="." unique_id=1802119397 instance=ExtResource("5_6pg1h")]
+position = Vector2(320, 1024)
+rotation = -1.5707964
+
+[node name="Block63" parent="." unique_id=222740714 instance=ExtResource("10_c8mis")]
+position = Vector2(440, 992)
+
+[node name="Block64" parent="." unique_id=622671806 instance=ExtResource("10_c8mis")]
+position = Vector2(432, 992)
+
+[node name="Block65" parent="." unique_id=984250431 instance=ExtResource("10_c8mis")]
+position = Vector2(424, 992)
+
+[node name="Block66" parent="." unique_id=1744943687 instance=ExtResource("4_rj0rw")]
+position = Vector2(392, 992)
+
+[node name="Door7" parent="." unique_id=396267924 instance=ExtResource("4_1imjg")]
+position = Vector2(576, 1744)
+
+[node name="Lazer3" parent="." unique_id=1529364192 instance=ExtResource("9_6pg1h")]
+position = Vector2(736, 1760)
+rotation = 1.5707964
+
+[node name="Hole3" parent="." unique_id=290748041 instance=ExtResource("12_if81t")]
+position = Vector2(544, 1824)
+
+[node name="Block67" parent="." unique_id=1399191664 instance=ExtResource("4_rj0rw")]
+position = Vector2(864, 1184)
+rotation = 3.1415927
+
+[node name="Block68" parent="." unique_id=537564030 instance=ExtResource("4_rj0rw")]
+position = Vector2(864, 1184)
+rotation = 1.5707964
+
+[node name="Block69" parent="." unique_id=1317909714 instance=ExtResource("4_rj0rw")]
+position = Vector2(480, 1120)
+rotation = 1.5707964
+
+[node name="Block70" parent="." unique_id=1210187392 instance=ExtResource("4_rj0rw")]
+position = Vector2(480, 1120)
+rotation = 3.1415927
+
+[node name="Finish" parent="." unique_id=28917126 instance=ExtResource("13_7bii0")]
+position = Vector2(96, 1312)
+
+[node name="Door8" parent="." unique_id=1581882242 instance=ExtResource("4_1imjg")]
+position = Vector2(128, 1376)
+
+[node name="Block12" parent="." unique_id=175492776 instance=ExtResource("10_c8mis")]
+position = Vector2(184, 1312)
+
+[node name="Block71" parent="." unique_id=525184415 instance=ExtResource("11_if81t")]
+position = Vector2(184, 1344)
+
+[node name="Block72" parent="." unique_id=459068336 instance=ExtResource("11_if81t")]
+position = Vector2(184, 1352)
+
+[node name="Block73" parent="." unique_id=393434521 instance=ExtResource("11_if81t")]
+position = Vector2(184, 1392)
+
+[node name="Block74" parent="." unique_id=21756331 instance=ExtResource("11_if81t")]
+position = Vector2(184, 1400)
+
+[node name="Block75" parent="." unique_id=771962581 instance=ExtResource("4_rj0rw")]
+position = Vector2(152, 1312)
+
 [connection signal="body_entered" from="Tiles/Hole" to="Tiles/Hole" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@114289" to="Tiles/@Area2D@114289" method="_finish"]
-[connection signal="body_entered" from="Tiles/@Area2D@114306" to="Tiles/@Area2D@114306" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127618" to="Tiles/@Area2D@127618" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127622" to="Tiles/@Area2D@127622" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127638" to="Tiles/@Area2D@127638" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127649" to="Tiles/@Area2D@127649" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127653" to="Tiles/@Area2D@127653" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127655" to="Tiles/@Area2D@127655" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127669" to="Tiles/@Area2D@127669" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127674" to="Tiles/@Area2D@127674" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127675" to="Tiles/@Area2D@127675" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127689" to="Tiles/@Area2D@127689" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127690" to="Tiles/@Area2D@127690" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127692" to="Tiles/@Area2D@127692" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127695" to="Tiles/@Area2D@127695" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127710" to="Tiles/@Area2D@127710" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127724" to="Tiles/@Area2D@127724" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127730" to="Tiles/@Area2D@127730" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127733" to="Tiles/@Area2D@127733" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127736" to="Tiles/@Area2D@127736" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127740" to="Tiles/@Area2D@127740" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127760" to="Tiles/@Area2D@127760" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127784" to="Tiles/@Area2D@127784" method="_finish"]
+[connection signal="body_entered" from="Tiles/@Area2D@127796" to="Tiles/@Area2D@127796" method="_finish"]
