@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var camera = $Camera2D
+@onready var camera = $CameraMain
 @onready var levels_manager = get_tree().root.find_child("Main", true, false)
 @onready var menu = get_tree().root.find_child("Menu", true, false)
 @onready var real_btn = get_tree().root.find_child("Real", true, false)
@@ -52,6 +52,14 @@ func load_level(index):
 		level_resource = load(levels[index])
 		current_level_node = level_resource.instantiate()
 		current_level_node.position = level_view_pos
+		
+		if current_level_node.has_signal("camera_move_requested"):
+			current_level_node.camera_move_requested.connect(move_camera)
+		else:
+			var moves_node = current_level_node.find_child("moves", true, false)
+			if moves_node and moves_node.has_signal("camera_move_requested"):
+				moves_node.camera_move_requested.connect(move_camera)
+
 		add_child(current_level_node)
 		move_camera(level_view_pos)
 	else:
@@ -82,10 +90,20 @@ func _on_real_pressed() -> void:
 func _on_slow_pressed() -> void:
 	Data.set_slow_mode(true)
 	update_frames()
+	
+func _on_accel_mode_pressed() -> void:
+	Data.set_control_type("accel")
+	update_frames()
+
+func _on_joystick_mode_pressed() -> void:
+	Data.set_control_type("joystick")
+	update_frames()
 
 func update_frames():
 	var style_real = real_btn.get_theme_stylebox("normal").duplicate()
 	var style_slow = slow_btn.get_theme_stylebox("normal").duplicate()
+	var style_accel = accel_btn.get_theme_stylebox("normal").duplicate()
+	var style_joy = joy_btn.get_theme_stylebox("normal").duplicate()
 	
 	if Data.slow:
 		style_slow.border_width_left = 8
@@ -111,10 +129,6 @@ func update_frames():
 	real_btn.add_theme_stylebox_override("hover", style_real)
 	slow_btn.add_theme_stylebox_override("hover", style_slow)
 	
-func update_control_type_frames():
-	var style_accel = accel_btn.get_theme_stylebox("normal").duplicate()
-	var style_joy = joy_btn.get_theme_stylebox("normal").duplicate()
-	
 	var is_joy = (Data.control_type == "joystick")
 	
 	style_joy.border_width_left = 8 if is_joy else 0
@@ -129,16 +143,8 @@ func update_control_type_frames():
 
 	accel_btn.add_theme_stylebox_override("normal", style_accel)
 	joy_btn.add_theme_stylebox_override("normal", style_joy)
-
-func _on_accel_mode_pressed():
-	Data.set_control_type("accel")
-	update_frames()
-	update_control_type_frames()
-
-func _on_joystick_mode_pressed():
-	Data.set_control_type("joystick")
-	update_frames()
-	update_control_type_frames()
+	accel_btn.add_theme_stylebox_override("hover", style_accel)
+	joy_btn.add_theme_stylebox_override("hover", style_joy)
 
 func _on_reset_pressed() -> void:
 	Data.reset()

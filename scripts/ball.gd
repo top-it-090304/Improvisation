@@ -57,7 +57,6 @@ func _input(event: InputEvent) -> void:
 			
 	if event is InputEventScreenDrag and is_dragging:
 		var offset = event.position - joystick_center
-		# Ограничиваем силу растяжения через MAX_OFFSET (200.0)
 		var strength = clamp(offset.length() / MAX_OFFSET, 0.0, 1.0)
 		joystick_vector = offset.normalized() * strength
 

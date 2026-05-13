@@ -22,8 +22,8 @@ func update_buttons_color():
 
 func _on_level_button_pressed(index: int):
 	if main:
-		main.load_level(index)
 		Data.set_result(index, false)
 		var ball = get_tree().current_scene.find_child("Ball", true, false)
 		if ball:
 			ball.is_active = true
+		main.load_level(index)
