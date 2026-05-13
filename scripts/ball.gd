@@ -10,6 +10,10 @@ var start_mouse_pos = Vector2.ZERO
 var bg_node : Sprite2D = null
 var bg_start_pos : Vector2 = Vector2.ZERO
 
+var joystick_center = Vector2.ZERO
+var joystick_vector = Vector2.ZERO
+var is_dragging = false
+
 func _ready() -> void:
 	if Data.slow:
 		G_SCALE = 100
@@ -27,18 +31,35 @@ func _physics_process(_delta: float) -> void:
 		_update_bg_tilt(Vector2.ZERO)
 		return
 		
-	var accel = Input.get_accelerometer()
 	var target_force = Vector2.ZERO
 	
-	if accel.length() > 0.1:
-		target_force = Vector2(accel.x, -accel.y) * G_SCALE
+	if Data.control_type == "accel":
+		var accel = Input.get_accelerometer()
+		if accel.length() > 0.1:
+			target_force = Vector2(accel.x, -accel.y) * G_SCALE
 	else:
-		var offset = get_global_mouse_position() - start_mouse_pos
-		var strength = clamp(offset.length() / MAX_OFFSET, 0.0, 1.0)
-		target_force = offset.normalized() * strength * (9.8 * G_SCALE)
+		target_force = joystick_vector * (9.8 * G_SCALE)
 	
 	constant_force = target_force * mass
 	_update_bg_tilt(target_force)
+	
+func _input(event: InputEvent) -> void:
+	if not is_active or Data.control_type != "joystick":
+		return
+
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			is_dragging = true
+			joystick_center = event.position
+		else:
+			is_dragging = false
+			joystick_vector = Vector2.ZERO
+			
+	if event is InputEventScreenDrag and is_dragging:
+		var offset = event.position - joystick_center
+		# Ограничиваем силу растяжения через MAX_OFFSET (200.0)
+		var strength = clamp(offset.length() / MAX_OFFSET, 0.0, 1.0)
+		joystick_vector = offset.normalized() * strength
 
 func _update_bg_tilt(t_force: Vector2):
 	if bg_node:

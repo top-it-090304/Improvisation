@@ -19,25 +19,6 @@ shadow_size = 0
 [sub_resource type="Theme" id="Theme_c7dyn"]
 default_font = ExtResource("3_c7dyn")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7dyn"]
-bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
-border_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s07ge"]
-bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwo8l"]
-bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7211"]
-bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdh4e"]
 bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
 border_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
@@ -58,6 +39,25 @@ corner_radius_bottom_left = 60
 bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_21ko3"]
+bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7dyn"]
+bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
+border_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s07ge"]
+bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwo8l"]
+bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7211"]
 bg_color = Color(0.4, 0.3019608, 0.1764706, 1)
 
 [sub_resource type="Theme" id="Theme_xdh4e"]
@@ -215,28 +215,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_trim_flags = 0
 
-[node name="Slow" type="Button" parent="Control" unique_id=1168182244]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = -3.3330002
-anchor_bottom = -3.3330002
-offset_left = 480.0
-offset_top = 325.32
-offset_right = 832.0
-offset_bottom = 453.32
-theme = SubResource("Theme_c7dyn")
-theme_override_colors/font_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
-theme_override_colors/font_focus_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
-theme_override_colors/font_pressed_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
-theme_override_colors/font_hover_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_c7dyn")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_s07ge")
-theme_override_styles/hover = SubResource("StyleBoxFlat_iwo8l")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_j7211")
-text = "Медленно"
-
 [node name="Real" type="Button" parent="Control" unique_id=428987340]
 layout_mode = 1
 anchors_preset = -1
@@ -260,15 +238,94 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_4fc0e")
 theme_override_styles/focus = SubResource("StyleBoxFlat_21ko3")
 text = "Реалистично"
 
+[node name="Slow" type="Button" parent="Control" unique_id=1168182244]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -3.3330002
+anchor_bottom = -3.3330002
+offset_left = 480.0
+offset_top = 325.32
+offset_right = 832.0
+offset_bottom = 453.32
+theme = SubResource("Theme_c7dyn")
+theme_override_colors/font_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_focus_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_pressed_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_hover_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_c7dyn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s07ge")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iwo8l")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j7211")
+text = "Медленно"
+
+[node name="Controls" type="Label" parent="Control" unique_id=1673673666]
+layout_mode = 0
+offset_top = 320.0
+offset_right = 960.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(0.2, 0.09019608, 0.047058824, 1)
+text = "Управление"
+label_settings = SubResource("LabelSettings_xdh4e")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+
+[node name="Accel" type="Button" parent="Control" unique_id=587770246]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -3.3330002
+anchor_bottom = -3.3330002
+offset_left = 128.0
+offset_top = 645.32
+offset_right = 480.0
+offset_bottom = 773.32
+theme = SubResource("Theme_c7dyn")
+theme_override_colors/font_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_focus_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_pressed_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_hover_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_xdh4e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1fput")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6yxbg")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4fc0e")
+theme_override_styles/focus = SubResource("StyleBoxFlat_21ko3")
+text = "Наклон"
+
+[node name="Joystick" type="Button" parent="Control" unique_id=1398165140]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -3.3330002
+anchor_bottom = -3.3330002
+offset_left = 480.0
+offset_top = 645.32
+offset_right = 832.0
+offset_bottom = 773.32
+theme = SubResource("Theme_c7dyn")
+theme_override_colors/font_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_focus_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_pressed_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_hover_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_c7dyn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s07ge")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iwo8l")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_j7211")
+text = "Джойстик"
+
 [node name="Reset" type="Button" parent="Control" unique_id=47992818]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -3.2
 anchor_bottom = -3.2
-offset_left = 224.0
-offset_top = 576.0
-offset_right = 736.0
-offset_bottom = 704.0
+offset_left = 240.0
+offset_top = 912.0
+offset_right = 752.0
+offset_bottom = 1040.0
 theme = SubResource("Theme_xdh4e")
 theme_override_colors/font_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
 theme_override_colors/font_focus_color = Color(0.8235294, 0.6745098, 0.49019608, 1)
@@ -424,8 +481,10 @@ text = "16"
 
 [connection signal="pressed" from="SettingsIcon" to="." method="_on_settings_icon_pressed"]
 [connection signal="pressed" from="BackIcon" to="." method="_on_back_icon_pressed"]
-[connection signal="pressed" from="Control/Slow" to="." method="_on_slow_pressed"]
 [connection signal="pressed" from="Control/Real" to="." method="_on_real_pressed"]
+[connection signal="pressed" from="Control/Slow" to="." method="_on_slow_pressed"]
+[connection signal="pressed" from="Control/Accel" to="." method="_on_accel_mode_pressed"]
+[connection signal="pressed" from="Control/Joystick" to="." method="_on_joystick_mode_pressed"]
 [connection signal="pressed" from="Control/Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="MenuIcon" to="." method="_on_menu_icon_pressed"]
 [connection signal="pressed" from="MenuIcon2" to="." method="_on_menu_icon_pressed"]

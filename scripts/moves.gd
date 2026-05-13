@@ -10,10 +10,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_body_entered_11_1(body: Node2D) -> void:
+func _on_body_entered_1(body: Node2D) -> void:
 	move_camera(level1_view_pos)
 
-func _on_body_entered_11_2(body: Node2D) -> void:
+func _on_body_entered_2(body: Node2D) -> void:
 	move_camera(level2_view_pos)
 
 func move_camera(target_pos):

@@ -5,6 +5,8 @@ extends Node2D
 @onready var menu = get_tree().root.find_child("Menu", true, false)
 @onready var real_btn = get_tree().root.find_child("Real", true, false)
 @onready var slow_btn = get_tree().root.find_child("Slow", true, false)
+@onready var accel_btn = get_tree().root.find_child("Accel", true, false)
+@onready var joy_btn = get_tree().root.find_child("Joystick", true, false)
 
 var levels = [
 	"res://levels/1.tscn",
@@ -66,12 +68,6 @@ func _on_back_icon_pressed():
 func _on_menu_icon_pressed() -> void:
 	menu.update_buttons_color()
 	levels_manager.load_level(-1)
-	
-func _on_area_1_area_entered(body: Node2D) -> void:
-	move_camera(level_view_pos)
-
-func _on_area_2_area_entered(body: Node2D) -> void:
-	move_camera(level_view_pos)
 
 func move_camera(target_pos):
 	var tween = create_tween()
@@ -114,6 +110,35 @@ func update_frames():
 	slow_btn.add_theme_stylebox_override("normal", style_slow)
 	real_btn.add_theme_stylebox_override("hover", style_real)
 	slow_btn.add_theme_stylebox_override("hover", style_slow)
+	
+func update_control_type_frames():
+	var style_accel = accel_btn.get_theme_stylebox("normal").duplicate()
+	var style_joy = joy_btn.get_theme_stylebox("normal").duplicate()
+	
+	var is_joy = (Data.control_type == "joystick")
+	
+	style_joy.border_width_left = 8 if is_joy else 0
+	style_joy.border_width_right = 8 if is_joy else 0
+	style_joy.border_width_top = 8 if is_joy else 0
+	style_joy.border_width_bottom = 8 if is_joy else 0
+	
+	style_accel.border_width_left = 0 if is_joy else 8
+	style_accel.border_width_right = 0 if is_joy else 8
+	style_accel.border_width_top = 0 if is_joy else 8
+	style_accel.border_width_bottom = 0 if is_joy else 8
+
+	accel_btn.add_theme_stylebox_override("normal", style_accel)
+	joy_btn.add_theme_stylebox_override("normal", style_joy)
+
+func _on_accel_mode_pressed():
+	Data.set_control_type("accel")
+	update_frames()
+	update_control_type_frames()
+
+func _on_joystick_mode_pressed():
+	Data.set_control_type("joystick")
+	update_frames()
+	update_control_type_frames()
 
 func _on_reset_pressed() -> void:
 	Data.reset()
