@@ -25,20 +25,14 @@ func _ready() -> void:
 	call_deferred("_capture_initial_ball_pos")
 
 func _capture_initial_ball_pos():
-	# Ищем узел с именем "Ball" [cite: 4, 14]
 	var ball_node = get_tree().current_scene.find_child("Ball", true, false)
 	
 	if ball_node:
-		# Запоминаем его координаты как исходные
 		start_position = ball_node.global_position
-		print("Исходная позиция шара сохранена: ", start_position)
 	else:
-		# Если шар не найден, используем текущую позицию лузы как страховку 
 		start_position = global_position
-		print("Предупреждение: Шар не найден, установлена позиция лузы")
 
 func _on_body_entered(body: Node2D) -> void:
-	# Если уже телепортируемся - игнорируем
 	if is_teleporting:
 		return
 		

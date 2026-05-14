@@ -1,6 +1,5 @@
-extends Node2D # Или Node, смотря к чему привязан
+extends Node2D
 
-# Создаем сигнал, который передаст нужную позицию
 signal camera_move_requested(new_pos)
 
 var level1_view_pos = Vector2(-1080-64, -64)

@@ -4,7 +4,7 @@ const MAX_OFFSET = 200.0
 const TILT_STRENGTH = 50.0
 var G_SCALE = 1000
 
-var is_active = false
+var is_active = true
 var start_mouse_pos = Vector2.ZERO
 
 var bg_node : Sprite2D = null
