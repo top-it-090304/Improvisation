@@ -40,27 +40,26 @@ var bg_start_pos : Vector2 = Vector2.ZERO
 func _ready():
 	pass
 
-func load_level(index):
+func load_level(index: int) -> void:
 	menu._ready()
 	current_level_index = index
-	
-	if current_level_node != null:
+	if is_instance_valid(current_level_node):
 		current_level_node.queue_free()
-		
-	var level_resource
 	if index != -1:
-		level_resource = load(levels[index])
+		if index < 0 or index >= levels.size():
+			push_error("Индекс уровня вне диапазона!")
+			return
+		var level_resource = load(levels[index])
+		if not level_resource:
+			push_error("Не удалось загрузить файл уровня: " + levels[index])
+			return
 		current_level_node = level_resource.instantiate()
-		current_level_node.position = level_view_pos
-		
-		if current_level_node.has_signal("camera_move_requested"):
-			current_level_node.camera_move_requested.connect(move_camera)
-		else:
-			var moves_node = current_level_node.find_child("moves", true, false)
-			if moves_node and moves_node.has_signal("camera_move_requested"):
-				moves_node.camera_move_requested.connect(move_camera)
-
 		add_child(current_level_node)
+		current_level_node.position = level_view_pos
+		var moves_node = current_level_node.find_child("Moves", true, false)
+		if moves_node:
+			if not moves_node.camera_move_requested.is_connected(move_camera):
+				moves_node.camera_move_requested.connect(move_camera)
 		move_camera(level_view_pos)
 	else:
 		move_camera(main_menu_pos)
