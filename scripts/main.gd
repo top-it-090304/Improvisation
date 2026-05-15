@@ -37,6 +37,9 @@ var current_level_node = null
 var bg_node : Sprite2D = null
 var bg_start_pos : Vector2 = Vector2.ZERO
 
+var camera_queue = []
+var is_camera_moving = false
+
 func _ready():
 	pass
 

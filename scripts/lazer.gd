@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var camera = get_viewport().get_camera_2d()
-var level1_view_pos = Vector2(-1080-64, -64)
+var level1_view_pos = Vector2(-1080-1080-64, -64)
 
 # Настройки лазера
 @export var shock_duration: float = 0.4     # Длительность удара током

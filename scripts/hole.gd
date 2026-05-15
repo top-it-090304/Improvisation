@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var camera = get_viewport().get_camera_2d()
-var level1_view_pos = Vector2(-1080-64, -64)
+var level1_view_pos = Vector2(-1080-1080-64, -64)
 
 @export var fall_duration: float = 0.8      # Длительность падения
 @export var sink_depth: float = 30.0        # Глубина "проваливания" в дыру
