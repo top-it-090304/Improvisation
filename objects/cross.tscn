@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clqhk15nb32oo"]
 
-[ext_resource type="Script" uid="uid://lnrnacdyxxyi" path="res://cross.gd" id="1_0m25m"]
+[ext_resource type="Script" uid="uid://lnrnacdyxxyi" path="res://scripts/cross.gd" id="1_0m25m"]
 [ext_resource type="Texture2D" uid="uid://n8wisi67d5gu" path="res://sources/Wood.jpg" id="1_yx0e3"]
 [ext_resource type="PackedScene" uid="uid://3m1wm3mxg8ws" path="res://objects/block thin.tscn" id="2_oignu"]
 [ext_resource type="Texture2D" uid="uid://m3v5a47frrf7" path="res://sources/Fence.png" id="3_mbhbw"]

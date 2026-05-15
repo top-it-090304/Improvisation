@@ -1,12 +1,13 @@
 extends Node2D
 
-@onready var left_door = $Left
-@onready var right_door = $Right
+@onready var left_door
+@onready var right_door
 var is_open: bool = false
 
 func _ready():
-	# Добавляем в группу, чтобы кнопка могла найти дверь без прописывания пути
 	add_to_group("my_doors")
+	left_door = get_node_or_null("Left")
+	right_door = get_node_or_null("Right")
 
 func open_door():
 	if is_open: return

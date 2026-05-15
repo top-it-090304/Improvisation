@@ -29,7 +29,7 @@ var levels = [
 
 var main_menu_pos = Vector2(-64, -64)
 var settings_pos = Vector2(1080-64, -64)
-var level_view_pos = Vector2(-1080-64, -64)
+var level_view_pos = Vector2(-1080-1080-64, -64)
 
 var current_level_index = -1
 var current_level_node = null
@@ -42,27 +42,39 @@ func _ready():
 
 func load_level(index: int) -> void:
 	menu._ready()
+	var level_to_remove = current_level_node
 	current_level_index = index
-	if is_instance_valid(current_level_node):
-		current_level_node.queue_free()
+	
 	if index != -1:
 		if index < 0 or index >= levels.size():
-			push_error("Индекс уровня вне диапазона!")
 			return
 		var level_resource = load(levels[index])
 		if not level_resource:
-			push_error("Не удалось загрузить файл уровня: " + levels[index])
 			return
+			
 		current_level_node = level_resource.instantiate()
-		add_child(current_level_node)
 		current_level_node.position = level_view_pos
+		add_child(current_level_node)
+		
+		current_level_node.propagate_call("force_update_transform")
+		
+		var tween = move_camera(level_view_pos)
+		
+		if is_instance_valid(level_to_remove):
+			tween.finished.connect(func(): level_to_remove.queue_free())
+			
 		var moves_node = current_level_node.find_child("Moves", true, false)
 		if moves_node:
-			if not moves_node.camera_move_requested.is_connected(move_camera):
-				moves_node.camera_move_requested.connect(move_camera)
-		move_camera(level_view_pos)
+			get_tree().create_timer(0.1).timeout.connect(func():
+				if is_instance_valid(moves_node):
+					moves_node.camera_move_requested.connect(move_camera)
+			)
 	else:
-		move_camera(main_menu_pos)
+		current_level_node = null 
+		var tween = move_camera(main_menu_pos)
+		
+		if is_instance_valid(level_to_remove):
+			tween.finished.connect(func(): level_to_remove.queue_free())
 	
 func _on_settings_icon_pressed():
 	update_frames()
@@ -76,10 +88,10 @@ func _on_menu_icon_pressed() -> void:
 	menu.update_buttons_color()
 	levels_manager.load_level(-1)
 
-func move_camera(target_pos):
+func move_camera(target_pos) -> Tween:
 	var tween = create_tween()
 	tween.tween_property(camera, "position", target_pos, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-
+	return tween
 
 #settings
 func _on_real_pressed() -> void:
