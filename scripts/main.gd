@@ -88,6 +88,9 @@ func _on_back_icon_pressed():
 	move_camera(main_menu_pos)
 	
 func _on_menu_icon_pressed() -> void:
+	var ball: RigidBody2D = get_tree().current_scene.find_child("Ball", true, false)
+	ball.is_active = false
+	ball.stop_ball()
 	menu.update_buttons_color()
 	levels_manager.load_level(-1)
 

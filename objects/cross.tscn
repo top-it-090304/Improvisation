@@ -5,13 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://3m1wm3mxg8ws" path="res://objects/block thin.tscn" id="2_oignu"]
 [ext_resource type="Texture2D" uid="uid://m3v5a47frrf7" path="res://sources/Fence.png" id="3_mbhbw"]
 
-[sub_resource type="Gradient" id="Gradient_0m25m"]
-colors = PackedColorArray(0, 0, 0, 0.39215687, 0, 0, 0, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_75ip5"]
-gradient = SubResource("Gradient_0m25m")
-width = 8
-
 [sub_resource type="Gradient" id="Gradient_75ip5"]
 offsets = PackedFloat32Array(0, 0.366485, 0.60626704, 1)
 colors = PackedColorArray(0, 0, 0, 0.39215687, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.39215687)
@@ -59,21 +52,6 @@ position = Vector2(32, 0)
 collision_layer = 0
 
 [node name="Texture" type="Node2D" parent="." unique_id=1103976208]
-
-[node name="Right" type="TextureRect" parent="Texture" unique_id=1169479640]
-offset_left = 32.0
-offset_top = -32.0
-offset_right = 40.0
-offset_bottom = 32.0
-texture = SubResource("GradientTexture1D_75ip5")
-
-[node name="Left" type="TextureRect" parent="Texture" unique_id=1843443754]
-offset_left = -32.0
-offset_top = 32.0
-offset_right = -24.0
-offset_bottom = 96.0
-rotation = 3.1415927
-texture = SubResource("GradientTexture1D_75ip5")
 
 [node name="Top" type="Sprite2D" parent="Texture" unique_id=1076268490]
 z_index = 2
