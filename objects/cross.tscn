@@ -18,22 +18,22 @@ colors = PackedColorArray(0, 0, 0, 0.39215687, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_spj2f"]
 gradient = SubResource("Gradient_75ip5")
-width = 192
+width = 176
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0m25m"]
-size = Vector2(64, 32)
+size = Vector2(64, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75ip5"]
-size = Vector2(64, 32)
+size = Vector2(64, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spj2f"]
-size = Vector2(32, 64)
+size = Vector2(24, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxffd"]
-size = Vector2(32, 64)
+size = Vector2(24, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wopl0"]
-size = Vector2(64, 192)
+size = Vector2(64, 176)
 
 [node name="Cross" type="Node2D" unique_id=1048308988]
 script = ExtResource("1_0m25m")
@@ -60,14 +60,6 @@ collision_layer = 0
 
 [node name="Texture" type="Node2D" parent="." unique_id=1103976208]
 
-[node name="Bottom" type="Sprite2D" parent="Texture" unique_id=376828005]
-self_modulate = Color(0.7647059, 0.7647059, 0.7647059, 1)
-position = Vector2(-7.6293945e-06, 0)
-scale = Vector2(0.61538464, 0.6153846)
-texture = ExtResource("1_yx0e3")
-region_enabled = true
-region_rect = Rect2(0, 0, 312, 104)
-
 [node name="Right" type="TextureRect" parent="Texture" unique_id=1169479640]
 offset_left = 32.0
 offset_top = -32.0
@@ -85,8 +77,8 @@ texture = SubResource("GradientTexture1D_75ip5")
 
 [node name="Top" type="Sprite2D" parent="Texture" unique_id=1076268490]
 z_index = 2
-position = Vector2(3.0517578e-05, -4.7683716e-07)
-scale = Vector2(0.61538446, 0.61538464)
+position = Vector2(3.0517578e-05, 4.7683716e-07)
+scale = Vector2(0.61538446, 0.56410253)
 texture = ExtResource("1_yx0e3")
 region_enabled = true
 region_rect = Rect2(0, 0, 104, 312)
@@ -94,9 +86,9 @@ region_rect = Rect2(0, 0, 104, 312)
 [node name="TextureRect" type="TextureRect" parent="Texture" unique_id=301787216]
 z_index = 2
 offset_left = 32.0
-offset_top = -96.0
-offset_right = 224.0
-offset_bottom = -32.0
+offset_top = -88.0
+offset_right = 208.0
+offset_bottom = -24.0
 rotation = 1.5707964
 texture = SubResource("GradientTexture1D_spj2f")
 
@@ -228,7 +220,7 @@ color = Color(0.1882353, 0.0627451, 0.4117647, 1)
 z_index = 2
 
 [node name="Shape" type="CollisionShape2D" parent="Areas/Top" unique_id=1255198365]
-position = Vector2(0, -80)
+position = Vector2(0, -76)
 shape = SubResource("RectangleShape2D_0m25m")
 debug_color = Color(1, 0, 0.10873253, 0.41960785)
 
@@ -236,21 +228,21 @@ debug_color = Color(1, 0, 0.10873253, 0.41960785)
 
 [node name="Shape" type="CollisionShape2D" parent="Areas/Bottom" unique_id=1690110054]
 z_index = 2
-position = Vector2(0, 80)
+position = Vector2(0, 76)
 shape = SubResource("RectangleShape2D_75ip5")
 debug_color = Color(1, 0, 0.10980392, 0.41960785)
 
 [node name="Left" type="Area2D" parent="Areas" unique_id=1995222502]
 
 [node name="Shape" type="CollisionShape2D" parent="Areas/Left" unique_id=120225675]
-position = Vector2(-80, 0)
+position = Vector2(-76, 0)
 shape = SubResource("RectangleShape2D_spj2f")
 debug_color = Color(1, 0, 0.10980392, 0.41960785)
 
 [node name="Right" type="Area2D" parent="Areas" unique_id=466196800]
 
 [node name="Shape" type="CollisionShape2D" parent="Areas/Right" unique_id=923388871]
-position = Vector2(80, 0)
+position = Vector2(76, 0)
 shape = SubResource("RectangleShape2D_bxffd")
 debug_color = Color(1, 0, 0.10980392, 0.41960785)
 
