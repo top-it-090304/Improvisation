@@ -44,10 +44,12 @@ rotation = 1.5707964
 collision_layer = 0
 
 [node name="Left" parent="Walls" unique_id=2119590286 instance=ExtResource("2_oignu")]
+z_index = 2
 position = Vector2(-40, 0)
 collision_layer = 0
 
 [node name="Right" parent="Walls" unique_id=217183556 instance=ExtResource("2_oignu")]
+z_index = 2
 position = Vector2(32, 0)
 collision_layer = 0
 
