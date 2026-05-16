@@ -159,20 +159,20 @@ texture = ExtResource("2_xdh4e")
 
 [node name="Background3" type="Sprite2D" parent="." unique_id=946891338]
 self_modulate = Color(0.7654146, 0.7654147, 0.76541466, 1)
-position = Vector2(-607.99994, 2816.0002)
-scale = Vector2(0.6234957, 0.61895543)
+position = Vector2(-599.99994, 2816.0002)
+scale = Vector2(0.6143267, 0.6189555)
 texture = ExtResource("2_xdh4e")
 
 [node name="Background3" type="Sprite2D" parent="Background3" unique_id=1015339635]
 self_modulate = Color(0.7654146, 0.7654147, 0.76541466, 1)
-position = Vector2(1745, -0.0005207062)
-scale = Vector2(0.99999994, 1.0000002)
+position = Vector2(1758.0222, -0.0005207062)
+scale = Vector2(1.014925, 1.0000002)
 texture = ExtResource("2_xdh4e")
 
 [node name="Background4" type="Sprite2D" parent="." unique_id=1940008138]
 self_modulate = Color(0.7654146, 0.7654147, 0.76541466, 1)
-position = Vector2(-608, 896)
-scale = Vector2(0.6234957, 0.61895555)
+position = Vector2(-600, 896)
+scale = Vector2(0.6143266, 0.61895555)
 texture = ExtResource("2_xdh4e")
 
 [node name="CameraMain" type="Camera2D" parent="." unique_id=1870140602]
@@ -358,9 +358,9 @@ text = "Сбросить статистику"
 
 [node name="MenuIcon" type="TextureButton" parent="." unique_id=1607378180]
 z_index = 10
-offset_left = -1239.9999
+offset_left = -1224.0001
 offset_top = 800.0
-offset_right = 8.499878
+offset_right = 24.499634
 offset_bottom = 3476.0
 scale = Vector2(0.07048458, 0.071748875)
 texture_normal = ExtResource("10_j7211")
@@ -372,9 +372,9 @@ stretch_mode = 4
 
 [node name="MenuIcon2" type="TextureButton" parent="." unique_id=874772559]
 z_index = 10
-offset_left = -1240.0001
+offset_left = -1224.0001
 offset_top = 2784.0002
-offset_right = 8.499634
+offset_right = 24.499634
 offset_bottom = 5460.0
 scale = Vector2(0.07048458, 0.071748875)
 texture_normal = ExtResource("10_j7211")
