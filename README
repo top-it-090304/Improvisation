@@ -1,0 +1,47 @@
+🎱 Improvisation (Maze Ball)
+
+Классический лабиринт с шариком, пушками, магнитами и бамперами. 16 уровней, управление гироскопом или свайпами. Написано на "Godot Engine 4.6.2.stable.steam"
+Уровни: 16 шт., сложность постепенно возрастает
+
+![Интерфейс игры](image.png)
+
+Управление:
+- Гироскоп: наклон смартфона для движения шарика
+- Свайпы пальцем по экрану в нужном направлении
+- Кнопка: переход в меню уровней
+
+Основные механики и их особенности:
+- Лузы: падение → перезапуск уровня
+- Пушки: стреляют отталкивающими снарядами
+- Бамперы: отбрасывают шарик при касании
+- Магниты: притягивают шарик на расстоянии
+
+Технологический стек:
+- Движок: Godot Engine 4.6.2.stable.steam
+- Язык программирования: GDScript
+- Рендеринг: 2D
+- Физика: Godot Physics 2D
+- Управление: тачскрин, гироскоп
+- Целевые платформы: Android (arm64-v8a), AuroraOS (armv7hl), Windows (x86_64)
+
+Сборка:
+   Общие требования:
+      - Установите Godot Engine (https://godotengine.org/download) (рекомендуется 4.2+)
+      - Для Android: Android SDK (или Java SDK), JDK 17
+      - Для AuroraOS: Aurora SDK (https://omprussia.ru/developer) для Godot
+   Android (.apk)
+      1) Открыть проект в Godot
+      2) Перейти в Project → Export → Android
+      3) В Editor Settings → Export → Android указать пути к: Android SDK, JDK 17
+      4) Нажать Export Project и выбрать имя файла
+      5) Установить APK на устройство (разрешив установку из неизвестных источников)
+   AuroraOS (.rpm)
+      1) Установить шаблон экспорта AuroraOS для Godot (поддерживается armv7hl)
+      2) В Godot открыть Project → Export → AuroraOS
+      3) Проверить пресет в "export_presets.cfg" (параметр architectures/armv7hl=true)
+      4) Нажмите Export Project → Сохранить RPM
+      5) Установить RPM на устройство AuroraOS (pm-install)
+   \Windows (.exe)
+      1) В Godot выбрать пресет Windows Desktop (или создать новый)
+      2) Нажать Export Project - будут созданы файлы .exe и .pck
+      3) Запустить игру на Windows (оба файла должны нажодиться рядом
